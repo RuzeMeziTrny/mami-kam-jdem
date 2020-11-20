@@ -1,0 +1,1431 @@
+{
+  "hriste": [
+    {
+      "nazev": "Veronské náměstí (u Alberta)",
+      "gps": "50.0409669N, 14.5574619E",
+      "foto": "DOPLNIT",
+      "houpackaMala": true,
+      "houpacka": true,
+      "houpackaDvojice": false,
+      "piskoviste": true,
+      "skluzavka": true,
+      "kolotoc": true,
+      "dalsiHerniPrvky": ["houpací želva", "domeček"],
+      "stin": true,
+      "stinDetaily": "stín jen nad pískovištěm a v domečku a v podvečer",
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Veronské náměstí (vlak)",
+      "gps": "50.0417214N, 14.5588394E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["houpací koník", "tunel", "přelézací sítě"],
+      "stin": false,
+      "stinDetaily": null,
+      "erarniHracky": false,
+      "pisek": false,
+      "kaminky": true,
+      "tartan": false
+    },
+    {
+      "nazev": "Milánská/Livornská",
+      "gps": "50.0408117N, 14.5545333E",
+      "foto": "DOPLNIT",
+      "houpackaMala": true,
+      "houpacka": true,
+      "houpackaDvojice": true,
+      "piskoviste": true,
+      "skluzavka": false,
+      "kolotoc": false,
+      "dalsiHerniPrvky": [
+        "houpací koník",
+        "mini kolotoč",
+        "hrazdy",
+        "kladina",
+        "vysoké prolézačky"
+      ],
+      "stin": true,
+      "stinDetaily": "stín jen dopoledne",
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Livornská (opičí dráha)",
+      "gps": "50.0419019N, 14.5540875E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": false,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["opičí dráha s kůly na přelézání a oky na zavěšení"],
+      "stin": false,
+      "stinDetaily": null,
+      "erarniHracky": false,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Milánská/Bolevecká",
+      "gps": "50.0428611N, 14.5564131E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["prolézačky"],
+      "stin": false,
+      "stinDetaily": null,
+      "erarniHracky": false,
+      "pisek": false,
+      "kaminky": true,
+      "tartan": false
+    },
+    {
+      "nazev": "Milánská",
+      "gps": "50.0431839N, 14.5544361E",
+      "foto": "DOPLNIT",
+      "houpackaMala": true,
+      "houpacka": true,
+      "houpackaDvojice": true,
+      "piskoviste": true,
+      "skluzavka": true,
+      "kolotoc": true,
+      "dalsiHerniPrvky": [],
+      "stin": true,
+      "stinDetaily": "stín jen odpoledne",
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Milánská",
+      "gps": "50.0431464N, 14.5546875E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": [
+        "trampolínka",
+        "kopečky na přelézání",
+        "otvory na kuličky",
+        "namalované hry (člověče nezlob se, zrcadlo, dráha s čísly, zvířata, skákání...)"
+      ],
+      "stin": false,
+      "stinDetaily": null,
+      "erarniHracky": false,
+      "pisek": false,
+      "kaminky": false,
+      "tartan": true
+    },
+    {
+      "nazev": "R. A. Dvorského",
+      "gps": "50.0434922N, 14.5527097E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": true,
+      "piskoviste": true,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": [],
+      "stin": true,
+      "stinDetaily": "stín jen nad pískovištěm",
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Parmská",
+      "gps": "50.0428489N, 14.5637461E",
+      "foto": "DOPLNIT",
+      "houpackaMala": true,
+      "houpacka": true,
+      "houpackaDvojice": false,
+      "piskoviste": true,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": [],
+      "stin": "DOPLNIT",
+      "stinDetaily": null,
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Lessnerova",
+      "gps": "50.0393797N, 14.5596467E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": true,
+      "skluzavka": false,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["houpací želva"],
+      "stin": true,
+      "stinDetaily": null,
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Galvaniho",
+      "gps": "50.0394717N, 14.5587744E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": true,
+      "piskoviste": false,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["mini kolotoč"],
+      "stin": false,
+      "stinDetaily": null,
+      "erarniHracky": false,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    },
+    {
+      "nazev": "Morseova (street workoutové hřiště) ?",
+      "gps": "50.0358836N, 14.5577158E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": false,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["posilovací prvky"],
+      "stin": "DOPLNIT",
+      "stinDetaily": null,
+      "erarniHracky": false,
+      "pisek": "DOPLNIT",
+      "kaminky": "DOPLNIT",
+      "tartan": "DOPLNIT"
+    },
+    {
+      "nazev": "Morseova",
+      "gps": "50.0364228N, 14.5567611E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": true,
+      "piskoviste": false,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": [
+        "houpací koník",
+        "mini kolotoč",
+        "síť pohyblivých kloboučků na přeskakování",
+        "vysoká prolézačka"
+      ],
+      "stin": true,
+      "stinDetaily": "stín částečně pod stromy",
+      "erarniHracky": false,
+      "pisek": false,
+      "kaminky": false,
+      "tartan": true
+    },
+    {
+      "nazev": "Lánská (pirátská loď)",
+      "gps": "50.0459972N, 14.5580808E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": false,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": true,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["velká prolézačka ve tvaru lodi"],
+      "stin": true,
+      "stinDetaily": "stín jen v podvečer",
+      "erarniHracky": false,
+      "pisek": false,
+      "kaminky": true,
+      "tartan": false
+    },
+    {
+      "nazev": "Boloňská (street workoutové hřiště)",
+      "gps": "50.0472881N, 14.5591139E",
+      "foto": "DOPLNIT",
+      "houpackaMala": false,
+      "houpacka": true,
+      "houpackaDvojice": false,
+      "piskoviste": false,
+      "skluzavka": false,
+      "kolotoc": false,
+      "dalsiHerniPrvky": ["síťová houpačka", "provazová prolézačka"],
+      "stin": true,
+      "stinDetaily": "stín jen odpoledne",
+      "erarniHracky": false,
+      "pisek": false,
+      "kaminky": false,
+      "tartan": true
+    },
+    {
+      "nazev": "Boloňská",
+      "gps": "50.0479750N, 14.5607775E",
+      "foto": "DOPLNIT",
+      "houpackaMala": true,
+      "houpacka": true,
+      "houpackaDvojice": true,
+      "piskoviste": true,
+      "skluzavka": false,
+      "kolotoc": false,
+      "dalsiHerniPrvky": [],
+      "stin": true,
+      "stinDetaily": "stín jen dopoledne",
+      "erarniHracky": true,
+      "pisek": true,
+      "kaminky": false,
+      "tartan": false
+    }
+  ],
+  "vnitrniArealy": [
+    {
+      "nazev": "Aqua Sport Club",
+      "gps": "50.0386019N, 14.5016939E",
+      "adresa": "Mírového hnutí 2385/3, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://www.aquasportclub.cz/plavecky-bazen/"
+    },
+    {
+      "nazev": "Aquapalace Praha",
+      "gps": "50.0075761N, 14.5714894E",
+      "adresa": "Pražská 138, 251 01 Čestlice",
+      "mestskaCast": "Čestlice",
+      "web": "https://www.aquapalace.cz/"
+    },
+    {
+      "nazev": "FunPark Žirafa",
+      "gps": "50.0000764N, 14.5768128E",
+      "adresa": "Obchodní 106, 251 01 Čestlice",
+      "mestskaCast": "Čestlice",
+      "web": "http://www.funparkzirafa.cz/ "
+    },
+    {
+      "nazev": "Hamr Záběhlice",
+      "gps": "50.0530586N, 14.4860553E",
+      "adresa": "K vodě 3200/3, 106 00 Praha 10 - Záběhlice",
+      "mestskaCast": "Záběhlice",
+      "web": "http://www.hamrsport.cz/cs/detsky_koutek/"
+    },
+    {
+      "nazev": "Jump arena",
+      "gps": "50.0671017N, 14.5473775E",
+      "adresa": "Kutnohorská 532, 109 00 Praha - Štěrboholy",
+      "mestskaCast": "Štěrboholy",
+      "web": "https://www.jumpjumpjump.cz/"
+    },
+    {
+      "nazev": "Koala",
+      "gps": "50.0561431N, 14.5429808E",
+      "adresa": "Dolnoměcholupská 209/17, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://www.koalacafe.cz"
+    },
+    {
+      "nazev": "Kulíškov",
+      "gps": "50.0534133N, 14.5178375E",
+      "adresa": "Švehlova 1391/32, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.kuliskov.cz/"
+    },
+    {
+      "nazev": "Pirátský dětský svět",
+      "gps": "50.0725097N, 14.5421122E",
+      "adresa": "Nákupní 389/3, 102 00 Praha - Štěrboholy",
+      "mestskaCast": "Štěrboholy",
+      "web": "http://www.europark.cz/cz/piratsky_detsky_svet"
+    },
+    {
+      "nazev": "Plaváček - pronájem bazénu",
+      "gps": "50.0455339N, 14.5581889E",
+      "adresa": "Milánská 311, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.plavani.com"
+    },
+    {
+      "nazev": "Slunečnice",
+      "gps": "50.0253447N, 14.4926225E",
+      "adresa": "Vojtíškova 1783/2, 148 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://www.detske-centrum-slunecnice.cz/"
+    },
+    {
+      "nazev": "Tanzania",
+      "gps": "50.0406161N, 14.5588367E",
+      "adresa": "Veronské náměstí 403, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.tanzania-park.cz"
+    },
+    {
+      "nazev": "Time Out",
+      "gps": "50.0312078N, 14.4902753E",
+      "adresa": "Roztylská 2321/19, 148 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://www.timeoutplus.cz/koutky.php?page=CZ_C_CH"
+    }
+  ],
+  "venkovniArealy": [
+    {
+      "nazev": "Divoká zahrada Hostivař",
+      "gps": "50.0401453N, 14.5173678E",
+      "adresa": null,
+      "mestskaCast": "Hostivař",
+      "web": "https://lhmp.cz/zachranna-stanice/lesni-zookoutky/divoka-zahrada-hostivar/ "
+    },
+    {
+      "nazev": "Dobrá voda potůček",
+      "gps": "50.0300175N, 14.5632119E",
+      "adresa": "Na Dobré vodě, 104 00 Praha - Křeslice",
+      "mestskaCast": "Křeslice",
+      "web": null
+    },
+    {
+      "nazev": "Dopravní hřiště Horní Měcholupy",
+      "gps": "50.0393753N, 14.5629506E",
+      "adresa": "Veronské nám. 391, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.zsvn.cz/skola/dopravni-hriste"
+    },
+    {
+      "nazev": "Dopravní hřiště Platanová",
+      "gps": "50.0555522N, 14.5093764E",
+      "adresa": "Platanová ulice, 106 00 Praha 10 - Záběhlice",
+      "mestskaCast": "Záběhlice",
+      "web": "https://praha10.cz/sport/volny-cas/detska-hriste/prm/view/id/39049/dopravni-hriste-platanova"
+    },
+    {
+      "nazev": "Gutovka",
+      "gps": "50.0711136N, 14.4910036E",
+      "adresa": "Gutova 39, 100 00 Praha 10 - Strašnice",
+      "mestskaCast": "Strašnice",
+      "web": "https://www.gutovka.cz/"
+    },
+    {
+      "nazev": "Hostivařský lesopark",
+      "gps": "50.0451481N, 14.5369528E",
+      "adresa": null,
+      "mestskaCast": "Hostivař",
+      "web": "http://www.praha-priroda.cz/lesy/hostivarsky-lesopark/"
+    },
+    {
+      "nazev": "Krtkův svět",
+      "gps": "50.0508917N, 14.5655572E",
+      "adresa": "K Měcholupům 777, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://krtkuvsvet.cz/"
+    },
+    {
+      "nazev": "Malešický park",
+      "gps": "50.0850017N, 14.4990378E",
+      "adresa": "Malešická ulice, 10800 Praha 10 - Malešice",
+      "mestskaCast": "Malešice",
+      "web": "https://www.praha.eu/jnp/cz/o_meste/zivot_v_praze/mapa_detskych_hrist/praha_10/malesicky_park.html"
+    },
+    {
+      "nazev": "Milíčov zoopark",
+      "gps": "50.0280586N, 14.5398583E",
+      "adresa": "K Milíčovu 100/8, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.facebook.com/pages/category/Petting-Zoo/Zoopark-Mil%C3%ADčov-2035774800011674 "
+    },
+    {
+      "nazev": "Milíčovský les",
+      "gps": "50.0218064N, 14.5378878E",
+      "adresa": "Praha Újezd",
+      "mestskaCast": "Újezd",
+      "web": "http://www.praha-priroda.cz/lesy/milicovsky-les/"
+    },
+    {
+      "nazev": "Na Šancích",
+      "gps": "50.0379197N, 14.5479481E",
+      "adresa": "Turínská 1494/1, 10900 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.nasancich.cz/"
+    },
+    {
+      "nazev": "Park Malinová-Chrpová",
+      "gps": "50.0568297N, 14.5012389E",
+      "adresa": "Malinová a Chrpová ulice, 10600 Praha 10 - Záběhlice",
+      "mestskaCast": "Záběhlice",
+      "web": "https://verejneprostory.cz/projekty/realizovane/park-malinova-chrpova"
+    },
+    {
+      "nazev": "Park u Chodovské tvrze",
+      "gps": "50.0346300N, 14.4990133E",
+      "adresa": "Ledvinova 9/86, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://chodovskatvrz.cz/"
+    },
+    {
+      "nazev": "pláž Hostivařská přehrada",
+      "gps": "50.0410653N, 14.5333978E",
+      "adresa": "K Jezeru, 100 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://www.hostivarskaprehrada.cz/"
+    },
+    {
+      "nazev": "Toulcův dvůr",
+      "gps": "50.0482556N, 14.5200314E",
+      "adresa": "Kubatova 32/1, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.toulcuvdvur.cz/"
+    }
+  ],
+  "restauraceKavarny": [
+    {
+      "nazev": "Bageterie Boulevard",
+      "gps": "50.0434989N, 14.5676031E",
+      "adresa": "Hornoměcholupská 764, 10900 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.bb.cz"
+    },
+    {
+      "nazev": "Cyklobar Ve Statku",
+      "gps": "50.0244522N, 14.5555886E",
+      "adresa": "Ke Štítu 33, 104 00 Praha - Křeslice",
+      "mestskaCast": "Křeslice",
+      "web": null
+    },
+    {
+      "nazev": "Dolce Carosello",
+      "gps": "50.0756758N, 14.5004539E",
+      "adresa": "Turnovského 497/2, 100 00 Praha 10 - Strašnice",
+      "mestskaCast": "Strašnice",
+      "web": "https://www.dolce-carosello.cz"
+    },
+    {
+      "nazev": "Hostivar 1",
+      "gps": "50.0463689N, 14.5493519E",
+      "adresa": "Lochotínská 656, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.pivovar-hostivar.cz"
+    },
+    {
+      "nazev": "Hostivar H2",
+      "gps": "50.0494186N, 14.5615542E",
+      "adresa": "Hornoměcholupská 750/115, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.pivovar-hostivar.cz"
+    },
+    {
+      "nazev": "Kavárna Jasmínka",
+      "gps": "50.0554542N, 14.5118408E",
+      "adresa": "Jasmínová 2905/37, 10600 Praha 10 - Záběhlice",
+      "mestskaCast": "Záběhlice",
+      "web": "http://www.kavarnajasminka.cz/"
+    },
+    {
+      "nazev": "Koala café",
+      "gps": "50.0561431N, 14.5429808E",
+      "adresa": "Dolnoměcholupská 209/17, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://www.koalacafe.cz"
+    },
+    {
+      "nazev": "Mlýn na Dobré vodě",
+      "gps": "50.0300175N, 14.5632119E",
+      "adresa": "Na Dobré vodě 39, 104 00 Praha - Křeslice",
+      "mestskaCast": "Křeslice"
+    },
+    {
+      "nazev": "Na Šancích",
+      "gps": "50.0379197N, 14.5479481E",
+      "adresa": "Turínská 1494/1, 109 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.nasancich.cz/"
+    },
+    {
+      "nazev": "Pizzerie Milano",
+      "gps": "50.0464744N, 14.5559864E",
+      "adresa": "Milánská 571, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.milano-pizzeria.cz/"
+    },
+    {
+      "nazev": "Zelenkova cukrárna",
+      "gps": "50.0406150N, 14.5588369E",
+      "adresa": "Veronské nám. 403, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.zelenkovacukrarna.cz"
+    },
+    {
+      "nazev": "Zmrzlinárna Míček",
+      "gps": "50.0478114N, 14.5515939E",
+      "adresa": "U Golfu 565, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.golfhostivar.cz/cukrarna-zmrzlinarna/"
+    }
+  ],
+  "lekari": [
+    {
+      "nazev": "Alblová Lucie",
+      "specializace": "fyzioterapie",
+      "gps": "50.0724847N, 14.5084294E",
+      "adresa": "Úvalská 3289/10a, 100 00 Praha 10 - Strašnice",
+      "mestskaCast": "Strašnice",
+      "web": "https://www.fyzio-pro-deti.cz/"
+    },
+    {
+      "nazev": "Alfa medica",
+      "specializace": "orl",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "www.usni.cz"
+    },
+    {
+      "nazev": "Bečvářová Nicola",
+      "specializace": "logopedie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.prahapetrovice.cz/oddeleni/logopedie"
+    },
+    {
+      "nazev": "Czinnerová Milada",
+      "specializace": "pediatrie",
+      "gps": "50.0463006N, 14.5140050E",
+      "adresa": "Tesaříkova 1027/2, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.firmy.cz/detail/1884067-mudr-milada-czinnerova-praha-hostivar.html"
+    },
+    {
+      "nazev": "Dentální centrum Hostivař",
+      "specializace": "stomatologie",
+      "gps": "50.0525825N, 14.5410172E",
+      "adresa": "Weilova 1270/4, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://stomatologiehostivar.cz/"
+    },
+    {
+      "nazev": "Dohnalová Dagmar",
+      "specializace": "pediatrie",
+      "gps": "50.0259925N, 14.5178011E",
+      "adresa": "Opatovská 1763/11, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://euc.cz/nase-zarizeni/kliniky/euc-klinika-praha-opatovska/prakticke-lekarstvi-pro-deti-a-dorost/mudr-dagmar-dohnalova/"
+    },
+    {
+      "nazev": "Elpeko",
+      "specializace": "fyzioterapie",
+      "gps": "50.0424025N, 14.5872672E",
+      "adresa": "Bečovská 656/14, 104 00 Praha 22 - Uhříněves",
+      "mestskaCast": "Uhříněves",
+      "web": "https://www.rehabilitace-uhrineves.cz/"
+    },
+    {
+      "nazev": "Elpeko",
+      "specializace": "fyzioterapie",
+      "gps": "50.0357508N, 14.5931744E",
+      "adresa": "Přátelství 370/25, 104 00 Praha 22 - Uhříněves",
+      "mestskaCast": "Uhříněves",
+      "web": "https://www.rehabilitace-uhrineves.cz/"
+    },
+    {
+      "nazev": "Francová Věra",
+      "specializace": "pediatrie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://katalog.praha11.cz/redakce/index.php?xuser=&lanG=cs&dr=1257"
+    },
+    {
+      "nazev": "Fyzio klinika",
+      "specializace": "fyzioterapie",
+      "gps": "50.0326878N, 14.5132733E",
+      "adresa": "Machkova 1642/2, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://www.fyzioklinika.cz/"
+    },
+    {
+      "nazev": "Gerstmanová Helena",
+      "specializace": "dermatologie",
+      "gps": "50.0241472N, 14.5213800E",
+      "adresa": "Tererova 1355/4, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://katalog.praha11.cz/redakce/index.php?xuser=&lanG=cs&dr=1200"
+    },
+    {
+      "nazev": "Hendrychová Zdeňka",
+      "specializace": "pediatrie",
+      "gps": "50.0259925N, 14.5178011E",
+      "adresa": "Opatovská 1763/11, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://euc.cz/nase-zarizeni/kliniky/euc-klinika-praha-opatovska/prakticke-lekarstvi-pro-deti-a-dorost/mudr-zdenka-hendrychova/"
+    },
+    {
+      "nazev": "Janíková Iva",
+      "specializace": "ortopedie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.prahapetrovice.cz/oddeleni/ortopedie"
+    },
+    {
+      "nazev": "Jiráňová Ivana",
+      "specializace": "stomatologie",
+      "gps": "50.0548525N, 14.5315192E",
+      "adresa": "U Hostivařského nádraží 1328/6, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.firmy.cz/detail/12832376-mudr-ivana-jiranova-praha-hostivar.html "
+    },
+    {
+      "nazev": "Joura Michal",
+      "specializace": "alergologie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.prahapetrovice.cz/oddeleni/alergologie"
+    },
+    {
+      "nazev": "Klečková Erika",
+      "specializace": "pediatrie",
+      "gps": "50.0463200N, 14.5589608E",
+      "adresa": "Boloňská 312/10, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.detskydoktor.cz/lekar/mudr-erika-kleckova-praha-horni-mecholupy/"
+    },
+    {
+      "nazev": "Kokaisl Radek",
+      "specializace": "ortodoncie",
+      "gps": "50.0802200N, 14.5012344E",
+      "adresa": "Plaňanská 573/1, 108 00 Praha 10 - Malešice",
+      "mestskaCast": "Malešice",
+      "web": "https://www.rovnatka-praha10.cz"
+    },
+    {
+      "nazev": "Königová Wachsmuth Ivana",
+      "specializace": "pediatrie",
+      "gps": "50.0463200N, 14.5589608E",
+      "adresa": "Boloňská 312/10, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.detskydoktor.cz/lekar/mudr-ivana-konigova-praha10/ "
+    },
+    {
+      "nazev": "Kubartová Alexandra",
+      "specializace": "pediatrie",
+      "gps": "50.0489983N, 14.5470072E",
+      "adresa": "Golfová 910/10, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://mudr-kubartova-alexandra.zdravotniregistr.cz"
+    },
+    {
+      "nazev": "Lampa Roman",
+      "specializace": "ortodoncie",
+      "gps": "50.0548525N, 14.5315192E",
+      "adresa": "U Hostivařského nádraží 1328/6, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.firmy.cz/detail/383811-mudr-roman-lampa-praha-hostivar.html"
+    },
+    {
+      "nazev": "Luňáková Andrea",
+      "specializace": "orl",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.prahapetrovice.cz/oddeleni/orl"
+    },
+    {
+      "nazev": "Majdent",
+      "specializace": "stomatologie",
+      "gps": "50.0395861N, 14.5070925E",
+      "adresa": "Majerského 2039/23, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "www.majdent.cz"
+    },
+    {
+      "nazev": "Malé zdraví ",
+      "specializace": "pediatrie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://malezdravi.cz/male-zdravi-praha-haje"
+    },
+    {
+      "nazev": "Malé zdraví ",
+      "specializace": "pediatrie",
+      "gps": "50.0534150N, 14.5178375E",
+      "adresa": "Švehlova 1391/32, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://malezdravi.cz/male-zdravi-praha-hostivar"
+    },
+    {
+      "nazev": "Markalousová Jana",
+      "specializace": "orl",
+      "gps": "50.0401089N, 14.5650133E",
+      "adresa": "Janovská 486, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.orlpraha-markalousova.cz/"
+    },
+    {
+      "nazev": "Medicavera",
+      "specializace": "fyzioterapie",
+      "gps": "50.0463200N, 14.5589608E",
+      "adresa": "Boloňská 312/10, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.medicavera.cz/"
+    },
+    {
+      "nazev": "Melicharová Věra",
+      "specializace": "pediatrie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.detskylekarpraha10.cz/"
+    },
+    {
+      "nazev": "Monada",
+      "specializace": "fyzioterapie",
+      "gps": "50.0331417N, 14.5258931E",
+      "adresa": "Hviezdoslavova 519/10, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.monada.cz/"
+    },
+    {
+      "nazev": "Opatovská pediatrie",
+      "specializace": "pediatrie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://www.opatovskapediatrie.cz"
+    },
+    {
+      "nazev": "Opatovská pediatrie",
+      "specializace": "pediatrie",
+      "gps": "50.0259925N, 14.5178011E",
+      "adresa": "Opatovská 1763/11, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://www.opatovskapediatrie.cz"
+    },
+    {
+      "nazev": "Ordinace klinické logopedie",
+      "specializace": "logopedie",
+      "gps": "50.0241472N, 14.5213800E",
+      "adresa": "Tererova 1355/4, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://www.logopedie-tererovapraha4.cz/"
+    },
+    {
+      "nazev": "ORL Tererova",
+      "specializace": "orl",
+      "gps": "50.0241472N, 14.5213800E",
+      "adresa": "Tererova 1355/4, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "http://www.orltererova.cz/"
+    },
+    {
+      "nazev": "OrtoArt ortodontická ordinace s.r.o.",
+      "specializace": "ortodoncie",
+      "gps": "50.0562181N, 14.4970431E",
+      "adresa": "Jabloňová 2992/8, 106 00 Praha 10 - Záběhlice",
+      "mestskaCast": "Záběhlice",
+      "web": "http://www.poliklinikazahradnimesto.cz/odborn/stoma.html "
+    },
+    {
+      "nazev": "Pacltová Anna",
+      "specializace": "pediatrie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.firmy.cz/detail/370582-mudr-anna-pacltova-praha-haje.html"
+    },
+    {
+      "nazev": "Pacltová Dagmar",
+      "specializace": "pediatrie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://katalog.praha11.cz/redakce/index.php?xuser=&lanG=cs&dr=1261"
+    },
+    {
+      "nazev": "Pekárek Chodov",
+      "specializace": "stomatologie",
+      "gps": "50.0328297N, 14.4983956E",
+      "adresa": "Starochodovská 1750/91, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "http://www.pekarek.dental/dum-zubni-pece-chodov"
+    },
+    {
+      "nazev": "Pekárek Strašnice",
+      "specializace": "stomatologie",
+      "gps": "50.0722111N, 14.4869442E",
+      "adresa": "Nad olšinami 672/4, 100 00 Praha 10 - Strašnice",
+      "mestskaCast": "Strašnice",
+      "web": "http://www.pekarek.dental/dum-zubni-pece-strasnice"
+    },
+    {
+      "nazev": "Petrlíková Petra",
+      "specializace": "logopedie",
+      "gps": "50.0463200N, 14.5589608E",
+      "adresa": "Boloňská 312/10, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.petrlikova.cz/"
+    },
+    {
+      "nazev": "Poláková Marcela",
+      "specializace": "pediatrie",
+      "gps": "50.0463200N, 14.5589608E",
+      "adresa": "Boloňská 312/10, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.mediclinic.cz/lekar/praha-10-horni-mecholupy-polakova"
+    },
+    {
+      "nazev": "Pospíšilová Lenka",
+      "specializace": "oční",
+      "gps": "50.0331697N, 14.5260722E",
+      "adresa": "Hviezdoslavova 520/12, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://www.ocni-pospisilova.cz/"
+    },
+    {
+      "nazev": "Rehabilitace Petrovice",
+      "specializace": "fyzioterapie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "http://www.rehabilitacepetrovice.cz/"
+    },
+    {
+      "nazev": "RehAktiv",
+      "specializace": "fyzioterapie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "http://www.rehaktiv.cz/"
+    },
+    {
+      "nazev": "Schůtová Vlasta",
+      "specializace": "pediatrie",
+      "gps": "50.0463006N, 14.5140050E",
+      "adresa": "Tesaříkova 1027/2, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.mudrschutova-hostivar-pediatr.cz"
+    },
+    {
+      "nazev": "Steinerová Judita",
+      "specializace": "dermatologie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://www.steiner.cz/kozni/"
+    },
+    {
+      "nazev": "Šnajdrová Jitka",
+      "specializace": "pediatrie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.prahapetrovice.cz/oddeleni/pediatrie"
+    },
+    {
+      "nazev": "Taxová Hana",
+      "specializace": "pediatrie",
+      "gps": "50.0286425N, 14.5215628E",
+      "adresa": "Konstantinova 1479/1, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://www.taxova.infolekar.cz/"
+    },
+    {
+      "nazev": "Vavřečková Anna",
+      "specializace": "pediatrie",
+      "gps": "50.0259925N, 14.5178011E",
+      "adresa": "Opatovská 1763/11, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://katalog.praha11.cz/redakce/index.php?xuser=&lanG=cs&dr=1003"
+    },
+    {
+      "nazev": "Wagenknechtová Šárka",
+      "specializace": "logopedie",
+      "gps": "50.0387564N, 14.5597908E",
+      "adresa": "Ohmova 271, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://klinicka-logopedie-bolonska.webnode.cz"
+    },
+    {
+      "nazev": "Zbořilová Eva",
+      "specializace": "oční",
+      "gps": "50.0489983N, 14.5470072E",
+      "adresa": "Golfová 910/10, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.ocni-zborilova.cz"
+    },
+    {
+      "nazev": "Zikmundová Vítězslava",
+      "specializace": "pediatrie",
+      "gps": "50.0333439N, 14.5284692E",
+      "adresa": "Anny Drabíkové 534/3, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://katalog.praha11.cz/redakce/index.php?xuser=&lanG=cs&dr=1263"
+    }
+  ],
+  "krouzky": [
+    {
+      "nazev": "Aerobik",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.sang.cz"
+    },
+    {
+      "nazev": "Angličtina Helen Doron",
+      "typ": "cizí jazyky",
+      "gps": "50.0560117N, 14.5356736E",
+      "adresa": "U Branek 674/9, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://centrumvorisek.cz/co-nabizime/anglictina-pro-deti-helen-doron-english/"
+    },
+    {
+      "nazev": "Angličtina s dráčkem Billym",
+      "typ": "cizí jazyky",
+      "gps": "50.0360039N, 14.5565078E",
+      "adresa": "Edisonova 429, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "http://bastafidli.net/ostatni-kurzy-pro-deti/"
+    },
+    {
+      "nazev": "Aqua Sport Club",
+      "typ": "sportovní",
+      "gps": "50.0386019N, 14.5016939E",
+      "adresa": "Mírového hnutí 2385/3, 149 00 Praha 11 - Chodov",
+      "mestskaCast": "Chodov",
+      "web": "https://www.aquasportclub.cz/kurzy-plavani/"
+    },
+    {
+      "nazev": "Baby dance Praha",
+      "typ": "sportovní",
+      "gps": "50.0314897N, 14.5284047E",
+      "adresa": "Arkalycká 877/1, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.babydancepraha.cz"
+    },
+    {
+      "nazev": "Baby jóga",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.squashpoint.cz/lekce/baby-joga/"
+    },
+    {
+      "nazev": "Brick by Brick",
+      "typ": "ostatní",
+      "gps": "50.0406161N, 14.5588367E",
+      "adresa": "Veronské náměstí 403, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.brickbybrick.cz"
+    },
+    {
+      "nazev": "Cvičení pro děti",
+      "typ": "sportovní",
+      "gps": "50.0360039N, 14.5565078E",
+      "adresa": "Edisonova 429, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "http://www.bemama.cz/cviceni-pro-rodice-s-detmi/"
+    },
+    {
+      "nazev": "Cvičení pro děti",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.squashpoint.cz/lekce/cviceni-pro-male-deti/"
+    },
+    {
+      "nazev": "Cvičení pro děti",
+      "typ": "sportovní",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Dance4child",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.squashpoint.cz/lekce/dance4child/"
+    },
+    {
+      "nazev": "Dětský sbor MuŠka",
+      "typ": "hudební",
+      "gps": "50.0350603N, 14.5557514E",
+      "adresa": "Edisonova 27/21, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.muskaskolka.cz/cs/odpoledni-krouzky/"
+    },
+    {
+      "nazev": "Gymnathlon",
+      "typ": "sportovní",
+      "gps": "50.0469700N, 14.5615733E",
+      "adresa": "Křimická 314, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.gymnathlon.cz/"
+    },
+    {
+      "nazev": "Gymnathlon",
+      "typ": "sportovní",
+      "gps": "50.0409703N, 14.5502594E",
+      "adresa": "Nad Přehradou 469, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.gymnathlon.cz/"
+    },
+    {
+      "nazev": "Hravé a pohybové tvoření s rodiči",
+      "typ": "výtvarné",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Jóga pro děti",
+      "typ": "sportovní",
+      "gps": "50.0350603N, 14.5557514E",
+      "adresa": "Edisonova 27/21, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.muskaskolka.cz/cs/odpoledni-krouzky/"
+    },
+    {
+      "nazev": "Jóga pro děti",
+      "typ": "sportovní",
+      "gps": "50.0558222N, 14.5352561E",
+      "adresa": "U Branek 674/7, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.sokolhostivar.cz/cviceni-deti/"
+    },
+    {
+      "nazev": "Judo Academy",
+      "typ": "sportovní",
+      "gps": "50.0363156N, 14.5245722E",
+      "adresa": "Květnového vítězství 85, 149 00  Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.judoprodeti.cz"
+    },
+    {
+      "nazev": "Jumping pro děti",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.squashpoint.cz/lekce/jumping-pro-deti/"
+    },
+    {
+      "nazev": "Keramicko-výtvarný kroužek",
+      "typ": "výtvarné",
+      "gps": "50.0350603N, 14.5557514E",
+      "adresa": "Edisonova 27/21, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.muskaskolka.cz/cs/odpoledni-krouzky/"
+    },
+    {
+      "nazev": "Keramika",
+      "typ": "výtvarné",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Kruhový trénink pro děti",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.squashpoint.cz/lekce/kruhovy-trenink-pro-deti/"
+    },
+    {
+      "nazev": "Malý muzikant",
+      "typ": "hudební",
+      "gps": "50.0360039N, 14.5565078E",
+      "adresa": "Edisonova 429, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.malymuzikant.cz"
+    },
+    {
+      "nazev": "Malý objevitel bez rodičů",
+      "typ": "ostatní",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Míčové hry pro děti",
+      "typ": "sportovní",
+      "gps": "50.0558222N, 14.5352561E",
+      "adresa": "U Branek 674/7, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.sokolhostivar.cz/cviceni-deti/"
+    },
+    {
+      "nazev": "Montessori",
+      "typ": "ostatní",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Muzicírování se zvířátky",
+      "typ": "hudební",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Německy od malička",
+      "typ": "cizí jazyky",
+      "gps": "50.0560117N, 14.5356736E",
+      "adresa": "U Branek 674/9, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://centrumvorisek.cz/co-nabizime/nemcina-pro-deti/"
+    },
+    {
+      "nazev": "Plaváček",
+      "typ": "sportovní",
+      "gps": "50.0455339N, 14.5581889E",
+      "adresa": "Milánská 311, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.plavani.com"
+    },
+    {
+      "nazev": "Play Wisely",
+      "typ": "ostatní",
+      "gps": "50.0560117N, 14.5356736E",
+      "adresa": "U Branek 674/9, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://centrumvorisek.cz/co-nabizime/play-wisely-moudre-hrani/"
+    },
+    {
+      "nazev": "Pohybovka pro děti",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.sang.cz"
+    },
+    {
+      "nazev": "Sokol Hostivař",
+      "typ": "sportovní",
+      "gps": "50.0558222N, 14.5352561E",
+      "adresa": "U Branek 674/7, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.sokolhostivar.cz/cviceni-deti/"
+    },
+    {
+      "nazev": "Sokol Petrovice",
+      "typ": "sportovní",
+      "gps": "50.0350828N, 14.5574344E",
+      "adresa": "Bellova 56, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "http://www.sokol-petrovice.cz/index.php?id=cviceni-pro-deti"
+    },
+    {
+      "nazev": "Tanečky bez rodičů",
+      "typ": "sportovní",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz/rodinne-centrum/pravidelne-kurzy/"
+    },
+    {
+      "nazev": "Taneční kroužek",
+      "typ": "sportovní",
+      "gps": "50.0350603N, 14.5557514E",
+      "adresa": "Edisonova 27/21, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.muskaskolka.cz/cs/odpoledni-krouzky/"
+    },
+    {
+      "nazev": "Tenisová škola",
+      "typ": "sportovní",
+      "gps": "50.0279875N, 14.5347475E",
+      "adresa": "K Milíčovu 674/2, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.tallent.cz/strediska/praha/zs-k-milicovu-2/"
+    },
+    {
+      "nazev": "Velký muzikant",
+      "typ": "hudební",
+      "gps": "50.0350603N, 14.5557514E",
+      "adresa": "Edisonova 27/21, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.muskaskolka.cz/cs/odpoledni-krouzky/"
+    },
+    {
+      "nazev": "Yamaha",
+      "typ": "hudební",
+      "gps": "50.0558222N, 14.5352561E",
+      "adresa": "U Branek 674/7, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.hudbaproradost.cz"
+    },
+    {
+      "nazev": "Yamaha",
+      "typ": "hudební",
+      "gps": "50.0413736N, 14.5605028E",
+      "adresa": "Veronské náměstí 595, 10900 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.hudbaproradost.cz"
+    },
+    {
+      "nazev": "Zumba pro děti",
+      "typ": "sportovní",
+      "gps": "50.0358214N, 14.5223108E",
+      "adresa": "Květnového vítězství 938/79, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.squashpoint.cz/lekce/zumba-pro-deti/"
+    }
+  ],
+  "skolky": [
+    {
+      "nazev": "Berušky",
+      "gps": "50.0453747N, 14.5540494E",
+      "adresa": "Jaroměřská 206, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.mojeskolicka.cz"
+    },
+    {
+      "nazev": "Broučci",
+      "gps": "50.0453747N, 14.5540494E",
+      "adresa": "Jaroměřská 206, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.mojeskolicka.cz"
+    },
+    {
+      "nazev": "Človíček",
+      "gps": "50.0487503N, 14.5369950E",
+      "adresa": "Kunická 1568, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://mshostivar.sportovniskoly.cz"
+    },
+    {
+      "nazev": "Človíček",
+      "gps": "50.0413736N, 14.5605028E",
+      "adresa": "Veronské náměstí 595, 10900 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://dsclovicek.sportovniskoly.cz"
+    },
+    {
+      "nazev": "Dino Preschool",
+      "gps": "50.0349433N, 14.5604164E",
+      "adresa": "Bellova 352, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://dinoskola.cz/materska-skola/"
+    },
+    {
+      "nazev": "DO LESA!",
+      "gps": "50.0462336N, 14.5390842E",
+      "adresa": "K Lesoparku, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.dolesa.net"
+    },
+    {
+      "nazev": "Frydolínek",
+      "gps": "50.0558222N, 14.5352561E",
+      "adresa": "U Branek 674/7, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://www.sokolhostivar.cz/centrum/"
+    },
+    {
+      "nazev": "Košík",
+      "gps": "50.0447522N, 14.5192692E",
+      "adresa": "K Horkám 504/40, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://www.mskosik-hostivar.cz/"
+    },
+    {
+      "nazev": "Montýsek",
+      "gps": "50.0420967N, 14.5573572E",
+      "adresa": "Bolevecká 474, 109 00 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "https://www.montysek.cz"
+    },
+    {
+      "nazev": "Muška",
+      "gps": "50.0350603N, 14.5557514E",
+      "adresa": "Edisonova 27/21, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.muskaskolka.cz/cs/"
+    },
+    {
+      "nazev": "Pilné včelky",
+      "gps": "50.0349447N, 14.5223486E",
+      "adresa": "Pacajevova 954/30, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "http://rcpilnevcelky.cz"
+    },
+    {
+      "nazev": "Rarášek",
+      "gps": "50.0469700N, 14.5615733E",
+      "adresa": "Křimická 314, 10900 Praha 15 - Horní Měcholupy",
+      "mestskaCast": "Horní Měcholupy",
+      "web": "http://www.mojeskolicka.cz"
+    },
+    {
+      "nazev": "Semínko",
+      "gps": "50.0482556N, 14.5200314E",
+      "adresa": "Kubatova 32/1, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://www.toulcuvdvur.cz/stranka/o-seminku"
+    },
+    {
+      "nazev": "Sluníčka",
+      "gps": "50.0496256N, 14.5317550E",
+      "adresa": "U břehu 638, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "http://slunicka.com"
+    },
+    {
+      "nazev": "Snopík",
+      "gps": "50.0360039N, 14.5565078E",
+      "adresa": "Edisonova 429, 109 00 Praha 10 - Petrovice",
+      "mestskaCast": "Petrovice",
+      "web": "https://www.rc-snopik.cz"
+    },
+    {
+      "nazev": "Voříšek",
+      "gps": "50.0560117N, 14.5356736E",
+      "adresa": "U Branek 674/9, 102 00 Praha 15 - Hostivař",
+      "mestskaCast": "Hostivař",
+      "web": "https://centrumvorisek.cz"
+    },
+    {
+      "nazev": "Wonderland",
+      "gps": "50.0324878N, 14.5301567E",
+      "adresa": "Kosmická 537, 149 00 Praha 11 - Háje",
+      "mestskaCast": "Háje",
+      "web": "https://www.english-wonderland.cz/"
+    }
+  ]
+}
