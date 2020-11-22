@@ -1,0 +1,18 @@
+.category-item {
+  display: flex;
+}
+
+.category-item__image {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  margin: 8px;
+}
+
+.category-item__details {
+  margin: 8px;
+}
+
+.category-item__name {
+  margin-top: 0;
+}
