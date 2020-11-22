@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Navigation } from './Navigation/index.jsx';
 import './index.html';
 import './styles.css';
 
@@ -13,51 +14,6 @@ const routes = [
   { path: '/skolky', component: Skolky },
   { path: '/lekari', component: Lekari },
 ];
-
-const Navigation = () => (
-  <nav>
-    <ul>
-      <li>
-        <img src="../assets/icons/vse.png" alt="ikona mimino" />
-        Vše
-      </li>
-      <li>
-        <img src="../assets/icons/hriste.png" alt="ikona kyblík a lopatka" />
-        <Link to="/hriste">Dětská hřiště</Link>
-      </li>
-      <li>
-        <img src="../assets/icons/venkovni-arealy.png" alt="ikona větrník" />
-        <Link to="/venkovni-arealy">Venkovní areály</Link>
-      </li>
-      <li>
-        <img
-          src="../assets/icons/vnitrni-arealy.png"
-          alt="ikona stavba z kostek"
-        />
-        <Link to="/vnitrni-arealy">Vnitřní areály</Link>
-      </li>
-      <li>
-        <img
-          src="../assets/icons/restaurace.png"
-          alt="ikona lžíce a vidlička"
-        />
-        <Link to="/restaurace">Restaurace, kavárny</Link>
-      </li>
-      <li>
-        <img src="../assets/icons/krouzky.png" alt="ikona puzzle" />
-        <Link to="/krouzky">Kroužky</Link>
-      </li>
-      <li>
-        <img src="../assets/icons/skolky.png" alt="ikona kostky" />
-        <Link to="/skolky">Soukromé školky</Link>
-      </li>
-      <li>
-        <img src="../assets/icons/lekari.png" alt="ikona kříž" />
-        <Link to="/lekari">Dětští lékaři</Link>
-      </li>
-    </ul>
-  </nav>
-);
 
 const Hriste = () => {
   return (
