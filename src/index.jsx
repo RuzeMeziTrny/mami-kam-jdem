@@ -78,7 +78,9 @@ const App = () => (
   <Router>
     <header>
       <h1>
-        <Link to="/">Mami, kam jdem?</Link>
+        <Link to="/" className="main-heading">
+          Mami, kam jdem?
+        </Link>
       </h1>
       <Navigation />
     </header>
