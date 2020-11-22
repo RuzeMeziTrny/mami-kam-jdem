@@ -6,16 +6,16 @@ import './index.html';
 import './styles.css';
 
 const routes = [
-  { path: '/hriste', component: Hriste },
-  { path: '/venkovni-arealy', component: VenkovniArealy },
-  { path: '/vnitrni-arealy', component: VnitrniArealy },
-  { path: '/restaurace', component: Restaurace },
-  { path: '/krouzky', component: Krouzky },
-  { path: '/skolky', component: Skolky },
-  { path: '/lekari', component: Lekari },
+  { path: '/hriste', component: Playgrounds },
+  { path: '/venkovni-arealy', component: OutdoorSpaces },
+  { path: '/vnitrni-arealy', component: InnerSpaces },
+  { path: '/restaurace', component: Restaurants },
+  { path: '/krouzky', component: Groups },
+  { path: '/skolky', component: Kindergartens },
+  { path: '/lekari', component: Doctors },
 ];
 
-const Hriste = () => {
+const Playgrounds = () => {
   return (
     <div>
       <p>filtry pro hřiště</p>
@@ -24,7 +24,7 @@ const Hriste = () => {
   );
 };
 
-const VenkovniArealy = () => {
+const OutdoorSpaces = () => {
   return (
     <div>
       <p>seznam venkovních areálů</p>
@@ -32,7 +32,7 @@ const VenkovniArealy = () => {
   );
 };
 
-const VnitrniArealy = () => {
+const InnerSpaces = () => {
   return (
     <div>
       <p>seznam vnitřních areálů</p>
@@ -40,7 +40,7 @@ const VnitrniArealy = () => {
   );
 };
 
-const Restaurace = () => {
+const Restaurants = () => {
   return (
     <div>
       <p>seznam restaurací a kaváren</p>
@@ -48,7 +48,7 @@ const Restaurace = () => {
   );
 };
 
-const Krouzky = () => {
+const Groups = () => {
   return (
     <div>
       <p>filtry pro kroužky</p>
@@ -57,7 +57,7 @@ const Krouzky = () => {
   );
 };
 
-const Skolky = () => {
+const Kindergartens = () => {
   return (
     <div>
       <p>seznam školek</p>
@@ -65,7 +65,7 @@ const Skolky = () => {
   );
 };
 
-const Lekari = () => {
+const Doctors = () => {
   return (
     <div>
       <p>filtry pro lékaře</p>
@@ -87,25 +87,25 @@ const App = () => (
     <main>
       <Switch>
         <Route path="/hriste">
-          <Hriste />
+          <Playgrounds />
         </Route>
         <Route path="/venkovni-arealy">
-          <VenkovniArealy />
+          <OutdoorSpaces />
         </Route>
         <Route path="/vnitrni-arealy">
-          <VnitrniArealy />
+          <InnerSpaces />
         </Route>
         <Route path="/restaurace">
-          <Restaurace />
+          <Restaurants />
         </Route>
         <Route path="/krouzky">
-          <Krouzky />
+          <Groups />
         </Route>
         <Route path="/skolky">
-          <Skolky />
+          <Kindergartens />
         </Route>
         <Route path="/lekari">
-          <Lekari />
+          <Doctors />
         </Route>
         {/* z nějakého důvodu nefunguje - opravit:
         {routes.map((route, index) => (

@@ -9,33 +9,35 @@ body {
 
 .nav {
   border: 1px solid black;
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 
 .nav__category-icon {
-  width: 20%;
-  height: 20%;
+  width: 15%;
+  height: 15%;
 }
 
 .nav__item {
   display: flex;
-  padding: 15px 0 15px 0;
+  padding: 1em;
 }
 
 .nav__list {
   list-style-type: none;
   padding: 0;
-  width: 50%;
   font-family: 'Atma', cursive;
+  margin: 0;
 }
 
+/*rozšířit na celou plochu pro hover*/
 .nav__link {
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.1em;
   font-weight: 600;
   text-align: left;
   padding-left: 30px;
+  align-self: center;
 }
 
 .main-heading {
@@ -50,11 +52,11 @@ body {
   color: #68bdff;
 }
 
-.nav__link--outdoor_spaces {
+.nav__link--outdoor-spaces {
   color: #6cbf45;
 }
 
-.nav__link--inner_spaces {
+.nav__link--inner-spaces {
   color: #ffcf00;
 }
 
@@ -79,4 +81,6 @@ body {
   font-size: 1em;
   font-weight: 600;
   width: 100%;
+  margin: 0;
+  font-family: 'Atma', cursive;
 }

@@ -32,7 +32,7 @@ export const Navigation = () => (
         />
         <Link
           to="/venkovni-arealy"
-          className="nav__link nav__link--outdoor_spaces"
+          className="nav__link nav__link--outdoor-spaces"
         >
           Venkovní areály
         </Link>
@@ -45,7 +45,7 @@ export const Navigation = () => (
         />
         <Link
           to="/vnitrni-arealy"
-          className="nav__link nav__link--inner_spaces"
+          className="nav__link nav__link--inner-spaces"
         >
           Vnitřní areály
         </Link>
