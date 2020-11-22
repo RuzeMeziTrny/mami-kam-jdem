@@ -4,15 +4,16 @@ import './styles.css';
 
 export const Navigation = () => (
   <nav className="nav">
+    <button className="nav__item nav__item--all">
+      <img
+        className="nav__category-icon"
+        src="../assets/icons/vse.png"
+        alt="ikona mimino"
+      />
+      Vše
+    </button>
+
     <ul className="nav__list">
-      <li className="nav__item nav__item--all">
-        <img
-          className="nav__category-icon"
-          src="../assets/icons/vse.png"
-          alt="ikona mimino"
-        />
-        Vše
-      </li>
       <li className="nav__item">
         <img
           className="nav__category-icon"
