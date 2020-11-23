@@ -21,6 +21,11 @@ body {
 .nav__item {
   display: flex;
   padding: 1em;
+  display: none;
+}
+
+.nav__item--show {
+  display: block;
 }
 
 .nav__list {
@@ -76,7 +81,7 @@ body {
   color: #512fd8;
 }
 
-.nav__item--all {
+.nav__button {
   color: rgb(11, 11, 97);
   font-size: 1em;
   font-weight: 600;
