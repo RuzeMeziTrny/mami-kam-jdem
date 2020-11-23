@@ -12,7 +12,7 @@ export const CategoryItem = (props) => {
       <div className="category-item__details">
         <p className="category-item__name">{props.name}</p>
         <p className="category-item__address">{props.address}</p>
-        <a className="category-item__web" href={props.web}>
+        <a className="category-item__web" href={props.web} target="_blank">
           {props.web}
         </a>
       </div>

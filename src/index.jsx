@@ -1,7 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import { Navigation } from './Navigation/index.jsx';
+import { Navigation } from './components/Navigation/index.jsx';
+import { Map } from './components/Map/index.jsx';
 import './index.html';
 import './styles.css';
 
@@ -113,6 +114,7 @@ const App = () => (
         ))}
         */}
       </Switch>
+      <Map />
     </main>
   </Router>
 );
