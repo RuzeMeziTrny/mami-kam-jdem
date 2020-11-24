@@ -1,31 +1,72 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './styles.css';
-
-/*a s tím klikem jak jsme říkaly,
-přidat stav s boolean hodnotou
-na button onClick={() => setStav(!stav)}
-u každého <li> className={stav ? “nav__item nav__item--show” : “nav__item”}*/
 
 export const Navigation = () => {
   const [opened, setOpened] = useState(true);
+
+  const location = useLocation();
+
+  /* přidal další klíč pro ikonu */
+  const items = {
+    '/': { label: 'Vše' },
+    '/hriste': {
+      label: 'Dětská hřiště',
+      className: 'nav__link--playgrounds',
+    },
+    '/venkovni-arealy': {
+      label: 'Venkovní areály',
+      className: 'nav__link--outdoor-spaces',
+    },
+    '/vnitrni-arealy': {
+      label: 'Vnitřní areály',
+      className: 'nav__link--inner-spaces',
+    },
+    '/restaurace': {
+      label: 'Restaurace, kavárny',
+      className: 'nav__link--restaurants',
+    },
+    '/krouzky': {
+      label: 'Kroužky',
+      className: 'nav__link--groups',
+    },
+    '/skolky': {
+      label: 'Soukromé školky',
+      className: 'nav__link--kindergartens',
+    },
+    '/lekari': {
+      label: 'Dětští lékaři',
+      className: 'nav__link--doctors',
+    },
+  };
+
+  const selectedItem = items[location.pathname];
 
   return (
     <nav className="nav">
       <button onClick={() => setOpened(!opened)} className="nav__button">
         <img
           className="nav__category-icon"
-          src="../assets/icons/vse.png"
+          src="../../assets/icons/all.svg"
           alt="ikona mimino"
         />
-        <span class="button__heading">Vše</span>
+        <span
+          className={`button__heading ${
+            selectedItem.className ? selectedItem.className : ''
+          }`}
+        >
+          {selectedItem.label}
+        </span>
       </button>
 
-      <ul className={opened ? 'nav__list--show' : 'nav__list'}>
+      <ul
+        className={opened ? 'nav__list--show' : 'nav__list'}
+        onClick={() => setOpened(!opened)}
+      >
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/hriste.png"
+            src="../../assets/icons/playgrounds.svg"
             alt="ikona kyblík a lopatka"
           />
           <Link to="/hriste" className="nav__link nav__link--playgrounds">
@@ -35,7 +76,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/venkovni-arealy.png"
+            src="../../assets/icons/outdoor-spaces.svg"
             alt="ikona větrník"
           />
           <Link
@@ -48,7 +89,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/vnitrni-arealy.png"
+            src="../../assets/icons/inner-spaces.svg"
             alt="ikona stavba z kostek"
           />
           <Link
@@ -61,7 +102,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/restaurace.png"
+            src="../../assets/icons/restaurants.svg"
             alt="ikona lžíce a vidlička"
           />
           <Link to="/restaurace" className="nav__link nav__link--restaurants">
@@ -71,7 +112,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/krouzky.png"
+            src="../../assets/icons/groups.svg"
             alt="ikona puzzle"
           />
           <Link to="/krouzky" className="nav__link nav__link--groups">
@@ -81,7 +122,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/skolky.png"
+            src="../../assets/icons/kindergartens.svg"
             alt="ikona kostky"
           />
           <Link to="/skolky" className="nav__link nav__link--kindergartens">
@@ -91,7 +132,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../assets/icons/lekari.png"
+            src="../../assets/icons/doctors.svg"
             alt="ikona kříž"
           />
           <Link to="/lekari" className="nav__link nav__link--doctors">

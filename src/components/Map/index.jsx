@@ -6,7 +6,7 @@ import ReactMapGL, {
   NavigationControl,
   Popup,
 } from 'react-map-gl';
-import hristeUrl from '../../assets/icons/hriste.png';
+import hristeUrl from '../../assets/icons/playgrounds.svg';
 import { CategoryItem } from '../CategoryItem/index.jsx';
 import { data } from '../../data.js';
 import './styles.css';
