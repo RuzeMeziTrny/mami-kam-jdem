@@ -18,14 +18,11 @@ export const Navigation = () => {
           src="../assets/icons/vse.png"
           alt="ikona mimino"
         />
-        Vše
+        <span class="button__heading">Vše</span>
       </button>
 
-      <ul className="nav__list">
-        <li
-          className={opened ? 'nav__item nav__item--show' : 'nav__item'}
-          className="nav__item"
-        >
+      <ul className={opened ? 'nav__list--show' : 'nav__list'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/hriste.png"
@@ -35,7 +32,7 @@ export const Navigation = () => {
             Dětská hřiště
           </Link>
         </li>
-        <li className={opened ? 'nav__item nav__item--show' : 'nav__item'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/venkovni-arealy.png"
@@ -48,7 +45,7 @@ export const Navigation = () => {
             Venkovní areály
           </Link>
         </li>
-        <li className={opened ? 'nav__item nav__item--show' : 'nav__item'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/vnitrni-arealy.png"
@@ -61,7 +58,7 @@ export const Navigation = () => {
             Vnitřní areály
           </Link>
         </li>
-        <li className={opened ? 'nav__item nav__item--show' : 'nav__item'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/restaurace.png"
@@ -71,7 +68,7 @@ export const Navigation = () => {
             Restaurace, kavárny
           </Link>
         </li>
-        <li className={opened ? 'nav__item nav__item--show' : 'nav__item'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/krouzky.png"
@@ -81,7 +78,7 @@ export const Navigation = () => {
             Kroužky
           </Link>
         </li>
-        <li className={opened ? 'nav__item nav__item--show' : 'nav__item'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/skolky.png"
@@ -91,7 +88,7 @@ export const Navigation = () => {
             Soukromé školky
           </Link>
         </li>
-        <li className={opened ? 'nav__item nav__item--show' : 'nav__item'}>
+        <li className="nav__item">
           <img
             className="nav__category-icon"
             src="../assets/icons/lekari.png"

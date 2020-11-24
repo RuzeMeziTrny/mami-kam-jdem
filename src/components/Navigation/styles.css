@@ -7,50 +7,84 @@ body {
   padding: 0;
 }
 
-.nav {
-  border: 1px solid black;
-  width: 50%;
-  margin: auto;
-}
-
-.nav__category-icon {
-  width: 15%;
-  height: 15%;
-}
-
-.nav__item {
-  display: flex;
-  padding: 1em;
-  display: none;
-}
-
-.nav__item--show {
-  display: block;
-}
-
-.nav__list {
-  list-style-type: none;
-  padding: 0;
+header {
   font-family: 'Atma', cursive;
-  margin: 0;
-}
-
-/*rozšířit na celou plochu pro hover*/
-.nav__link {
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 600;
-  text-align: left;
-  padding-left: 30px;
-  align-self: center;
+  position: relative;
+  height: 180px;
 }
 
 .main-heading {
   text-decoration: none;
-  font-family: 'Atma', cursive;
   color: #1a1a1d;
   text-align: center;
   display: block;
+}
+
+.nav {
+  width: 300px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 3%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: 90px;
+}
+
+.nav__button {
+  color: rgb(11, 11, 97);
+  font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  background-color: white;
+  border: none;
+  font-family: 'Atma', cursive;
+  padding: 0.9em 1em;
+  border-radius: 3%;
+  display: flex;
+}
+
+.button__heading {
+  padding-left: 30px;
+  align-self: center;
+}
+
+.nav__list--show {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  background-color: white;
+  border-radius: 3%;
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav__item {
+  display: flex;
+  padding: 0.9em 1em;
+  margin: 0;
+}
+
+.nav__category-icon {
+  width: 13%;
+  height: 13%;
+}
+
+/*rozšířit na celou plochu pro hover a pro klik*/
+.nav__link {
+  text-decoration: none;
+  text-align: left;
+  padding-left: 30px;
+  align-self: center;
 }
 
 .nav__link--playgrounds {
@@ -79,13 +113,4 @@ body {
 
 .nav__link--doctors {
   color: #512fd8;
-}
-
-.nav__button {
-  color: rgb(11, 11, 97);
-  font-size: 1em;
-  font-weight: 600;
-  width: 100%;
-  margin: 0;
-  font-family: 'Atma', cursive;
 }
