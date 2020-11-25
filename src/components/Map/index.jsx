@@ -7,7 +7,7 @@ import ReactMapGL, {
   Popup,
 } from 'react-map-gl';
 import hristeUrl from '../../assets/icons/playgrounds.svg';
-import { CategoryItem } from '../CategoryItem/index.jsx';
+import { CategoryItemGeneral } from '../CategoryItemGeneral/index.jsx';
 import { data } from '../../data.js';
 import './styles.css';
 
@@ -80,7 +80,7 @@ export const Map = () => {
             offsetLeft={100}
             offsetTop={-40}
           >
-            <CategoryItem
+            <CategoryItemGeneral
               img={data.skolky[0].foto}
               name={data.skolky[0].nazev}
               web={data.skolky[0].web}

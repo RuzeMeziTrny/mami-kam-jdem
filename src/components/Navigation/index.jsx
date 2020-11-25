@@ -7,7 +7,6 @@ export const Navigation = () => {
 
   const location = useLocation();
 
-  /* přidal další klíč pro ikonu */
   const items = {
     '/': {
       label: 'Vše',
