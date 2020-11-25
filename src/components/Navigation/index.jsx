@@ -9,34 +9,52 @@ export const Navigation = () => {
 
   /* přidal další klíč pro ikonu */
   const items = {
-    '/': { label: 'Vše' },
+    '/': {
+      label: 'Vše',
+      icon: '../../assets/icons/all.svg',
+      iconAlt: 'ikona miminko',
+    },
     '/hriste': {
       label: 'Dětská hřiště',
       className: 'nav__link--playgrounds',
+      icon: '../../assets/icons/playgrounds.svg',
+      iconAlt: 'ikona kyblík a lopatka',
     },
     '/venkovni-arealy': {
       label: 'Venkovní areály',
       className: 'nav__link--outdoor-spaces',
+      icon: '../../assets/icons/outdoor-spaces.svg',
+      iconAlt: 'ikona větrník',
     },
     '/vnitrni-arealy': {
       label: 'Vnitřní areály',
       className: 'nav__link--inner-spaces',
+      icon: '../../assets/icons/inner-spaces.svg',
+      iconAlt: 'ikona stavba z kostek',
     },
     '/restaurace': {
       label: 'Restaurace, kavárny',
       className: 'nav__link--restaurants',
+      icon: '../../assets/icons/restaurants.svg',
+      iconAlt: 'ikona lžíce a vidlička',
     },
     '/krouzky': {
       label: 'Kroužky',
       className: 'nav__link--groups',
+      icon: '../../assets/icons/groups.svg',
+      iconAlt: 'ikona puzzle',
     },
     '/skolky': {
       label: 'Soukromé školky',
       className: 'nav__link--kindergartens',
+      icon: '../../assets/icons/kindergartens.svg',
+      iconAlt: 'ikona kostky',
     },
     '/lekari': {
       label: 'Dětští lékaři',
       className: 'nav__link--doctors',
+      icon: '../../assets/icons/doctors.svg',
+      iconAlt: 'ikona kříž',
     },
   };
 
@@ -47,8 +65,8 @@ export const Navigation = () => {
       <button onClick={() => setOpened(!opened)} className="nav__button">
         <img
           className="nav__category-icon"
-          src="../../assets/icons/all.svg"
-          alt="ikona mimino"
+          src={selectedItem.icon}
+          alt={selectedItem.iconAlt}
         />
         <span
           className={`button__heading ${
