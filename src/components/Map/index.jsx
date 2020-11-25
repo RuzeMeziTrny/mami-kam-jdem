@@ -62,7 +62,7 @@ export const Map = () => {
           offsetLeft={-25}
           offsetTop={-25}
         >
-          <button onClick={() => setPopupOpen(true)}>
+          <button className="marker__button" onClick={() => setPopupOpen(true)}>
             <img
               className="marker--playgrounds"
               src={hristeUrl}
@@ -77,7 +77,7 @@ export const Map = () => {
           <Popup
             latitude={50.0409669}
             longitude={14.5574619}
-            offsetLeft={100}
+            offsetLeft={0}
             offsetTop={-40}
           >
             <CategoryItemGeneral

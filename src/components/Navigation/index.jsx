@@ -74,6 +74,11 @@ export const Navigation = () => {
         >
           {selectedItem.label}
         </span>
+        <img
+          className="nav__arrow--down"
+          src="/assets/icons/arrow_down.svg"
+          alt="šipka dolů"
+        />
       </button>
 
       <ul
