@@ -33,8 +33,8 @@ const seznamMapy = {
 
 export const Map = () => {
   const [viewport, setViewport] = useState({
-    latitude: 50.0409669,
-    longitude: 14.5574619,
+    latitude: 50.0508917,
+    longitude: 14.5655572,
     zoom: 15,
   });
 
@@ -62,7 +62,10 @@ export const Map = () => {
           offsetLeft={-25}
           offsetTop={-25}
         >
-          <button className="marker__button" onClick={() => setPopupOpen(true)}>
+          <button
+            className="marker__button"
+            onClick={() => setPopupOpen(!popupOpen)}
+          >
             <img
               className="marker--playgrounds"
               src={hristeUrl}
@@ -79,6 +82,7 @@ export const Map = () => {
             longitude={14.5574619}
             offsetLeft={0}
             offsetTop={-40}
+            onClose={() => setPopupOpen(false)}
           >
             <CategoryItemGeneral
               img={data.skolky[0].foto}
