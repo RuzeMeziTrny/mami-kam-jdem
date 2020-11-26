@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './styles.css';
 
 export const Navigation = () => {
-  const [opened, setOpened] = useState(true);
+  const [opened, setOpened] = useState(false);
 
   const location = useLocation();
 
@@ -59,9 +59,24 @@ export const Navigation = () => {
 
   const selectedItem = items[location.pathname];
 
+  const navListClasses = ['nav__list'];
+
+  if (location.pathname === '/') {
+    navListClasses.push('nav__list--main');
+  }
+
+  if (opened) {
+    navListClasses.push('nav__list--open');
+  }
+
   return (
-    <nav className="nav">
-      <button onClick={() => setOpened(!opened)} className="nav__button">
+    <nav className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}>
+      <button
+        className={`nav__button ${
+          location.pathname === '/' ? 'nav__button--main' : ''
+        }`}
+        onClick={() => setOpened(!opened)}
+      >
         <img
           className="nav__category-icon"
           src={selectedItem.icon}
@@ -81,8 +96,9 @@ export const Navigation = () => {
         />
       </button>
 
+      {/* dořešit, aby se na desktopu při kliknutí na kategorii barevné navigace menu hned zavřelo */}
       <ul
-        className={opened ? 'nav__list--show' : 'nav__list'}
+        className={navListClasses.join(' ')}
         onClick={() => setOpened(!opened)}
       >
         <li className="nav__item">

@@ -47,7 +47,7 @@ header {
   background-color: white;
   border: none;
   font-family: 'Atma', cursive;
-  padding: 0.9em 1em;
+  padding: 0.5em;
   border-radius: 3% 3% 0 0;
   display: flex;
 }
@@ -70,23 +70,24 @@ header {
   margin-left: auto;
 }
 
-.nav__list--show {
+.nav__list {
   list-style-type: none;
   padding: 0;
   margin: 0;
   font-weight: 600;
   background-color: white;
   border-radius: 0 0 3% 3%;
+  display: none;
 }
 
-.nav__list {
-  display: none;
+.nav__list--open {
+  display: block;
 }
 
 .nav__item {
   display: flex;
   margin: 0;
-  padding: 0.9em 1em;
+  padding: 0.5em;
 }
 
 .nav__category-icon {
@@ -109,6 +110,7 @@ header {
   padding-left: 30px;
 }
 
+/* je potřeba spravit šířku, na desktopu to leze mimo políčko */
 .nav__link:after {
   content: '';
   padding: 36px 200px;
@@ -150,14 +152,14 @@ header {
     height: 220px;
   }
 
+  .main-heading {
+    font-size: 1.5em;
+  }
+
   .nav {
     width: 400px;
     font-size: 1.3em;
     top: 125px;
-  }
-
-  .nav__list--show {
-    width: 400px;
   }
 
   .nav__arrow--down {
@@ -167,10 +169,6 @@ header {
   .nav__category-icon {
     width: 8%;
     height: 8%;
-  }
-
-  .main-heading {
-    font-size: 1.5em;
   }
 }
 
@@ -189,20 +187,29 @@ header {
 
   .nav {
     width: 80%;
-    box-shadow: none;
   }
 
-  .nav__list--show {
-    width: 90%;
-  }
-
-  .nav__button {
-    display: none;
+  .nav__arrow--down {
+    width: 8%;
   }
 
   .nav__category-icon {
-    width: 15%;
-    height: 15%;
+    width: 13%;
+    height: 13%;
+  }
+
+  .nav--main {
+    box-shadow: none;
+    font-size: 1.5em;
+  }
+
+  .nav__button--main {
+    display: none;
+    background: blue;
+  }
+
+  .nav__list--main {
+    display: block;
   }
 
   .nav__item:hover {
@@ -215,7 +222,7 @@ header {
     font-size: 1.3em;
   }
 
-  .nav {
+  .nav--main {
     font-size: 1.6em;
   }
 }
