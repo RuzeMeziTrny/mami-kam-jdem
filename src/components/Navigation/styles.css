@@ -168,7 +168,39 @@ header {
     float: left;
     z-index: 1;
     background-color: white;
-    width: 500px;
+    width: 30%;
     height: 100vh;
+  }
+
+  .main-heading {
+    font-size: 1.1em;
+  }
+
+  .nav {
+    width: 80%;
+    box-shadow: none;
+  }
+
+  .nav__list--show {
+    width: 90%;
+  }
+
+  .nav__button {
+    display: none;
+  }
+
+  .nav__category-icon {
+    width: 15%;
+    height: 15%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .main-heading {
+    font-size: 1.3em;
+  }
+
+  .nav {
+    font-size: 1.6em;
   }
 }
