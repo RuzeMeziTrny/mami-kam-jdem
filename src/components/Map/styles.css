@@ -56,10 +56,9 @@
   filter: invert(80%);
 }
 
-/* tohle by mělo jít spíš do CategoryItem stylů, pokud tady budeme používat tu komponentu */
+/* tohle musíme udělat jinak, rozhazuje to CategoryItem komponentu 
 .category-item__name {
   font-size: 1.1em;
-  font-weight: 600;
   margin-bottom: 25px;
   margin-top: 10px;
-}
+} */
