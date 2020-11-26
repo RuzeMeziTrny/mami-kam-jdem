@@ -4,12 +4,6 @@
   right: 10px;
 }
 
-.marker--playgrounds {
-  background: #6cbf45;
-  padding: 5px;
-  border-radius: 10%;
-}
-
 .marker__button {
   border: none;
   padding: 0;
@@ -17,6 +11,39 @@
   outline: none;
   border-radius: 10%;
   height: 50px;
+}
+
+.marker__button--playgrounds {
+  background: #68bdff;
+}
+
+.marker__button--outdoor-spaces {
+  background: #6cbf45;
+}
+
+.marker__button--inner-spaces {
+  background: #ffcf00;
+}
+
+.marker__button--restaurants {
+  background: #fb973c;
+}
+
+.marker__button--groups {
+  background: #ff2222;
+}
+
+.marker__button--kindergartens {
+  background: #eb00eb;
+}
+
+.marker__button--doctors {
+  background: #512fd8;
+}
+
+.marker__icon {
+  padding: 5px;
+  filter: invert(100%);
 }
 
 .mapboxgl-popup-content {
@@ -29,6 +56,7 @@
   filter: invert(80%);
 }
 
+/* tohle by mělo jít spíš do CategoryItem stylů, pokud tady budeme používat tu komponentu */
 .category-item__name {
   font-size: 1.1em;
   font-weight: 600;
