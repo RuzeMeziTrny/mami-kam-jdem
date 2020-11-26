@@ -33,6 +33,7 @@ header {
   margin-right: auto;
   top: 90px;
   font-size: 1.1em;
+  cursor: pointer;
 }
 
 .nav__button {
@@ -93,17 +94,26 @@ header {
   height: 13%;
 }
 
+.nav__item:hover {
+  cursor: pointer;
+  background-color: rgb(238, 238, 238);
+}
+
 /*rozšířit na celou plochu pro hover a pro klik*/
 .nav__link {
   text-decoration: none;
   text-align: left;
   padding-left: 30px;
   align-self: center;
+  position: relative;
 }
 
-.nav__link:hover {
-  cursor: pointer;
-  background-color: rgb(238, 238, 238);
+.nav__link:after {
+  content: '';
+  padding: 36px 200px;
+  position: absolute;
+  left: -45px;
+  top: -25px;
 }
 
 .nav__link--playgrounds {
@@ -192,6 +202,10 @@ header {
   .nav__category-icon {
     width: 15%;
     height: 15%;
+  }
+
+  .nav__item:hover {
+    background-color: none;
   }
 }
 
