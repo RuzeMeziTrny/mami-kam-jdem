@@ -1,55 +1,29 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  font-family: 'Atma', cursive;
-  position: relative;
-  height: 180px;
- /* width: 100vw;*/
-}
-
-.main-heading {
-  text-decoration: none;
-  color: #1a1a1d;
-  text-align: center;
-  display: block;
-  font-size: 1.1em;
-}
-
 .nav {
+  font-family: 'Atma', cursive;
+  font-size: 1.1em;
   width: 300px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
   border-radius: 3%;
+  cursor: pointer;
   position: absolute;
   z-index: 1;
   left: 0;
   right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: 90px;
-  font-size: 1.1em;
-  cursor: pointer;
+  margin: auto;
 }
 
 .nav__button {
   color: rgb(11, 11, 97);
+  font-family: 'Atma', cursive;
   font-size: 1em;
   font-weight: 600;
   width: 100%;
   margin: 0;
-  padding: 0;
-  outline: none;
-  background-color: white;
-  border: none;
-  font-family: 'Atma', cursive;
   padding: 0.5em;
+  outline: none;
+  border: none;
   border-radius: 3% 3% 0 0;
+  background-color: white;
   display: flex;
 }
 
@@ -58,7 +32,7 @@ header {
   background-color: rgb(238, 238, 238);
 }
 
-.button__heading {
+.nav__button-heading {
   padding-left: 30px;
   align-self: center;
 }
@@ -102,7 +76,6 @@ header {
   border-radius: 3%;
 }
 
-/*rozšířit na celou plochu pro hover a pro klik*/
 .nav__link {
   text-decoration: none;
   text-align: left;
@@ -111,13 +84,12 @@ header {
   padding-left: 30px;
 }
 
-/* je potřeba spravit šířku, na desktopu to leze mimo políčko */
-.nav__link:after {
+.nav__link::after {
   content: '';
-  padding: 36px 200px;
+  padding: 27px 150px;
   position: absolute;
-  left: -45px;
-  top: -25px;
+  left: -40px;
+  top: -15px;
 }
 
 .nav__link--playgrounds {
@@ -149,18 +121,9 @@ header {
 }
 
 @media only screen and (min-width: 760px) {
-  header {
-    height: 220px;
-  }
-
-  .main-heading {
-    font-size: 1.5em;
-  }
-
   .nav {
-    width: 400px;
     font-size: 1.3em;
-    top: 125px;
+    width: 400px;
   }
 
   .nav__arrow--down {
@@ -171,21 +134,13 @@ header {
     width: 8%;
     height: 8%;
   }
+
+  .nav__link::after {
+    padding: 27px 200px;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
-  header {
-    float: left;
-    z-index: 1;
-    background-color: white;
-    width: 30%;
-    height: 100vh;
-  }
-
-  .main-heading {
-    font-size: 1.1em;
-  }
-
   .nav {
     width: 80%;
   }
@@ -201,12 +156,11 @@ header {
 
   .nav--main {
     box-shadow: none;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .nav__button--main {
     display: none;
-    background: blue;
   }
 
   .nav__list--main {
@@ -216,19 +170,25 @@ header {
   .nav__item:hover {
     background-color: white;
   }
+
+  .nav__link::after {
+    padding: 31px 160px;
+    left: -70px;
+  }
 }
 
 @media only screen and (min-width: 1400px) {
-  .main-heading {
-    font-size: 1.3em;
-  }
-
   .nav {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   .nav__button,
   .nav__item {
     padding: 1em;
+  }
+
+  .nav__link::after {
+    padding: 43px 180px;
+    top: -25px;
   }
 }

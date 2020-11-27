@@ -83,7 +83,7 @@ export const Navigation = () => {
           alt={selectedItem.iconAlt}
         />
         <span
-          className={`button__heading ${
+          className={`nav__button-heading ${
             selectedItem.className ? selectedItem.className : ''
           }`}
         >
