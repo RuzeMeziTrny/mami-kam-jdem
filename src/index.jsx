@@ -10,6 +10,7 @@ import { CategoryList } from './components/CategoryList/index.jsx';
 
 
 
+
 const Playgrounds = () => {
   return (
     <div>
@@ -39,6 +40,7 @@ const Restaurants = () => {
   return (
     <div>
       <p>seznam restaurací a kaváren</p>
+      <CategoryList />
     </div>
   );
 };
