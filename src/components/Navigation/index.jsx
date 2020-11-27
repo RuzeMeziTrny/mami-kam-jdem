@@ -68,8 +68,6 @@ export const Navigation = () => {
   if (opened) {
     navListClasses.push('nav__list--open');
   }
-   
- 
 
   return (
     <nav className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}>
@@ -99,10 +97,7 @@ export const Navigation = () => {
       </button>
 
       {/* dořešit, aby se na desktopu při kliknutí na kategorii barevné navigace menu hned zavřelo */}
-      <ul
-        className={navListClasses.join(' ')}
-        onClick={() => setOpened(!opened)}
-      >
+      <ul className={navListClasses.join(' ')} onClick={() => setOpened(false)}>
         <li className="nav__item">
           <img
             className="nav__category-icon"
