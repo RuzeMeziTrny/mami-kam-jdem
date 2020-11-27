@@ -6,11 +6,13 @@ import { Map } from './components/Map/index.jsx';
 import './index.html';
 import './styles.css';
 import { CategoryList } from './components/CategoryList/index.jsx';
+/*import { CategoryItemPlayground } from './components/CategoryItemPlayground/index.jsx';*/
 
 const Playgrounds = () => {
   return (
     <div>
       <p>filtry pro hřiště</p>
+      {/*  <CategoryItemPlayground />*/}
       <p>seznam hřišť</p>
     </div>
   );
