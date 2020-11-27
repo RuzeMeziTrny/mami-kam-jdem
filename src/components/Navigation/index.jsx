@@ -68,8 +68,6 @@ export const Navigation = () => {
   if (opened) {
     navListClasses.push('nav__list--open');
   }
-   
- 
 
   return (
     <nav className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}>
@@ -85,7 +83,7 @@ export const Navigation = () => {
           alt={selectedItem.iconAlt}
         />
         <span
-          className={`button__heading ${
+          className={`nav__button-heading ${
             selectedItem.className ? selectedItem.className : ''
           }`}
         >

@@ -7,10 +7,6 @@ import './index.html';
 import './styles.css';
 import { CategoryList } from './components/CategoryList/index.jsx';
 
-
-
-
-
 const Playgrounds = () => {
   return (
     <div>
@@ -83,20 +79,22 @@ const routes = [
 
 const App = () => (
   <Router>
-    <header>
-      <h1>
-        <Link to="/" className="main-heading">
-          Mami, kam jdem?
-        </Link>
-      </h1>
+    <section>
+      <header>
+        <h1>
+          <Link to="/" className="main-heading">
+            Mami, kam jdem?
+          </Link>
+        </h1>
+      </header>
       <Navigation />
-    </header>
-    <main>
       <Switch>
         {routes.map((route, index) => (
           <Route {...route} key={index} />
         ))}
       </Switch>
+    </section>
+    <main>
       <Map />
     </main>
   </Router>
