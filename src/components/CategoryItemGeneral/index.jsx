@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles.css';
 
+
+
 export const CategoryItemGeneral = (props) => {
   const colonIndex = props.web.indexOf(':');
 
@@ -21,3 +23,5 @@ export const CategoryItemGeneral = (props) => {
     </div>
   );
 };
+
+

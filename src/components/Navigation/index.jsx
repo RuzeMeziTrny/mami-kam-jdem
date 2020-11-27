@@ -68,6 +68,8 @@ export const Navigation = () => {
   if (opened) {
     navListClasses.push('nav__list--open');
   }
+   
+ 
 
   return (
     <nav className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}>
