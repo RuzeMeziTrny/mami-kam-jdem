@@ -223,7 +223,12 @@ header {
     font-size: 1.3em;
   }
 
-  .nav--main {
+  .nav {
     font-size: 1.6em;
+  }
+
+  .nav__button,
+  .nav__item {
+    padding: 1em;
   }
 }
