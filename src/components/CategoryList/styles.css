@@ -6,6 +6,21 @@ display: none;
 .category-list {
 display: flex;
 font-family: 'Roboto', sans-serif;
+padding: 10px 10px;
+justify-content: space-around;
 }
+
+.category-arrow {
+width: 3%;
+filter: invert(80%);
 }
-  
+
+/*.category-arrow--left {
+    margin-left: 20px;
+}
+
+.category-arrow--right {
+    margin-right: 20px;
+}*/
+}
+

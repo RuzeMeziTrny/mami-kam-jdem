@@ -1,5 +1,8 @@
 .category-item {
   display: flex;
+  width: 400px;
+  flex-basis: 400px;
+  flex-shrink: 0;
 }
 
 .category-item__image {
