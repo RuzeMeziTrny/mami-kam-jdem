@@ -5,6 +5,11 @@ import { Navigation } from './components/Navigation/index.jsx';
 import { Map } from './components/Map/index.jsx';
 import './index.html';
 import './styles.css';
+import { CategoryList } from './components/CategoryList/index.jsx';
+
+
+
+
 
 const Playgrounds = () => {
   return (
@@ -35,6 +40,7 @@ const Restaurants = () => {
   return (
     <div>
       <p>seznam restaurací a kaváren</p>
+      <CategoryList />
     </div>
   );
 };
