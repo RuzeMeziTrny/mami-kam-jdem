@@ -10,7 +10,7 @@
   margin: 0;
   outline: none;
   border-radius: 10%;
-  height: 50px;
+  cursor: pointer;
 }
 
 .marker__button--playgrounds {

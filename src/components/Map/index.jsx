@@ -1,14 +1,21 @@
-import 'mapbox-gl/dist/mapbox-gl.css';
 import React, { useState } from 'react';
+import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, {
-  GeolocateControl,
   Marker,
   NavigationControl,
+  GeolocateControl,
   Popup,
 } from 'react-map-gl';
-import hristeUrl from '../../assets/icons/playgrounds.svg';
-import { CategoryItemGeneral } from '../CategoryItemGeneral/index.jsx';
+import iconPlaygrounds from '../../assets/icons/playgrounds.svg';
+import iconOutdoorSpaces from '../../assets/icons/outdoor-spaces.svg';
+import iconInnerSpaces from '../../assets/icons/inner-spaces.svg';
+import iconRestaurants from '../../assets/icons/restaurants.svg';
+import iconGroups from '../../assets/icons/groups.svg';
+import iconKindergartens from '../../assets/icons/kindergartens.svg';
+import iconDoctors from '../../assets/icons/doctors.svg';
 import { data } from '../../data.js';
+import { CategoryItemGeneral } from '../CategoryItemGeneral/index.jsx';
+import { CategoryItemPlayground } from '../CategoryItemPlayground/index.jsx';
 import './styles.css';
 
 const seznamMapy = {
@@ -33,8 +40,8 @@ const seznamMapy = {
 
 export const Map = () => {
   const [viewport, setViewport] = useState({
-    latitude: 50.0409669,
-    longitude: 14.5574619,
+    latitude: 50.0441875,
+    longitude: 14.5536622,
     zoom: 15,
   });
 
@@ -44,54 +51,58 @@ export const Map = () => {
     <>
       <ReactMapGL
         {...viewport}
-        width="100%"
+        width="100vw"
         height="100vh"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
-        mapboxApiAccessToken="pk.eyJ1IjoicnV6ZW1leml0cm55IiwiYSI6ImNraHVubmo4MjFlZDAyeGt6bGNyamV1bWEifQ.OZe_RJx_MXkd6mRh9K8-uw"
         mapStyle={seznamMapy}
-        scrollZoom={false} /* když chceme zabránit zoomu kolečkem myši */
+        /* scrollZoom={false} kdybychom chtěli zabránit zoomu kolečkem myši */
       >
         <div className="map__control-panel">
           <NavigationControl />
           <GeolocateControl />
         </div>
 
-        <Marker
-          latitude={50.0409669}
-          longitude={14.5574619}
-          offsetLeft={-25}
-          offsetTop={-25}
-        >
-          <button
-            className="marker__button marker__button--playgrounds"
-            onClick={() => setPopupOpen(!popupOpen)}
+        {/* markery a popupy pro hřiště */}
+        {data.playgrounds.map((place) => (
+          <Marker
+            key={place.id}
+            latitude={place.latitude}
+            longitude={place.longitude}
+            offsetLeft={-20}
+            offsetTop={-20}
           >
-            <img
-              className="marker__icon"
-              src={hristeUrl}
-              width={50}
-              height={50}
-              alt="špendlík hřiště"
-            />
-          </button>
-        </Marker>
+            <button
+              className="marker__button marker__button--playgrounds"
+              onClick={() => setPopupOpen(!popupOpen)}
+            >
+              <img
+                className="marker__icon"
+                src={iconPlaygrounds}
+                width={40}
+                height={40}
+                alt="špendlík hřiště"
+              />
+            </button>
+          </Marker>
+        ))}
 
-        {popupOpen && (
-          <Popup
-            latitude={50.0409669}
-            longitude={14.5574619}
-            offsetLeft={0}
-            offsetTop={-40}
-            onClose={() => setPopupOpen(false)}
-          >
-            <CategoryItemGeneral
-              img={data.skolky[0].foto}
-              name={data.skolky[0].nazev}
-              web={data.skolky[0].web}
-            />
-            {/* udělat pomocí map */}
-          </Popup>
-        )}
+        {popupOpen &&
+          data.playgrounds.map((place) => (
+            <Popup
+              key={place.id}
+              latitude={place.latitude}
+              longitude={place.longitude}
+              offsetTop={-30}
+              onClose={() => setPopupOpen(false)}
+            >
+              <CategoryItemPlayground
+                img={place.image}
+                name={place.name}
+                web={place.id}
+              />
+            </Popup>
+          ))}
+        {/* pořešit, aby se popupy neotevíraly hromadně */}
       </ReactMapGL>
     </>
   );
