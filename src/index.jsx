@@ -6,7 +6,7 @@ import { Map } from './components/Map/index.jsx';
 import './index.html';
 import './styles.css';
 import { CategoryList } from './components/CategoryList/index.jsx';
-import { PlaygroundsPage } from './components/PlaygroundsPage/index.jsx';
+import { PlaygroundsDetails } from './components/PlaygroundsDetails/index.jsx';
 import { data } from './data.js';
 
 const Playgrounds = () => {
@@ -15,7 +15,30 @@ const Playgrounds = () => {
       <p>filtry pro hřiště</p>
       <CategoryList array={data.playgrounds} />
 
-      <Route path={`/hriste/:id`} component={PlaygroundsPage} />
+      <Route
+        path={`/hriste/:id`}
+        render={() => (
+          <PlaygroundsDetails
+            key={data.playgrounds.id}
+            image={data.playgrounds.image}
+            name={data.playgrounds.name}
+            address={data.playgrounds.address}
+            id={data.playgrounds.id}
+            babySwing={data.playgrounds.babySwing}
+            seeSaw={data.playgrounds.seeSaw}
+            sandBox={data.playgrounds.sandBox}
+            carousel={data.playgrounds.carousel}
+            others={data.playgrounds.others}
+            shadow={data.playgrounds.shadow}
+            shadowDetails={data.playgrounds.shadowDetails}
+            tartan={data.playgrounds.tartan}
+            grain={data.playgrounds.grain}
+            sand={data.playgrounds.sand}
+            slide={data.playgrounds.slide}
+            /*nefunguje, data nejdou*/
+          />
+        )}
+      />
     </div>
   );
 };

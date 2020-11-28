@@ -2,26 +2,35 @@ import React from 'react';
 import './styles.css';
 import { useParams } from 'react-router-dom';
 
-export const PlaygroundsPage = (props) => {
+export const PlaygroundsDetails = (props) => {
   const params = useParams();
-  console.log(params);
 
   const surface = () => {
     const surfaceElm = null;
     if (props.sand) {
-      surfaceElm = 'písek';
+      surfaceElm === 'písek';
     } else if (props.grain) {
-      surfaceElm = 'kamínky';
+      surfaceElm === 'kamínky';
     } else if (props.tartan) {
-      surfaceElm = 'tartan';
+      surfaceElm === 'tartan';
     }
+    return surfaceElm;
   };
 
-  return <div className="fake-pop-up"></div>;
+  const shadow = () => {
+    const shadowElm = null;
+    if (props.shadow) {
+      shadowElm === `ano/ + ${props.shadowDetails}`;
+    } else {
+      shadowElm === 'ne';
+    }
+    return shadowElm;
+  };
+
+  /* return <div className="fake-pop-up">Ahoj</div>;*/
 
   return (
-    <div>
-      <p>{props.id}</p>
+    <div className="fake-pop-up">
       <h3 className="playgrounds-name">{props.name}</h3>
       <img
         className="playgrounds-photo"
@@ -32,25 +41,24 @@ export const PlaygroundsPage = (props) => {
         <li>
           <h3 className="playgrounds-items--heading">Herní prvky</h3>
           <ul className="playgrounds-others">
-            <li>{props.babySwing}</li>
-            <li>{props.seeSaw}</li>
-            <li>{props.sandBox}</li>
-            <li>{props.carousel}</li>
-            <li>{props.others}</li>
+            <li>{props.babySwing === true ? 'pískoviště ' : null}</li>
+            <li>{props.seeSaw === true ? 'houpačka pro dvojice' : 'ne'}</li>
+            <li>{props.sandBox === true ? 'ano' : 'ne'}</li>
+            <li>{props.carousel === true ? 'ano' : 'ne'}</li>
+            <li>{props.slide === true ? 'ano' : 'ne'}</li>
+            {/*<li>{props.others === true ? 'ano' : 'ne'}</li>*/}
           </ul>
         </li>
         <li>
           <h3 className="playgrounds-items--heading">Stín</h3>
-          <p>
-            {props.shadow}, {props.shadowDetails}
-          </p>
+          <p>{shadow()}</p>
 
           {/* tady podmínka pro zobrazí ano/ne a ne true/false */}
         </li>
         <li>
           <h3 className="playgrounds-items--heading">Povrch hřiště</h3>
           <ul>
-            <p>{surface}</p>
+            <p>{surface()}</p>
           </ul>
           {/* tady podmínka, aby se zobrazil jen klíč, u kterého je true a ne všechny */}
         </li>

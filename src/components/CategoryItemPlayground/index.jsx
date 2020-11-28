@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PlaygroundsPage } from '../PlaygroundsPage';
+import { PlaygroundsDetails } from '../PlaygroundsDetails';
 import './styles.css';
 
 export const CategoryItemPlayground = (props) => {
