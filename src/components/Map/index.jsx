@@ -263,9 +263,15 @@ export const Map = () => {
           >
             {activeCategory === 'playgrounds' ? (
               <CategoryItemPlayground
-                img={place.image}
-                name={place.name}
-                id={place.id}
+                img={`../../assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
+                name={data[activeCategory][dataIndex].name}
+                id={data[activeCategory][dataIndex].id}
+              />
+            ) : (
+              <CategoryItemGeneral
+                img={`../../assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
+                name={data[activeCategory][dataIndex].name}
+                web={data[activeCategory][dataIndex].web}
               />
             )}
           </Popup>
