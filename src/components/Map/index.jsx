@@ -98,7 +98,7 @@ export const Map = () => {
               <CategoryItemPlayground
                 img={place.image}
                 name={place.name}
-                web={place.id}
+                id={place.id}
               />
             </Popup>
           ))}

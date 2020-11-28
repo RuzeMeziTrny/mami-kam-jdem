@@ -6,6 +6,7 @@ import { Map } from './components/Map/index.jsx';
 import './index.html';
 import './styles.css';
 import { CategoryList } from './components/CategoryList/index.jsx';
+import { PlaygroundsPage } from './components/PlaygroundsPage/index.jsx';
 /*import { CategoryItemPlayground } from './components/CategoryItemPlayground/index.jsx';*/
 
 const Playgrounds = () => {
@@ -13,6 +14,9 @@ const Playgrounds = () => {
     <div>
       <p>filtry pro hřiště</p>
       {/*  <CategoryItemPlayground />*/}
+
+      <Route path={`/hriste/:id`} component={PlaygroundsPage} />
+
       <p>seznam hřišť</p>
     </div>
   );

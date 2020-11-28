@@ -1,9 +1,13 @@
 import React from 'react';
 import './styles.css';
+import { useParams } from 'react-router-dom';
 
 export const PlaygroundsPage = (props) => {
+  const params = useParams();
+  console.log(params);
+
   return (
-    <>
+    <h3>
       <p>{props.id}</p>
       <h3 className="playgrounds-name">{props.name}</h3>
       <img
@@ -27,6 +31,7 @@ export const PlaygroundsPage = (props) => {
           <p>
             {props.shadow}, {props.shadowDetails}
           </p>
+
           {/* tady podmínka pro zobrazí ano/ne a ne true/false */}
         </li>
         <li>
@@ -44,6 +49,6 @@ export const PlaygroundsPage = (props) => {
           {/* zobrazit ano/ne podle true/false */}
         </li>
       </ul>
-    </>
+    </h3>
   );
 };

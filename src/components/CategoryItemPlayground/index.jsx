@@ -54,21 +54,10 @@ export const CategoryItemPlayground = (props) => {
         <p className="category-item__name">{props.name}</p>
         <p className="category-item__address">{props.address}</p>
 
-        <Link to={`/hriste/:${props.id}?`} className="category-item__web">
+        <Link to={`/hriste/${props.id}`} className="category-item__web">
           Podrobnosti o hřišti
         </Link>
-        {/* <PlaygroundsPage /> */}
-        <Route path={`/hriste/:${props.id}?`}></Route>
-
-        <a className="category-item__web" href={props.web}>
-          Podrobnosti o hřišti
-        </a>
       </div>
     </div>
   );
 };
-
-/*img={data.hriste[0].foto}
-name={data.hriste[0].nazev}
-web={data.hriste[0].web}
-/>*/
