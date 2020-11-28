@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, {
   Marker,
@@ -45,6 +46,8 @@ export const Map = () => {
     zoom: 15,
   });
 
+  const location = useLocation();
+
   const [dataIndex, setDataIndex] = useState(null);
   const [activeCategory, setActiveCategory] = useState('');
 
@@ -71,194 +74,242 @@ export const Map = () => {
           <GeolocateControl />
         </div>
 
-        {/* markery pro hřiště */}
-        {data.playgrounds.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--playgrounds"
-              onClick={() => {
-                setActiveCategory('playgrounds');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconPlaygrounds}
-                width={40}
-                height={40}
-                alt="špendlík hřiště"
-              />
-            </button>
-          </Marker>
-        ))}
+        <Route
+          path={['/', '/hriste/:id?']}
+          exact
+          render={() =>
+            data.playgrounds.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--playgrounds"
+                  onClick={() => {
+                    setActiveCategory('playgrounds');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconPlaygrounds}
+                    width={40}
+                    height={40}
+                    alt="špendlík hřiště"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
+        <Route
+          path={['/', '/venkovni-arealy']}
+          exact
+          render={() =>
+            data.outdoorSpaces.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--outdoor-spaces"
+                  onClick={() => {
+                    setActiveCategory('outdoorSpaces');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconOutdoorSpaces}
+                    width={40}
+                    height={40}
+                    alt="špendlík venkovní areál"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
 
-        {/* markery pro venkovní areály */}
-        {data.outdoorSpaces.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--outdoor-spaces"
-              onClick={() => {
-                setActiveCategory('outdoorSpaces');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconOutdoorSpaces}
-                width={40}
-                height={40}
-                alt="špendlík venkovní areál"
-              />
-            </button>
-          </Marker>
-        ))}
+        <Route
+          path={['/', '/vnitrni-arealy']}
+          exact
+          render={() =>
+            data.innerSpaces.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--inner-spaces"
+                  onClick={() => {
+                    setActiveCategory('innerSpaces');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconInnerSpaces}
+                    width={40}
+                    height={40}
+                    alt="špendlík vnitřní areál"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
 
-        {/* markery pro vnitřní areály */}
-        {data.innerSpaces.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--inner-spaces"
-              onClick={() => {
-                setActiveCategory('innerSpaces');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconInnerSpaces}
-                width={40}
-                height={40}
-                alt="špendlík vnitřní areál"
-              />
-            </button>
-          </Marker>
-        ))}
+        <Route
+          path={['/', '/restaurace']}
+          exact
+          render={() =>
+            data.restaurants.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--restaurants"
+                  onClick={() => {
+                    setActiveCategory('restaurants');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconRestaurants}
+                    width={40}
+                    height={40}
+                    alt="špendlík restaurace"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
 
-        {/* markery pro restaurace */}
-        {data.restaurants.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--restaurants"
-              onClick={() => {
-                setActiveCategory('restaurants');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconRestaurants}
-                width={40}
-                height={40}
-                alt="špendlík restaurace"
-              />
-            </button>
-          </Marker>
-        ))}
+        <Route
+          path={['/', '/krouzky']}
+          exact
+          render={() =>
+            data.groups.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--groups"
+                  onClick={() => {
+                    setActiveCategory('groups');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconGroups}
+                    width={40}
+                    height={40}
+                    alt="špendlík kroužek"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
 
-        {/* markery pro kroužky */}
-        {data.groups.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--groups"
-              onClick={() => {
-                setActiveCategory('groups');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconGroups}
-                width={40}
-                height={40}
-                alt="špendlík kroužek"
-              />
-            </button>
-          </Marker>
-        ))}
+        <Route
+          path={['/', '/skolky']}
+          exact
+          render={() =>
+            data.kindergartens.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--kindergartens"
+                  onClick={() => {
+                    setActiveCategory('kindergartens');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconKindergartens}
+                    width={40}
+                    height={40}
+                    alt="špendlík školka"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
 
-        {/* markery pro školky */}
-        {data.kindergartens.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--kindergartens"
-              onClick={() => {
-                setActiveCategory('kindergartens');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconKindergartens}
-                width={40}
-                height={40}
-                alt="špendlík školka"
-              />
-            </button>
-          </Marker>
-        ))}
-
-        {/* markery pro lékaře */}
-        {data.doctors.map((place, index) => (
-          <Marker
-            key={place.id}
-            latitude={place.latitude}
-            longitude={place.longitude}
-            offsetLeft={-20}
-            offsetTop={-20}
-          >
-            <button
-              className="marker__button marker__button--doctors"
-              onClick={() => {
-                setActiveCategory('doctors');
-                dataIndex === index ? setDataIndex(null) : setDataIndex(index);
-              }}
-            >
-              <img
-                className="marker__icon"
-                src={iconDoctors}
-                width={40}
-                height={40}
-                alt="špendlík lékař"
-              />
-            </button>
-          </Marker>
-        ))}
+        <Route
+          path={['/', '/lekari']}
+          exact
+          render={() =>
+            data.doctors.map((place, index) => (
+              <Marker
+                key={place.id}
+                latitude={place.latitude}
+                longitude={place.longitude}
+                offsetLeft={-20}
+                offsetTop={-20}
+              >
+                <button
+                  className="marker__button marker__button--doctors"
+                  onClick={() => {
+                    setActiveCategory('doctors');
+                    dataIndex === index
+                      ? setDataIndex(null)
+                      : setDataIndex(index);
+                  }}
+                >
+                  <img
+                    className="marker__icon"
+                    src={iconDoctors}
+                    width={40}
+                    height={40}
+                    alt="špendlík lékař"
+                  />
+                </button>
+              </Marker>
+            ))
+          }
+        />
 
         {dataIndex !== null && (
           <Popup
