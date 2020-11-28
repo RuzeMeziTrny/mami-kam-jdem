@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Switch, Route, useLocation } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, {
   Marker,
@@ -45,8 +45,6 @@ export const Map = () => {
     longitude: 14.5536622,
     zoom: 15,
   });
-
-  const location = useLocation();
 
   const [dataIndex, setDataIndex] = useState(null);
   const [activeCategory, setActiveCategory] = useState('');
@@ -322,13 +320,13 @@ export const Map = () => {
           >
             {activeCategory === 'playgrounds' ? (
               <CategoryItemPlayground
-                img={`/assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
+                img={`/assets/images/${data[activeCategory][dataIndex].image}`} /* obrázek se nezobrazuje */
                 name={data[activeCategory][dataIndex].name}
                 id={data[activeCategory][dataIndex].id}
               />
             ) : (
               <CategoryItemGeneral
-                img={`/assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
+                img={`/assets/images/${data[activeCategory][dataIndex].image}`} /* obrázek se nezobrazuje */
                 name={data[activeCategory][dataIndex].name}
                 web={data[activeCategory][dataIndex].web}
               />

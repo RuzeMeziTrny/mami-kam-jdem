@@ -1,8 +1,12 @@
-.fake-pop-up {
+.playgrounds-container {
   background-color: blue;
   position: absolute;
   width: 500px;
   height: 500px;
   top: 100px;
   left: 450px;
+}
+
+.playgrounds-photo {
+  width: 50%;
 }

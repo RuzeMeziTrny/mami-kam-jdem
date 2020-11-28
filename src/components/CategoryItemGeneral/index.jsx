@@ -13,8 +13,9 @@ export const CategoryItemGeneral = (props) => {
         <p className="category-item__name">{props.name}</p>
         <p className="category-item__address">{props.address}</p>
         <a className="category-item__web" href={props.web} target="_blank">
-          {props.web.slice(colonIndex + 3, props.web.length).slice(0, 20) +
-            '...'}
+          {props.web !== '' &&
+            props.web.slice(colonIndex + 3, props.web.length).slice(0, 20) +
+              '...'}
         </a>
       </div>
     </div>

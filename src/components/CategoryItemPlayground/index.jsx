@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { PlaygroundsDetails } from '../PlaygroundsDetails';
 import './styles.css';
 
 export const CategoryItemPlayground = (props) => {
@@ -12,7 +11,6 @@ export const CategoryItemPlayground = (props) => {
       <div className="category-item__details">
         <p className="category-item__name">{props.name}</p>
         <p className="category-item__address">{props.address}</p>
-
         <Link to={`/hriste/${props.id}`} className="category-item__web">
           Podrobnosti o hřišti
         </Link>

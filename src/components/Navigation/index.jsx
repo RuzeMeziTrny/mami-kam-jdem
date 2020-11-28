@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import './styles.css';
 import { matchPath } from 'react-router';
+import './styles.css';
 
 export const Navigation = () => {
   const [opened, setOpened] = useState(false);
@@ -12,63 +12,63 @@ export const Navigation = () => {
     {
       path: '/',
       label: 'Vše',
-      icon: '../../assets/icons/all.svg',
+      icon: '/assets/icons/all.svg',
       iconAlt: 'ikona miminko',
     },
     {
       path: '/hriste',
       label: 'Dětská hřiště',
       className: 'nav__link--playgrounds',
-      icon: '../../assets/icons/playgrounds.svg',
+      icon: '/assets/icons/playgrounds.svg',
       iconAlt: 'ikona kyblík a lopatka',
     },
     {
       path: '/hriste/:id',
       label: 'Dětská hřiště',
       className: 'nav__link--playgrounds',
-      icon: '../../assets/icons/playgrounds.svg',
+      icon: '/assets/icons/playgrounds.svg',
       iconAlt: 'ikona kyblík a lopatka',
     },
     {
       path: '/venkovni-arealy',
       label: 'Venkovní areály',
       className: 'nav__link--outdoor-spaces',
-      icon: '../../assets/icons/outdoor-spaces.svg',
+      icon: '/assets/icons/outdoor-spaces.svg',
       iconAlt: 'ikona větrník',
     },
     {
       path: '/vnitrni-arealy',
       label: 'Vnitřní areály',
       className: 'nav__link--inner-spaces',
-      icon: '../../assets/icons/inner-spaces.svg',
+      icon: '/assets/icons/inner-spaces.svg',
       iconAlt: 'ikona stavba z kostek',
     },
     {
       path: '/restaurace',
       label: 'Restaurace, kavárny',
       className: 'nav__link--restaurants',
-      icon: '../../assets/icons/restaurants.svg',
+      icon: '/assets/icons/restaurants.svg',
       iconAlt: 'ikona lžíce a vidlička',
     },
     {
       path: '/krouzky',
       label: 'Kroužky',
       className: 'nav__link--groups',
-      icon: '../../assets/icons/groups.svg',
+      icon: '/assets/icons/groups.svg',
       iconAlt: 'ikona puzzle',
     },
     {
       path: '/skolky',
       label: 'Soukromé školky',
       className: 'nav__link--kindergartens',
-      icon: '../../assets/icons/kindergartens.svg',
+      icon: '/assets/icons/kindergartens.svg',
       iconAlt: 'ikona kostky',
     },
     {
       path: '/lekari',
       label: 'Dětští lékaři',
       className: 'nav__link--doctors',
-      icon: '../../assets/icons/doctors.svg',
+      icon: '/assets/icons/doctors.svg',
       iconAlt: 'ikona kříž',
     },
   ];
@@ -119,12 +119,11 @@ export const Navigation = () => {
         />
       </button>
 
-      {/* dořešit, aby se na desktopu při kliknutí na kategorii barevné navigace menu hned zavřelo */}
       <ul className={navListClasses.join(' ')} onClick={() => setOpened(false)}>
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/playgrounds.svg"
+            src="/assets/icons/playgrounds.svg"
             alt="ikona kyblík a lopatka"
           />
           <Link to="/hriste" className="nav__link nav__link--playgrounds">
@@ -134,7 +133,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/outdoor-spaces.svg"
+            src="/assets/icons/outdoor-spaces.svg"
             alt="ikona větrník"
           />
           <Link
@@ -147,7 +146,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/inner-spaces.svg"
+            src="/assets/icons/inner-spaces.svg"
             alt="ikona stavba z kostek"
           />
           <Link
@@ -160,7 +159,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/restaurants.svg"
+            src="/assets/icons/restaurants.svg"
             alt="ikona lžíce a vidlička"
           />
           <Link to="/restaurace" className="nav__link nav__link--restaurants">
@@ -170,7 +169,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/groups.svg"
+            src="/assets/icons/groups.svg"
             alt="ikona puzzle"
           />
           <Link to="/krouzky" className="nav__link nav__link--groups">
@@ -180,7 +179,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/kindergartens.svg"
+            src="/assets/icons/kindergartens.svg"
             alt="ikona kostky"
           />
           <Link to="/skolky" className="nav__link nav__link--kindergartens">
@@ -190,7 +189,7 @@ export const Navigation = () => {
         <li className="nav__item">
           <img
             className="nav__category-icon"
-            src="../../assets/icons/doctors.svg"
+            src="/assets/icons/doctors.svg"
             alt="ikona kříž"
           />
           <Link to="/lekari" className="nav__link nav__link--doctors">

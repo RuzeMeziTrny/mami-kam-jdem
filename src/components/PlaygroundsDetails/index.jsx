@@ -1,71 +1,70 @@
 import React from 'react';
-import './styles.css';
 import { useParams } from 'react-router-dom';
+import './styles.css';
 
 export const PlaygroundsDetails = (props) => {
   const params = useParams();
 
-  const surface = () => {
-    const surfaceElm = null;
+  const surface = (props) => {
+    let surfaceElm = '';
     if (props.sand) {
-      surfaceElm === 'písek';
+      surfaceElm = 'písek';
     } else if (props.grain) {
-      surfaceElm === 'kamínky';
+      surfaceElm = 'kamínky';
     } else if (props.tartan) {
-      surfaceElm === 'tartan';
+      surfaceElm = 'tartan';
     }
     return surfaceElm;
   };
 
-  const shadow = () => {
-    const shadowElm = null;
+  const shadow = (props) => {
+    let shadowElm = '';
     if (props.shadow) {
-      shadowElm === `ano/ + ${props.shadowDetails}`;
+      if (props.shadowDetails) {
+        shadowElm = `ano - ${props.shadowDetails}`;
+      } else {
+        shadowElm = 'ano';
+      }
     } else {
-      shadowElm === 'ne';
+      shadowElm = 'ne';
     }
     return shadowElm;
   };
 
-  /* return <div className="fake-pop-up">Ahoj</div>;*/
-
   return (
-    <div className="fake-pop-up">
+    <div className="playgrounds-container">
       <h3 className="playgrounds-name">{props.name}</h3>
       <img
         className="playgrounds-photo"
-        src="hriste-veronske-namesti-albert-1.jpg"
+        src={`/assets/images/${props.image}`}
         alt="obrázek hřiště"
       />
       <ul className="playgrounds-list">
         <li>
-          <h3 className="playgrounds-items--heading">Herní prvky</h3>
+          <h3 className="playgrounds-items__heading">Herní prvky</h3>
           <ul className="playgrounds-others">
-            <li>{props.babySwing === true ? 'pískoviště ' : null}</li>
-            <li>{props.seeSaw === true ? 'houpačka pro dvojice' : 'ne'}</li>
-            <li>{props.sandBox === true ? 'ano' : 'ne'}</li>
-            <li>{props.carousel === true ? 'ano' : 'ne'}</li>
-            <li>{props.slide === true ? 'ano' : 'ne'}</li>
-            {/*<li>{props.others === true ? 'ano' : 'ne'}</li>*/}
+            {props.babySwing && <li>malá houpačka</li>}
+            {props.swing && <li>houpačka</li>}
+            {props.seeSaw && <li>houpačka pro dvojice</li>}
+            {props.sandbox && <li>pískoviště</li>}
+            {props.slide && <li>skluzavka</li>}
+            {props.carousel && <li>kolotoč</li>}
+            {props.others.map((other) => (
+              <li key={other}>{other}</li>
+            ))}
           </ul>
         </li>
         <li>
-          <h3 className="playgrounds-items--heading">Stín</h3>
-          <p>{shadow()}</p>
-
-          {/* tady podmínka pro zobrazí ano/ne a ne true/false */}
+          <h3 className="playgrounds-items__heading">Stín</h3>
+          <p>{shadow(props)}</p>
         </li>
         <li>
-          <h3 className="playgrounds-items--heading">Povrch hřiště</h3>
-          <ul>
-            <p>{surface()}</p>
-          </ul>
-          {/* tady podmínka, aby se zobrazil jen klíč, u kterého je true a ne všechny */}
+          <h3 className="playgrounds-items__heading">Povrch hřiště</h3>
+          <p>{surface(props)}</p>
         </li>
         <li>
-          <h3 className="playgrounds-items--heading">Erární hračky</h3>
-          <p>{props.toys === true ? 'ano' : 'ne'}</p>
-          {/* zobrazit ano/ne podle true/false */}
+          <h3 className="playgrounds-items__heading">Erární hračky</h3>
+          <p>{props.toys ? 'ano' : 'ne'}</p>
         </li>
       </ul>
     </div>
