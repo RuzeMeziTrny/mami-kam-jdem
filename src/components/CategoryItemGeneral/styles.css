@@ -1,6 +1,7 @@
 .category-item {
   display: flex;
   width: 350px;
+  flex-shrink: 0;
 }
 
 .category-item__image {
@@ -9,9 +10,9 @@
   margin: 8px;
   display: flex;
   align-items: center;
-  border: 1px solid black;
   flex-grow: 0;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .category-item__image img {
@@ -22,7 +23,6 @@
   margin: 8px;
   flex-grow: 0;
   flex-shrink: 0;
-  overflow: hidden;
 }
 
 .category-item__name {

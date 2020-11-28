@@ -8,13 +8,12 @@ import './styles.css';
 import { CategoryList } from './components/CategoryList/index.jsx';
 import { PlaygroundsPage } from './components/PlaygroundsPage/index.jsx';
 import { data } from './data.js';
-/*import { CategoryItemPlayground } from './components/CategoryItemPlayground/index.jsx';*/
 
 const Playgrounds = () => {
   return (
     <div>
       <p>filtry pro hřiště</p>
-      {/*  <CategoryItemPlayground />*/}
+      <CategoryList array={data.playgrounds} />
 
       <Route path={`/hriste/:id`} component={PlaygroundsPage} />
     </div>
