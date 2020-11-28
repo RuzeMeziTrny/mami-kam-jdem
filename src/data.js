@@ -248,6 +248,7 @@ export const data = {
   ],
   groups: [
     {
+      id: 'auqa-sport-club',
       name: 'Aqua Sport Club',
       image: 'jedenactka.png',
       gps: '50.0386019N, 14.5016939E',
@@ -259,6 +260,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'baby-dance-praha',
       name: 'Baby dance Praha',
       image: 'baby-dance-praha.png',
       gps: '50.0314897N, 14.5284047E',
@@ -270,6 +272,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'basta-fidli',
       name: 'Basta fidli',
       image: 'bastafidli.png',
       gps: '50.0360039N, 14.5565078E',
@@ -281,6 +284,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'bemama',
       name: 'Bemama',
       image: 'groups.svg',
       gps: '50.0360039N, 14.5565078E',
@@ -292,6 +296,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'brick-by-brick',
       name: 'Brick by Brick',
       image: 'brick-by-brick.png',
       gps: '50.0406161N, 14.5588367E',
@@ -303,6 +308,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'centrum-vorisek',
       name: 'Centrum Voříšek',
       image: 'vorisek.png',
       gps: '50.0560117N, 14.5356736E',
@@ -314,6 +320,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'gymnathlon',
       name: 'Gymnathlon',
       image: 'gymnathlon.png',
       gps: '50.0409703N, 14.5502594E',
@@ -325,6 +332,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'judo-academy',
       name: 'Judo Academy',
       image: 'groups.svg',
       gps: '50.0363156N, 14.5245722E',
@@ -336,6 +344,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'maly-muzikant',
       name: 'Malý muzikant',
       image: 'groups.svg',
       gps: '50.0360039N, 14.5565078E',
@@ -347,6 +356,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'muska-skolka',
       name: 'Muška školka',
       image: 'muska-skolka.png',
       gps: '50.0350603N, 14.5557514E',
@@ -358,6 +368,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'pilne-vcelky',
       name: 'Pilné včelky',
       image: 'pilne-vcelky.png',
       gps: '50.0349447N, 14.5223486E',
@@ -369,6 +380,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'plavacek',
       name: 'Plaváček',
       image: 'plavacek.png',
       gps: '50.0455339N, 14.5581889E',
@@ -380,6 +392,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'sang',
       name: 'Sang Z.S. sport academy',
       image: 'sang.png',
       gps: '50.0358214N, 14.5223108E',
@@ -391,6 +404,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'sokol-hostivar',
       name: 'Sokol Hostivař',
       image: 'sokol-hostivar.png',
       gps: '50.0558222N, 14.5352561E',
@@ -402,6 +416,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'sokol-petrovice',
       name: 'Sokol Petrovice',
       image: 'groups.svg',
       gps: '50.0350828N, 14.5574344E',
@@ -413,6 +428,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'squash-point',
       name: 'Squash point',
       image: 'squash-point.png',
       gps: '50.0358214N, 14.5223108E',
@@ -424,6 +440,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'tenisova-skola-tallent',
       name: 'Tenisová škola Tallent',
       image: 'tallent.png',
       gps: '50.0279875N, 14.5347475E',
@@ -435,6 +452,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'yamaha',
       name: 'Yamaha',
       image: 'yamaha.png',
       gps: '50.0413736N, 14.5605028E',
@@ -448,6 +466,7 @@ export const data = {
   ],
   outdoorSpaces: [
     {
+      id: 'divoka-zahrada-hostivar',
       name: 'Divoká zahrada Hostivař',
       image: 'outdoor-spaces.svg',
       gps: '50.0401453N, 14.5173678E',
@@ -459,6 +478,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'dobra-voda-potucek',
       name: 'Dobrá voda potůček',
       image: 'outdoor-spaces.svg',
       gps: '50.0300175N, 14.5632119E',
@@ -469,6 +489,7 @@ export const data = {
       cityPart: 'Křeslice',
     },
     {
+      id: 'dopravni-hriste-horni-mecholupy',
       name: 'Dopravní hřiště Horní Měcholupy',
       image: 'outdoor-spaces.svg',
       gps: '50.0393753N, 14.5629506E',
@@ -479,6 +500,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'dopravni-hriste-platanova',
       name: 'Dopravní hřiště Platanová',
       image: 'outdoor-spaces.svg',
       gps: '50.0555522N, 14.5093764E',
@@ -490,6 +512,7 @@ export const data = {
       cityPart: 'Záběhlice',
     },
     {
+      id: 'gutovka',
       name: 'Gutovka',
       image: 'gutovka.png',
       gps: '50.0711136N, 14.4910036E',
@@ -500,6 +523,7 @@ export const data = {
       cityPart: 'Strašnice',
     },
     {
+      id: 'hostivarsky-lesopark',
       name: 'Hostivařský lesopark',
       image: 'outdoor-spaces.svg',
       gps: '50.0451481N, 14.5369528E',
@@ -510,6 +534,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'krtkuv-svet',
       name: 'Krtkův svět',
       image: 'krtkuv-svet.png',
       gps: '50.0508917N, 14.5655572E',
@@ -520,6 +545,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'malesicky-park',
       name: 'Malešický park',
       image: 'outdoor-spaces.svg',
       gps: '50.0850017N, 14.4990378E',
@@ -531,6 +557,7 @@ export const data = {
       cityPart: 'Malešice',
     },
     {
+      id: 'milicov-zoopark',
       name: 'Milíčov zoopark',
       image: 'outdoor-spaces.svg',
       gps: '50.0280586N, 14.5398583E',
@@ -542,6 +569,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'milicovsky-les',
       name: 'Milíčovský les',
       image: 'outdoor-spaces.svg',
       gps: '50.0218064N, 14.5378878E',
@@ -552,6 +580,7 @@ export const data = {
       cityPart: 'Újezd',
     },
     {
+      id: 'na-sancich',
       name: 'Na Šancích',
       image: 'outdoor-spaces.svg',
       gps: '50.0379197N, 14.5479481E',
@@ -562,6 +591,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'park-malinova-chrpova',
       name: 'Park Malinová-Chrpová',
       image: 'outdoor-spaces.svg',
       gps: '50.0568297N, 14.5012389E',
@@ -573,6 +603,7 @@ export const data = {
       cityPart: 'Záběhlice',
     },
     {
+      id: 'park-u-chodovské-tvrze',
       name: 'Park u Chodovské tvrze',
       image: 'outdoor-spaces.svg',
       gps: '50.0346300N, 14.4990133E',
@@ -583,6 +614,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'plaz-hostivarska-prehrada',
       name: 'pláž Hostivařská přehrada',
       image: 'outdoor-spaces.svg',
       gps: '50.0410653N, 14.5333978E',
@@ -593,6 +625,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'toulcuv-dvur',
       name: 'Toulcův dvůr',
       image: 'toulcuv-dvur.png',
       gps: '50.0482556N, 14.5200314E',
@@ -605,6 +638,7 @@ export const data = {
   ],
   innerSpaces: [
     {
+      id: 'aqua-sport-club-areal',
       name: 'Aqua Sport Club',
       image: 'jedenactka.png',
       gps: '50.0386019N, 14.5016939E',
@@ -615,6 +649,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'aquapalace-praha',
       name: 'Aquapalace Praha',
       image: 'aqua-palace.png',
       gps: '50.0075761N, 14.5714894E',
@@ -625,6 +660,7 @@ export const data = {
       cityPart: 'Čestlice',
     },
     {
+      id: 'funpark-zirafa',
       name: 'FunPark Žirafa',
       image: 'funpark-zirafa.png',
       gps: '50.0000764N, 14.5768128E',
@@ -635,6 +671,7 @@ export const data = {
       cityPart: 'Čestlice',
     },
     {
+      id: 'hamr-zaběhlice',
       name: 'Hamr Záběhlice',
       image: 'hamr.png',
       gps: '50.0530586N, 14.4860553E',
@@ -645,6 +682,7 @@ export const data = {
       cityPart: 'Záběhlice',
     },
     {
+      id: 'jump-arena',
       name: 'Jump arena',
       image: 'jump-park.png',
       gps: '50.0671017N, 14.5473775E',
@@ -655,6 +693,7 @@ export const data = {
       cityPart: 'Štěrboholy',
     },
     {
+      id: 'koala',
       name: 'Koala',
       image: 'koala-cafe.png',
       gps: '50.0561431N, 14.5429808E',
@@ -665,6 +704,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'kuliskov',
       name: 'Kulíškov',
       image: 'kuliskov.png',
       gps: '50.0534133N, 14.5178375E',
@@ -675,6 +715,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'piratsky-detsky-svet',
       name: 'Pirátský dětský svět',
       image: 'inner-spaces.svg',
       gps: '50.0725097N, 14.5421122E',
@@ -685,6 +726,7 @@ export const data = {
       cityPart: 'Štěrboholy',
     },
     {
+      id: 'plavacek-pronajem-bazenu',
       name: 'Plaváček - pronájem bazénu',
       image: 'plavacek.png',
       gps: '50.0455339N, 14.5581889E',
@@ -695,6 +737,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'slunecnice',
       name: 'Slunečnice',
       image: 'slunecnice.png',
       gps: '50.0253447N, 14.4926225E',
@@ -705,6 +748,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'tanzania',
       name: 'Tanzania',
       image: 'tanzania.png',
       gps: '50.0406161N, 14.5588367E',
@@ -715,6 +759,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'time-out',
       name: 'Time Out',
       image: 'timeout.png',
       gps: '50.0312078N, 14.4902753E',
@@ -727,6 +772,7 @@ export const data = {
   ],
   restaurants: [
     {
+      id: 'bageterie-boulevard',
       name: 'Bageterie Boulevard',
       image: 'bb.png',
       gps: '50.0434989N, 14.5676031E',
@@ -737,6 +783,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'cyklobar-ve-statku',
       name: 'Cyklobar Ve Statku',
       image: 'restaurants.svg',
       gps: '50.0244522N, 14.5555886E',
@@ -747,6 +794,7 @@ export const data = {
       cityPart: 'Křeslice',
     },
     {
+      id: 'dolce-carosello',
       name: 'Dolce Carosello',
       image: 'dolce-carosello.png',
       gps: '50.0756758N, 14.5004539E',
@@ -757,6 +805,7 @@ export const data = {
       cityPart: 'Strašnice',
     },
     {
+      id: 'hostivar-1',
       name: 'Hostivar 1',
       image: 'hostivar.png',
       gps: '50.0463689N, 14.5493519E',
@@ -767,6 +816,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'hostivar-2',
       name: 'Hostivar H2',
       image: 'hostivar.png',
       gps: '50.0494186N, 14.5615542E',
@@ -777,6 +827,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'kavarna-jasminka',
       name: 'Kavárna Jasmínka',
       image: 'jasminka.png',
       gps: '50.0554542N, 14.5118408E',
@@ -787,6 +838,7 @@ export const data = {
       cityPart: 'Záběhlice',
     },
     {
+      id: 'koala-cafe-restaurant',
       name: 'Koala café',
       image: 'koala-cafe.png',
       gps: '50.0561431N, 14.5429808E',
@@ -797,6 +849,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'mlyn-na-dobre-vode',
       name: 'Mlýn na Dobré vodě',
       image: 'restaurants.svg',
       gps: '50.0300175N, 14.5632119E',
@@ -807,6 +860,7 @@ export const data = {
       cityPart: 'Křeslice',
     },
     {
+      id: 'na-sancich',
       name: 'Na Šancích',
       image: 'restaurants.svg',
       gps: '50.0379197N, 14.5479481E',
@@ -817,6 +871,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'pizzerie-milano',
       name: 'Pizzerie Milano',
       image: 'restaurants.svg',
       gps: '50.0464744N, 14.5559864E',
@@ -827,6 +882,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'zelenkova-cukrarna',
       name: 'Zelenkova cukrárna',
       image: 'zelenkova-cukrarna.png',
       gps: '50.0406150N, 14.5588369E',
@@ -837,6 +893,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'zmrzlinarna-micek',
       name: 'Zmrzlinárna Míček',
       image: 'micek.png',
       gps: '50.0478114N, 14.5515939E',
@@ -849,6 +906,7 @@ export const data = {
   ],
   kindergartens: [
     {
+      id: 'berusky',
       name: 'Berušky',
       image: 'kindergartens.svg',
       gps: '50.0453747N, 14.5540494E',
@@ -859,6 +917,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'broucci',
       name: 'Broučci',
       image: 'kindergartens.svg',
       gps: '50.0453747N, 14.5540494E',
@@ -869,6 +928,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'clovicek-hostivar',
       name: 'Človíček',
       image: 'clovicek.png',
       gps: '50.0487503N, 14.5369950E',
@@ -879,6 +939,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'clovicek-mecholupy',
       name: 'Človíček',
       image: 'clovicek.png',
       gps: '50.0413736N, 14.5605028E',
@@ -889,6 +950,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'dino-preschool',
       name: 'Dino Preschool',
       image: 'dino-school.png',
       gps: '50.0349433N, 14.5604164E',
@@ -899,6 +961,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'do-lesa',
       name: 'DO LESA!',
       image: 'kindergartens.svg',
       gps: '50.0462336N, 14.5390842E',
@@ -909,6 +972,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'frydolinek',
       name: 'Frydolínek',
       image: 'sokol-hostivar.png',
       gps: '50.0558222N, 14.5352561E',
@@ -919,6 +983,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'kosik',
       name: 'Košík',
       image: 'ms-kosik.png',
       gps: '50.0447522N, 14.5192692E',
@@ -929,6 +994,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'montysek',
       name: 'Montýsek',
       image: 'montysek.png',
       gps: '50.0420967N, 14.5573572E',
@@ -939,6 +1005,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'muska',
       name: 'Muška',
       image: 'muska-skolka.png',
       gps: '50.0350603N, 14.5557514E',
@@ -949,6 +1016,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'pilne-vcelky-skolka',
       name: 'Pilné včelky',
       image: 'pilne-vcelky.png',
       gps: '50.0349447N, 14.5223486E',
@@ -959,6 +1027,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'rarasek',
       name: 'Rarášek',
       image: 'kindergartens.svg',
       gps: '50.0469700N, 14.5615733E',
@@ -969,6 +1038,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'seminko',
       name: 'Semínko',
       image: 'seminko.png',
       gps: '50.0482556N, 14.5200314E',
@@ -979,6 +1049,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'slunicko',
       name: 'Sluníčka',
       image: 'slunicka.png',
       gps: '50.0496256N, 14.5317550E',
@@ -989,6 +1060,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'snopik',
       name: 'Snopík',
       image: 'snopik.png',
       gps: '50.0360039N, 14.5565078E',
@@ -999,6 +1071,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'vorisek',
       name: 'Voříšek',
       image: 'vorisek.png',
       gps: '50.0560117N, 14.5356736E',
@@ -1009,6 +1082,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'wonderland',
       name: 'Wonderland',
       image: 'wonderland.png',
       gps: '50.0324878N, 14.5301567E',
@@ -1021,6 +1095,7 @@ export const data = {
   ],
   doctors: [
     {
+      id: 'alblova-lucie',
       name: 'Alblová Lucie',
       image: 'doctors.svg',
       gps: '50.0724847N, 14.5084294E',
@@ -1032,6 +1107,7 @@ export const data = {
       cityPart: 'Strašnice',
     },
     {
+      id: 'alfa-medica',
       name: 'Alfa medica',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1043,6 +1119,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'becvarova-nicola',
       name: 'Bečvářová Nicola',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1054,6 +1131,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'czinnerova-milada',
       name: 'Czinnerová Milada',
       image: 'doctors.svg',
       gps: '50.0463006N, 14.5140050E',
@@ -1066,6 +1144,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'dentalni-centrum-hostivar',
       name: 'Dentální centrum Hostivař',
       image: 'doctors.svg',
       gps: '50.0525825N, 14.5410172E',
@@ -1077,6 +1156,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'dohnalova-dagmar',
       name: 'Dohnalová Dagmar',
       image: 'doctors.svg',
       gps: '50.0259925N, 14.5178011E',
@@ -1089,6 +1169,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'elpeko-1',
       name: 'Elpeko',
       image: 'doctors.svg',
       gps: '50.0424025N, 14.5872672E',
@@ -1100,6 +1181,7 @@ export const data = {
       cityPart: 'Uhříněves',
     },
     {
+      id: 'elpeko-2',
       name: 'Elpeko',
       image: 'doctors.svg',
       gps: '50.0357508N, 14.5931744E',
@@ -1111,6 +1193,7 @@ export const data = {
       cityPart: 'Uhříněves',
     },
     {
+      id: 'francova-vera',
       name: 'Francová Věra',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
@@ -1123,6 +1206,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'fyzio-klinika',
       name: 'Fyzio klinika',
       image: 'doctors.svg',
       gps: '50.0326878N, 14.5132733E',
@@ -1134,6 +1218,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'gerstmanova-helena',
       name: 'Gerstmanová Helena',
       image: 'doctors.svg',
       gps: '50.0241472N, 14.5213800E',
@@ -1146,6 +1231,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'hendrychova-zdenka',
       name: 'Hendrychová Zdeňka',
       image: 'doctors.svg',
       gps: '50.0259925N, 14.5178011E',
@@ -1158,6 +1244,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'janikova-iva',
       name: 'Janíková Iva',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1169,6 +1256,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'jiranova-ivana',
       name: 'Jiráňová Ivana',
       image: 'doctors.svg',
       gps: '50.0548525N, 14.5315192E',
@@ -1181,6 +1269,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'joura-michal',
       name: 'Joura Michal',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1192,18 +1281,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
-      name: 'Klečková Erika',
-      image: 'doctors.svg',
-      gps: '50.0463200N, 14.5589608E',
-      latitude: 50.04632,
-      longitude: 14.5589608,
-      address: 'Boloňská 312/10, Praha 15 ',
-      web:
-        'http://www.detskydoktor.cz/lekar/mudr-erika-kleckova-praha-horni-mecholupy/',
-      type: 'pediatrie',
-      cityPart: 'Horní Měcholupy',
-    },
-    {
+      id: 'kokaisl-radek',
       name: 'Kokaisl Radek',
       image: 'doctors.svg',
       gps: '50.0802200N, 14.5012344E',
@@ -1215,17 +1293,19 @@ export const data = {
       cityPart: 'Malešice',
     },
     {
+      id: 'konigova-wachsmuth-ivana',
       name: 'Königová Wachsmuth Ivana',
       image: 'doctors.svg',
-      gps: '50.0463200N, 14.5589608E',
-      latitude: 50.04632,
-      longitude: 14.5589608,
-      address: 'Boloňská 312/10, Praha 15 ',
+      gps: '50.0299642N, 14.5961011E',
+      latitude: 50.02996,
+      longitude: 14.5961011,
+      address: 'Ke Kříži 1610/16, Praha 22',
       web: 'http://www.detskydoktor.cz/lekar/mudr-ivana-konigova-praha10/ ',
       type: 'pediatrie',
-      cityPart: 'Horní Měcholupy',
+      cityPart: 'Uhříněves',
     },
     {
+      id: 'kubartova-alexandra',
       name: 'Kubartová Alexandra',
       image: 'doctors.svg',
       gps: '50.0489983N, 14.5470072E',
@@ -1237,6 +1317,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'lampa-roman',
       name: 'Lampa Roman',
       image: 'doctors.svg',
       gps: '50.0548525N, 14.5315192E',
@@ -1249,6 +1330,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'lunakova-andrea',
       name: 'Luňáková Andrea',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1260,6 +1342,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'majdent',
       name: 'Majdent',
       image: 'doctors.svg',
       gps: '50.0395861N, 14.5070925E',
@@ -1271,6 +1354,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'male-zdravi-haje',
       name: 'Malé zdraví ',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
@@ -1282,6 +1366,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'male-zdravi-hostivar',
       name: 'Malé zdraví ',
       image: 'doctors.svg',
       gps: '50.0534150N, 14.5178375E',
@@ -1293,6 +1378,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'markalousova-jana',
       name: 'Markalousová Jana',
       image: 'doctors.svg',
       gps: '50.0401089N, 14.5650133E',
@@ -1304,6 +1390,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'medicavera',
       name: 'Medicavera',
       image: 'doctors.svg',
       gps: '50.0463200N, 14.5589608E',
@@ -1315,6 +1402,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'melicharova-vera',
       name: 'Melicharová Věra',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1326,6 +1414,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'monada',
       name: 'Monada',
       image: 'doctors.svg',
       gps: '50.0331417N, 14.5258931E',
@@ -1337,6 +1426,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'opatovska-pediatrie-haje',
       name: 'Opatovská pediatrie',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
@@ -1348,6 +1438,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'opatovska-pediatrie-chodov',
       name: 'Opatovská pediatrie',
       image: 'doctors.svg',
       gps: '50.0259925N, 14.5178011E',
@@ -1359,6 +1450,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'ordinace-klinicke-logopedie',
       name: 'Ordinace klinické logopedie',
       image: 'doctors.svg',
       gps: '50.0241472N, 14.5213800E',
@@ -1370,6 +1462,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'orl-tererova',
       name: 'ORL Tererova',
       image: 'doctors.svg',
       gps: '50.0241472N, 14.5213800E',
@@ -1381,6 +1474,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'ortoart',
       name: 'OrtoArt ortodontická ordinace s.r.o.',
       image: 'doctors.svg',
       gps: '50.0562181N, 14.4970431E',
@@ -1392,6 +1486,7 @@ export const data = {
       cityPart: 'Záběhlice',
     },
     {
+      id: 'pacltova-anna',
       name: 'Pacltová Anna',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
@@ -1404,6 +1499,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'pacltova-dagmar',
       name: 'Pacltová Dagmar',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
@@ -1416,6 +1512,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'pekárek-chodov',
       name: 'Pekárek Chodov',
       image: 'doctors.svg',
       gps: '50.0328297N, 14.4983956E',
@@ -1427,6 +1524,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'pekarek-strasnice',
       name: 'Pekárek Strašnice',
       image: 'doctors.svg',
       gps: '50.0722111N, 14.4869442E',
@@ -1438,6 +1536,7 @@ export const data = {
       cityPart: 'Strašnice',
     },
     {
+      id: 'petrikova-petra',
       name: 'Petrlíková Petra',
       image: 'doctors.svg',
       gps: '50.0463200N, 14.5589608E',
@@ -1449,6 +1548,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'polakova-marcela',
       name: 'Poláková Marcela',
       image: 'doctors.svg',
       gps: '50.0463200N, 14.5589608E',
@@ -1460,6 +1560,7 @@ export const data = {
       cityPart: 'Horní Měcholupy',
     },
     {
+      id: 'pospisilova-lenka',
       name: 'Pospíšilová Lenka',
       image: 'doctors.svg',
       gps: '50.0331697N, 14.5260722E',
@@ -1471,6 +1572,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'rehabilitace-petrovice',
       name: 'Rehabilitace Petrovice',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1482,6 +1584,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'rehAktiv',
       name: 'RehAktiv',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1493,6 +1596,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'schutova-vlasta',
       name: 'Schůtová Vlasta',
       image: 'doctors.svg',
       gps: '50.0463006N, 14.5140050E',
@@ -1504,6 +1608,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'steinerova-judita',
       name: 'Steinerová Judita',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
@@ -1515,6 +1620,7 @@ export const data = {
       cityPart: 'Háje',
     },
     {
+      id: 'snajdrova-jitka',
       name: 'Šnajdrová Jitka',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1526,6 +1632,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'taxova-hana',
       name: 'Taxová Hana',
       image: 'doctors.svg',
       gps: '50.0286425N, 14.5215628E',
@@ -1537,6 +1644,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'vavreckova-anna',
       name: 'Vavřečková Anna',
       image: 'doctors.svg',
       gps: '50.0259925N, 14.5178011E',
@@ -1549,6 +1657,7 @@ export const data = {
       cityPart: 'Chodov',
     },
     {
+      id: 'konigova-wachsmuth-ivana',
       name: 'Wagenknechtová Šárka',
       image: 'doctors.svg',
       gps: '50.0387564N, 14.5597908E',
@@ -1560,6 +1669,7 @@ export const data = {
       cityPart: 'Petrovice',
     },
     {
+      id: 'zborilova-eva',
       name: 'Zbořilová Eva',
       image: 'doctors.svg',
       gps: '50.0489983N, 14.5470072E',
@@ -1571,6 +1681,7 @@ export const data = {
       cityPart: 'Hostivař',
     },
     {
+      id: 'zikmundova-vitezslava',
       name: 'Zikmundová Vítězslava',
       image: 'doctors.svg',
       gps: '50.0333439N, 14.5284692E',
