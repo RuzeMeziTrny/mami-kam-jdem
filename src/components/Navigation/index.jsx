@@ -1,63 +1,89 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './styles.css';
+import { matchPath } from 'react-router';
 
 export const Navigation = () => {
   const [opened, setOpened] = useState(false);
 
   const location = useLocation();
+  console.log(location);
 
-  const items = {
-    '/': {
+  const items = [
+    {
+      path: '/',
       label: 'Vše',
       icon: '../../assets/icons/all.svg',
       iconAlt: 'ikona miminko',
     },
-    '/hriste': {
+    {
+      path: '/hriste',
       label: 'Dětská hřiště',
       className: 'nav__link--playgrounds',
       icon: '../../assets/icons/playgrounds.svg',
       iconAlt: 'ikona kyblík a lopatka',
     },
-    '/venkovni-arealy': {
+    {
+      path: '/hriste/:id',
+      label: 'Dětská hřiště',
+      className: 'nav__link--playgrounds',
+      icon: '../../assets/icons/playgrounds.svg',
+      iconAlt: 'ikona kyblík a lopatka',
+    },
+    {
+      path: '/venkovni-arealy',
       label: 'Venkovní areály',
       className: 'nav__link--outdoor-spaces',
       icon: '../../assets/icons/outdoor-spaces.svg',
       iconAlt: 'ikona větrník',
     },
-    '/vnitrni-arealy': {
+    {
+      path: '/vnitrni-arealy',
       label: 'Vnitřní areály',
       className: 'nav__link--inner-spaces',
       icon: '../../assets/icons/inner-spaces.svg',
       iconAlt: 'ikona stavba z kostek',
     },
-    '/restaurace': {
+    {
+      path: '/restaurace',
       label: 'Restaurace, kavárny',
       className: 'nav__link--restaurants',
       icon: '../../assets/icons/restaurants.svg',
       iconAlt: 'ikona lžíce a vidlička',
     },
-    '/krouzky': {
+    {
+      path: '/krouzky',
       label: 'Kroužky',
       className: 'nav__link--groups',
       icon: '../../assets/icons/groups.svg',
       iconAlt: 'ikona puzzle',
     },
-    '/skolky': {
+    {
+      path: '/skolky',
       label: 'Soukromé školky',
       className: 'nav__link--kindergartens',
       icon: '../../assets/icons/kindergartens.svg',
       iconAlt: 'ikona kostky',
     },
-    '/lekari': {
+    {
+      path: '/lekari',
       label: 'Dětští lékaři',
       className: 'nav__link--doctors',
       icon: '../../assets/icons/doctors.svg',
       iconAlt: 'ikona kříž',
     },
-  };
+  ];
 
-  const selectedItem = items[location.pathname];
+  /* const selectedItem = items[location.pathname];*/
+
+  const selectedItem = items.find((item) => {
+    const match = matchPath(location.pathname, {
+      path: item.path,
+      exact: true,
+      strict: false,
+    });
+    return match === null ? false : true;
+  });
 
   const navListClasses = ['nav__list'];
 

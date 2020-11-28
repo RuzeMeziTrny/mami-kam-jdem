@@ -6,8 +6,21 @@ export const PlaygroundsPage = (props) => {
   const params = useParams();
   console.log(params);
 
+  const surface = () => {
+    const surfaceElm = null;
+    if (props.sand) {
+      surfaceElm = 'písek';
+    } else if (props.grain) {
+      surfaceElm = 'kamínky';
+    } else if (props.tartan) {
+      surfaceElm = 'tartan';
+    }
+  };
+
+  return <div className="fake-pop-up"></div>;
+
   return (
-    <h3>
+    <div>
       <p>{props.id}</p>
       <h3 className="playgrounds-name">{props.name}</h3>
       <img
@@ -18,8 +31,8 @@ export const PlaygroundsPage = (props) => {
       <ul className="playgrounds-list">
         <li>
           <h3 className="playgrounds-items--heading">Herní prvky</h3>
-          <ul>
-            <li className="playgrounds-item">{props.babySwing}</li>
+          <ul className="playgrounds-others">
+            <li>{props.babySwing}</li>
             <li>{props.seeSaw}</li>
             <li>{props.sandBox}</li>
             <li>{props.carousel}</li>
@@ -37,18 +50,16 @@ export const PlaygroundsPage = (props) => {
         <li>
           <h3 className="playgrounds-items--heading">Povrch hřiště</h3>
           <ul>
-            <li>{props.sand}</li>
-            <li>{props.grain}</li>
-            <li>{props.tartan}</li>
+            <p>{surface}</p>
           </ul>
           {/* tady podmínka, aby se zobrazil jen klíč, u kterého je true a ne všechny */}
         </li>
         <li>
           <h3 className="playgrounds-items--heading">Erární hračky</h3>
-          <p>{props.toys}</p>
+          <p>{props.toys === true ? 'ano' : 'ne'}</p>
           {/* zobrazit ano/ne podle true/false */}
         </li>
       </ul>
-    </h3>
+    </div>
   );
 };
