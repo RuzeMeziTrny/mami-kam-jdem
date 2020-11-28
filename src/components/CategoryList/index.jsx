@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { Switch, useLocation } from 'react-router-dom';
 import { CategoryItemGeneral } from '../CategoryItemGeneral';
 import { CategoryItemPlayground } from '../CategoryItemPlayground';
 import './styles.css';
@@ -7,9 +7,16 @@ import './styles.css';
 export const CategoryList = (props) => {
   const location = useLocation();
 
+  /*
+<Switch>
+<Route path="/hriste" render={() => pole category item plg</>}
+<Route render={() => pole category item general</>}
+</Switch>
+*/
+
   return (
     <div className="category-list">
-      {location.pathname === '/hriste'
+      {location.pathname === '/hriste' /*startsWith('/hriste')*/
         ? props.array.map((place) => (
             <CategoryItemPlayground
               key={place.id}

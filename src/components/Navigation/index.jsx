@@ -7,7 +7,6 @@ export const Navigation = () => {
   const [opened, setOpened] = useState(false);
 
   const location = useLocation();
-  console.log(location);
 
   const items = [
     {
@@ -73,8 +72,6 @@ export const Navigation = () => {
       iconAlt: 'ikona kříž',
     },
   ];
-
-  /* const selectedItem = items[location.pathname];*/
 
   const selectedItem = items.find((item) => {
     const match = matchPath(location.pathname, {
