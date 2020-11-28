@@ -58,6 +58,14 @@ export const Map = () => {
         mapStyle={seznamMapy}
         /* scrollZoom={false} kdybychom chtěli zabránit zoomu kolečkem myši */
       >
+        <div>
+          <img
+            className="map__logo"
+            src="/assets/icons/mapy-logo.svg"
+            alt="logo Seznam mapy"
+          />
+        </div>
+
         <div className="map__control-panel">
           <NavigationControl />
           <GeolocateControl />
@@ -263,13 +271,13 @@ export const Map = () => {
           >
             {activeCategory === 'playgrounds' ? (
               <CategoryItemPlayground
-                img={`../../assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
+                img={`/assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
                 name={data[activeCategory][dataIndex].name}
                 id={data[activeCategory][dataIndex].id}
               />
             ) : (
               <CategoryItemGeneral
-                img={`../../assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
+                img={`/assets/images/${activeCategory}/${data[activeCategory][dataIndex].image}`} /* nefunguje */
                 name={data[activeCategory][dataIndex].name}
                 web={data[activeCategory][dataIndex].web}
               />
