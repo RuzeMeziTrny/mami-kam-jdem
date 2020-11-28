@@ -1,16 +1,28 @@
 .category-item {
-  width: 400px;
+  display: flex;
+  width: 350px;
 }
 
 .category-item__image {
   width: 88px;
   height: 88px;
-  object-fit: cover;
   margin: 8px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.category-item__image img {
+  width: 100%;
 }
 
 .category-item__details {
   margin: 8px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .category-item__name {
@@ -20,4 +32,10 @@
 
 .category-item__address {
   font-size: 0.9em;
+}
+
+@media only screen and (min-width: 1100px) {
+  .category-item {
+    width: 100%;
+  }
 }

@@ -7,6 +7,7 @@ import './index.html';
 import './styles.css';
 import { CategoryList } from './components/CategoryList/index.jsx';
 import { PlaygroundsPage } from './components/PlaygroundsPage/index.jsx';
+import { data } from './data.js';
 /*import { CategoryItemPlayground } from './components/CategoryItemPlayground/index.jsx';*/
 
 const Playgrounds = () => {
@@ -16,8 +17,6 @@ const Playgrounds = () => {
       {/*  <CategoryItemPlayground />*/}
 
       <Route path={`/hriste/:id`} component={PlaygroundsPage} />
-
-      <p>seznam hřišť</p>
     </div>
   );
 };
@@ -25,7 +24,7 @@ const Playgrounds = () => {
 const OutdoorSpaces = () => {
   return (
     <div>
-      <p>seznam venkovních areálů</p>
+      <CategoryList array={data.outdoorSpaces} />
     </div>
   );
 };
@@ -33,7 +32,7 @@ const OutdoorSpaces = () => {
 const InnerSpaces = () => {
   return (
     <div>
-      <p>seznam vnitřních areálů</p>
+      <CategoryList array={data.innerSpaces} />
     </div>
   );
 };
@@ -41,8 +40,7 @@ const InnerSpaces = () => {
 const Restaurants = () => {
   return (
     <div>
-      <p>seznam restaurací a kaváren</p>
-      <CategoryList />
+      <CategoryList array={data.restaurants} />
     </div>
   );
 };
@@ -50,8 +48,7 @@ const Restaurants = () => {
 const Groups = () => {
   return (
     <div>
-      <p>filtry pro kroužky</p>
-      <p>seznam kroužků</p>
+      <CategoryList array={data.groups} />
     </div>
   );
 };
@@ -59,7 +56,7 @@ const Groups = () => {
 const Kindergartens = () => {
   return (
     <div>
-      <p>seznam školek</p>
+      <CategoryList array={data.kindergartens} />
     </div>
   );
 };
@@ -67,8 +64,7 @@ const Kindergartens = () => {
 const Doctors = () => {
   return (
     <div>
-      <p>filtry pro lékaře</p>
-      <p>seznam lékařů</p>
+      <CategoryList array={data.doctors} />
     </div>
   );
 };

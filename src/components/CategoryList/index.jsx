@@ -53,28 +53,18 @@ const restauraceKavarny = [
   },
 ];
 
-export const CategoryList = () => {
+export const CategoryList = (props) => {
   return (
     <div className="category-list">
-      {/* <img
-        className="category-arrow category-arrow--left"
-        src="../../assets/icons/arrow_left.svg"
-        alt="šipka doleva"
-     /> */}
-      {restauraceKavarny.map((data) => (
+      {props.array.map((place) => (
         <CategoryItemGeneral
-          key={data.name}
-          image={data.image}
-          name={data.name}
-          address={data.address}
-          web={data.web}
+          key={place.id}
+          image={place.image}
+          name={place.name}
+          address={place.address}
+          web={place.web}
         />
       ))}
-      {/* <img
-        className="category-arrow category-arrow--right"
-        src="../../assets/icons/arrow_right.svg"
-        alt="šipka doprava"
-     />*/}
     </div>
   );
 };
