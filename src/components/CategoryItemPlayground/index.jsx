@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
-import { Route, Link } from 'react-router-dom';
-/*import { PlaygroundsPage } from './components/PlaygroundsPage/index.jsx';*/
+import { Route, Link, Router } from 'react-router-dom';
+import { PlaygroundsPage } from '../PlaygroundsPage';
 
 const PlaygroundsField = [
   {
@@ -54,11 +54,10 @@ export const CategoryItemPlayground = (props) => {
         <p className="category-item__name">{props.name}</p>
         <p className="category-item__address">{props.address}</p>
 
-        {/*nejpíše místo id props*/}
         <Link to={`/hriste/:${props.id}?`} className="category-item__web">
           Podrobnosti o hřišti
         </Link>
-        <PlaygroundsPage />
+        {/* <PlaygroundsPage /> */}
         <Route path={`/hriste/:${props.id}?`}></Route>
 
         <a className="category-item__web" href={props.web}>
