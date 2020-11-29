@@ -15,31 +15,16 @@ const Playgrounds = () => {
       <CategoryList array={data.playgrounds} />
 
       <Route
-        path={`/hriste/:id`}
-        render={() =>
-          data.playgrounds.map((place) => (
-            <PlaygroundsDetails
-              key={place.id}
-              name={place.name}
-              image={place.image}
-              address={place.address}
-              babySwing={place.babySwing}
-              swing={place.swing}
-              seeSaw={place.seeSaw}
-              sandbox={place.sandbox}
-              slide={place.slide}
-              carousel={place.carousel}
-              others={place.others}
-              shadow={place.shadow}
-              shadowDetails={place.shadowDetails}
-              toys={place.toys}
-              sand={place.sand}
-              grain={place.grain}
-              tartan={place.tartan}
-            />
-            /* ale teď to vyrenderuje všechny hřiště -> propojit to se správným hřištěm (pomocí id hřiště?) */
-          ))
-        }
+        path={`/hriste/:idhriste`}
+        render={(routeprops) => {
+          const IDhristezURL = routeprops.match.params.idhriste;
+          const playground = data.playgrounds.find((place) => {
+            return IDhristezURL === place.id ? true : false;
+          });
+
+          return <PlaygroundsDetails key={playground.id} {...playground} />;
+          /* ale teď to vyrenderuje všechny hřiště -> propojit to se správným hřištěm (pomocí id hřiště?) */
+        }}
       />
     </div>
   );

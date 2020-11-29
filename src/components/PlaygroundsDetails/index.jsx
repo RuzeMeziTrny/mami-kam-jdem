@@ -33,6 +33,7 @@ export const PlaygroundsDetails = (props) => {
 
   return (
     <div className="playgrounds-container">
+      <button>x</button>
       <h3 className="playgrounds-name">{props.name}</h3>
       <img
         className="playgrounds-photo"

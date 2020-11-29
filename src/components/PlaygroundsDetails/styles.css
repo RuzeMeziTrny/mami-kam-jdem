@@ -1,12 +1,107 @@
 .playgrounds-container {
-  background-color: blue;
+  background-color: white;
+  width: 80%;
+  border-radius: 3%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
   position: absolute;
-  width: 500px;
-  height: 500px;
-  top: 100px;
-  left: 450px;
+  left: 0;
+  right: 0;
+  top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 .playgrounds-photo {
-  width: 50%;
+  width: 30%;
+  height: 30%;
+  margin: auto;
 }
+
+.playgrounds-container button {
+  float: right;
+  outline: none;
+  background-color: white;
+  border: none;
+  font-size: 1.2em;
+  border-radius: 3%;
+  margin: 5px;
+  color: grey;
+}
+
+.playgrounds-list {
+  list-style-type: none;
+  margin: 0;
+}
+
+.playgrounds-list li {
+}
+
+.playgrounds-list p,
+.playgrounds-list h3 {
+  margin: 0;
+  padding: 5px;
+}
+
+.playgrounds-others {
+  padding: 0;
+}
+
+.playgrounds-name {
+  padding-left: 50px;
+}
+
+.playgrounds-items__heading {
+  font-size: 0.9em;
+}
+
+/*.playgrounds-container {
+  background-color: white;
+  width: 600px;
+  height: 450px;
+  border-radius: 3%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8em;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.playgrounds-photo {
+  width: 40%;
+  height: 40%;
+  float: right;
+  margin-right: 60px;
+}
+
+.playgrounds-name {
+  font-size: 2em;
+  padding-left: 50px;
+}
+
+.playgrounds-list {
+  float: left;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 50px;
+  width: 40%;
+}
+
+.playgrounds-list p {
+  margin: 10px;
+}
+
+
+.playgrounds-items__heading {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.playgrounds-others {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}*/
