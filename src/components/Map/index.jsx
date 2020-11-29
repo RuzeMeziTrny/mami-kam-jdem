@@ -62,7 +62,7 @@ export const Map = ({
         latitude: popupData.latitude,
         longitude: popupData.longitude,
         zoom: viewport.zoom,
-        transitionDuration: 1000,
+        transitionDuration: 2000,
         transitionInterpolator: new FlyToInterpolator(),
         transitionEasing: d3.easeCubic,
       });
@@ -86,12 +86,10 @@ export const Map = ({
             alt="logo Seznam mapy"
           />
         </div>
-
         <div className="map__control-panel">
           <NavigationControl />
           <GeolocateControl />
         </div>
-
         <Route
           path={['/', '/hriste/:id?']}
           exact
@@ -158,7 +156,6 @@ export const Map = ({
             ))
           }
         />
-
         <Route
           path={['/', '/vnitrni-arealy']}
           exact
@@ -192,7 +189,6 @@ export const Map = ({
             ))
           }
         />
-
         <Route
           path={['/', '/restaurace']}
           exact
@@ -226,7 +222,6 @@ export const Map = ({
             ))
           }
         />
-
         <Route
           path={['/', '/krouzky']}
           exact
@@ -260,7 +255,6 @@ export const Map = ({
             ))
           }
         />
-
         <Route
           path={['/', '/skolky']}
           exact
@@ -294,7 +288,6 @@ export const Map = ({
             ))
           }
         />
-
         <Route
           path={['/', '/lekari']}
           exact
@@ -340,13 +333,13 @@ export const Map = ({
           >
             {activeCategory === 'playgrounds' ? (
               <CategoryItemPlayground
-                img={`/assets/images/${popupData.image}`} /* obrázek se nezobrazuje */
+                image={popupData.image}
                 name={popupData.name}
                 id={popupData.id}
               />
             ) : (
               <CategoryItemGeneral
-                img={`/assets/images/${popupData.image}`} /* obrázek se nezobrazuje */
+                image={popupData.image}
                 name={popupData.name}
                 web={popupData.web}
               />
