@@ -1,3 +1,11 @@
+.map__container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 300px;
+}
+
 .map__logo {
   position: absolute;
   bottom: 10px;

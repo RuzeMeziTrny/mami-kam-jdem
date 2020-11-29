@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './styles.css';
 
 export const PlaygroundsDetails = (props) => {
@@ -32,42 +32,49 @@ export const PlaygroundsDetails = (props) => {
   };
 
   return (
-    <div className="playgrounds-container">
-      <button>x</button>
-      <h3 className="playgrounds-name">{props.name}</h3>
-      <img
-        className="playgrounds-photo"
-        src={`/assets/images/${props.image}`}
-        alt="obrázek hřiště"
-      />
-      <ul className="playgrounds-list">
-        <li>
-          <h3 className="playgrounds-items__heading">Herní prvky</h3>
-          <ul className="playgrounds-others">
-            {props.babySwing && <li>malá houpačka</li>}
-            {props.swing && <li>houpačka</li>}
-            {props.seeSaw && <li>houpačka pro dvojice</li>}
-            {props.sandbox && <li>pískoviště</li>}
-            {props.slide && <li>skluzavka</li>}
-            {props.carousel && <li>kolotoč</li>}
-            {props.others.map((other) => (
-              <li key={other}>{other}</li>
-            ))}
-          </ul>
-        </li>
-        <li>
-          <h3 className="playgrounds-items__heading">Stín</h3>
-          <p>{shadow(props)}</p>
-        </li>
-        <li>
-          <h3 className="playgrounds-items__heading">Povrch hřiště</h3>
-          <p>{surface(props)}</p>
-        </li>
-        <li>
-          <h3 className="playgrounds-items__heading">Erární hračky</h3>
-          <p>{props.toys ? 'ano' : 'ne'}</p>
-        </li>
-      </ul>
-    </div>
+    <>
+      <div className="modal-drop"></div>
+      <div className="playgrounds-container">
+        <button>
+          <Link to="/hriste" className="playgrounds-container--link">
+            x
+          </Link>
+        </button>
+        <h3 className="playgrounds-name">{props.name}</h3>
+        <img
+          className="playgrounds-photo"
+          src={`/assets/images/${props.image}`}
+          alt="obrázek hřiště"
+        />
+        <ul className="playgrounds-list">
+          <li>
+            <h3 className="playgrounds-items__heading">Herní prvky</h3>
+            <ul className="playgrounds-others">
+              {props.babySwing && <li>malá houpačka</li>}
+              {props.swing && <li>houpačka</li>}
+              {props.seeSaw && <li>houpačka pro dvojice</li>}
+              {props.sandbox && <li>pískoviště</li>}
+              {props.slide && <li>skluzavka</li>}
+              {props.carousel && <li>kolotoč</li>}
+              {props.others.map((other) => (
+                <li key={other}>{other}</li>
+              ))}
+            </ul>
+          </li>
+          <li>
+            <h3 className="playgrounds-items__heading">Stín</h3>
+            <p>{shadow(props)}</p>
+          </li>
+          <li>
+            <h3 className="playgrounds-items__heading">Povrch hřiště</h3>
+            <p>{surface(props)}</p>
+          </li>
+          <li>
+            <h3 className="playgrounds-items__heading">Erární hračky</h3>
+            <p>{props.toys ? 'ano' : 'ne'}</p>
+          </li>
+        </ul>
+      </div>
+    </>
   );
 };

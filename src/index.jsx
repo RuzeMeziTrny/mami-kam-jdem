@@ -136,6 +136,9 @@ const App = () => {
               Mami, kam jdem?
             </Link>
           </h1>
+          <button className="header__btn">
+            <a href="mailto:someone@example.com">Napište nám</a>
+          </button>
         </header>
         <Navigation setDataIndex={setDataIndex} />
         <Switch>

@@ -69,11 +69,11 @@ export const Map = ({
   }, [popupData]);
 
   return (
-    <>
+    <div className="map__container">
       <ReactMapGL
         {...viewport}
-        width="100vw"
-        height="100vh"
+        width="100%"
+        height="100%"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
         mapStyle={seznamMapy}
         /* scrollZoom={false} kdybychom chtěli zabránit zoomu kolečkem myši */
@@ -346,6 +346,6 @@ export const Map = ({
           </Popup>
         )}
       </ReactMapGL>
-    </>
+    </div>
   );
 };
