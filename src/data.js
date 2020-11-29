@@ -1300,7 +1300,7 @@ export const data = {
       latitude: 50.02996,
       longitude: 14.5961011,
       address: 'Ke Kříži 1610/16, Praha 22',
-      web: 'http://www.detskydoktor.cz/lekar/mudr-ivana-konigova-praha10/',
+      web: 'https://www.detskemecholupy.cz/',
       type: 'pediatrie',
       cityPart: 'Uhříněves',
     },

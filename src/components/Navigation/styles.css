@@ -167,10 +167,6 @@
     display: block;
   }
 
-  .nav__item:hover {
-    background-color: white;
-  }
-
   .nav__link::after {
     padding: 31px 160px;
     left: -70px;

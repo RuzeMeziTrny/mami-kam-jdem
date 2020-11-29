@@ -4,6 +4,10 @@
   flex-shrink: 0;
 }
 
+.category-item:hover {
+  cursor: pointer;
+}
+
 .category-item__image {
   width: 88px;
   height: 88px;
