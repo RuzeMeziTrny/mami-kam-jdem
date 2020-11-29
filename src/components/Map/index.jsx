@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, {
@@ -6,7 +6,10 @@ import ReactMapGL, {
   NavigationControl,
   GeolocateControl,
   Popup,
+  LinearInterpolator,
+  FlyToInterpolator,
 } from 'react-map-gl';
+import * as d3 from 'd3-ease';
 import iconPlaygrounds from '../../assets/icons/playgrounds.svg';
 import iconOutdoorSpaces from '../../assets/icons/outdoor-spaces.svg';
 import iconInnerSpaces from '../../assets/icons/inner-spaces.svg';
@@ -50,6 +53,21 @@ export const Map = ({
     longitude: 14.5536622,
     zoom: 15,
   });
+
+  const popupData = dataIndex !== null ? data[activeCategory][dataIndex] : null;
+
+  useEffect(() => {
+    if (popupData !== null) {
+      setViewport({
+        latitude: popupData.latitude,
+        longitude: popupData.longitude,
+        zoom: viewport.zoom,
+        transitionDuration: 1000,
+        transitionInterpolator: new FlyToInterpolator(),
+        transitionEasing: d3.easeCubic,
+      });
+    }
+  }, [popupData]);
 
   return (
     <>
@@ -311,26 +329,26 @@ export const Map = ({
           }
         />
 
-        {dataIndex !== null && (
+        {popupData !== null && (
           <Popup
-            key={data[activeCategory][dataIndex].id}
-            latitude={data[activeCategory][dataIndex].latitude}
-            longitude={data[activeCategory][dataIndex].longitude}
+            key={popupData.id}
+            latitude={popupData.latitude}
+            longitude={popupData.longitude}
             offsetTop={-30}
             closeOnClick={false}
             onClose={() => setDataIndex(null)}
           >
             {activeCategory === 'playgrounds' ? (
               <CategoryItemPlayground
-                img={`/assets/images/${data[activeCategory][dataIndex].image}`} /* obrázek se nezobrazuje */
-                name={data[activeCategory][dataIndex].name}
-                id={data[activeCategory][dataIndex].id}
+                img={`/assets/images/${popupData.image}`} /* obrázek se nezobrazuje */
+                name={popupData.name}
+                id={popupData.id}
               />
             ) : (
               <CategoryItemGeneral
-                img={`/assets/images/${data[activeCategory][dataIndex].image}`} /* obrázek se nezobrazuje */
-                name={data[activeCategory][dataIndex].name}
-                web={data[activeCategory][dataIndex].web}
+                img={`/assets/images/${popupData.image}`} /* obrázek se nezobrazuje */
+                name={popupData.name}
+                web={popupData.web}
               />
             )}
           </Popup>
