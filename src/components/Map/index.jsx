@@ -39,15 +39,17 @@ const seznamMapy = {
   ],
 };
 
-export const Map = () => {
+export const Map = ({
+  dataIndex,
+  setDataIndex,
+  activeCategory,
+  setActiveCategory,
+}) => {
   const [viewport, setViewport] = useState({
     latitude: 50.0441875,
     longitude: 14.5536622,
     zoom: 15,
   });
-
-  const [dataIndex, setDataIndex] = useState(null);
-  const [activeCategory, setActiveCategory] = useState('');
 
   return (
     <>

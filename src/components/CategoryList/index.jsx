@@ -11,26 +11,34 @@ export const CategoryList = (props) => {
         <Route
           path="/hriste"
           render={() =>
-            props.array.map((place) => (
+            props.array.map((place, index) => (
               <CategoryItemPlayground
                 key={place.id}
                 image={place.image}
                 name={place.name}
                 address={place.address}
                 id={place.id}
+                handleClick={() => {
+                  props.setDataIndex(index);
+                  props.setActiveCategory(props.category);
+                }}
               />
             ))
           }
         />
         <Route
           render={() =>
-            props.array.map((place) => (
+            props.array.map((place, index) => (
               <CategoryItemGeneral
                 key={place.id}
                 image={place.image}
                 name={place.name}
                 address={place.address}
                 web={place.web}
+                handleClick={() => {
+                  props.setDataIndex(index);
+                  props.setActiveCategory(props.category);
+                }}
               />
             ))
           }
