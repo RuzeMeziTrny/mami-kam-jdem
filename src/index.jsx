@@ -152,7 +152,7 @@ const App = () => {
             </Link>
           </h1>
         </header>
-        <Navigation />
+        <Navigation setDataIndex={setDataIndex} />
         <Switch>
           {routes.map((route, index) => {
             const { Component, path } = route;

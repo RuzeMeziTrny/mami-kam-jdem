@@ -6,7 +6,6 @@ import ReactMapGL, {
   NavigationControl,
   GeolocateControl,
   Popup,
-  LinearInterpolator,
   FlyToInterpolator,
 } from 'react-map-gl';
 import * as d3 from 'd3-ease';
