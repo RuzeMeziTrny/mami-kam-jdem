@@ -17,8 +17,7 @@ import iconGroups from '../../assets/icons/groups.svg';
 import iconKindergartens from '../../assets/icons/kindergartens.svg';
 import iconDoctors from '../../assets/icons/doctors.svg';
 import { data } from '../../data.js';
-import { CategoryItemGeneral } from '../CategoryItemGeneral';
-import { CategoryItemPlayground } from '../CategoryItemPlayground';
+import { CategoryItem } from '../CategoryItem';
 import './styles.css';
 
 const seznamMapy = {
@@ -330,19 +329,13 @@ export const Map = ({
             closeOnClick={false}
             onClose={() => setDataIndex(null)}
           >
-            {activeCategory === 'playgrounds' ? (
-              <CategoryItemPlayground
-                image={popupData.image}
-                name={popupData.name}
-                id={popupData.id}
-              />
-            ) : (
-              <CategoryItemGeneral
-                image={popupData.image}
-                name={popupData.name}
-                web={popupData.web}
-              />
-            )}
+            <CategoryItem
+              image={popupData.image}
+              name={popupData.name}
+              web={popupData.web}
+              id={popupData.id}
+              category={activeCategory}
+            />
           </Popup>
         )}
       </ReactMapGL>
