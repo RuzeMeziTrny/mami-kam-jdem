@@ -5,7 +5,7 @@ export const CategoryItemGeneral = (props) => {
   const colonIndex = props.web.indexOf(':');
 
   return (
-    <div className="category-item">
+    <div className="category-item" onClick={props.handleClick}>
       <div className="category-item__image">
         <img src={`/assets/images/${props.image}`} alt="obrázek místa" />
       </div>

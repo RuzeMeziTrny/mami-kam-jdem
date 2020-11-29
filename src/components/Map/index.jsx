@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, {
@@ -6,7 +6,9 @@ import ReactMapGL, {
   NavigationControl,
   GeolocateControl,
   Popup,
+  FlyToInterpolator,
 } from 'react-map-gl';
+import * as d3 from 'd3-ease';
 import iconPlaygrounds from '../../assets/icons/playgrounds.svg';
 import iconOutdoorSpaces from '../../assets/icons/outdoor-spaces.svg';
 import iconInnerSpaces from '../../assets/icons/inner-spaces.svg';
@@ -39,15 +41,32 @@ const seznamMapy = {
   ],
 };
 
-export const Map = () => {
+export const Map = ({
+  dataIndex,
+  setDataIndex,
+  activeCategory,
+  setActiveCategory,
+}) => {
   const [viewport, setViewport] = useState({
     latitude: 50.0441875,
     longitude: 14.5536622,
     zoom: 15,
   });
 
-  const [dataIndex, setDataIndex] = useState(null);
-  const [activeCategory, setActiveCategory] = useState('');
+  const popupData = dataIndex !== null ? data[activeCategory][dataIndex] : null;
+
+  useEffect(() => {
+    if (popupData !== null) {
+      setViewport({
+        latitude: popupData.latitude,
+        longitude: popupData.longitude,
+        zoom: viewport.zoom,
+        transitionDuration: 2000,
+        transitionInterpolator: new FlyToInterpolator(),
+        transitionEasing: d3.easeCubic,
+      });
+    }
+  }, [popupData]);
 
   return (
     <>
@@ -66,12 +85,10 @@ export const Map = () => {
             alt="logo Seznam mapy"
           />
         </div>
-
         <div className="map__control-panel">
           <NavigationControl />
           <GeolocateControl />
         </div>
-
         <Route
           path={['/', '/hriste/:id?']}
           exact
@@ -138,7 +155,6 @@ export const Map = () => {
             ))
           }
         />
-
         <Route
           path={['/', '/vnitrni-arealy']}
           exact
@@ -172,7 +188,6 @@ export const Map = () => {
             ))
           }
         />
-
         <Route
           path={['/', '/restaurace']}
           exact
@@ -206,7 +221,6 @@ export const Map = () => {
             ))
           }
         />
-
         <Route
           path={['/', '/krouzky']}
           exact
@@ -240,7 +254,6 @@ export const Map = () => {
             ))
           }
         />
-
         <Route
           path={['/', '/skolky']}
           exact
@@ -274,7 +287,6 @@ export const Map = () => {
             ))
           }
         />
-
         <Route
           path={['/', '/lekari']}
           exact
@@ -309,26 +321,26 @@ export const Map = () => {
           }
         />
 
-        {dataIndex !== null && (
+        {popupData !== null && (
           <Popup
-            key={data[activeCategory][dataIndex].id}
-            latitude={data[activeCategory][dataIndex].latitude}
-            longitude={data[activeCategory][dataIndex].longitude}
+            key={popupData.id}
+            latitude={popupData.latitude}
+            longitude={popupData.longitude}
             offsetTop={-30}
             closeOnClick={false}
             onClose={() => setDataIndex(null)}
           >
             {activeCategory === 'playgrounds' ? (
               <CategoryItemPlayground
-                img={`/assets/images/${data[activeCategory][dataIndex].image}`} /* obrázek se nezobrazuje */
-                name={data[activeCategory][dataIndex].name}
-                id={data[activeCategory][dataIndex].id}
+                image={popupData.image}
+                name={popupData.name}
+                id={popupData.id}
               />
             ) : (
               <CategoryItemGeneral
-                img={`/assets/images/${data[activeCategory][dataIndex].image}`} /* obrázek se nezobrazuje */
-                name={data[activeCategory][dataIndex].name}
-                web={data[activeCategory][dataIndex].web}
+                image={popupData.image}
+                name={popupData.name}
+                web={popupData.web}
               />
             )}
           </Popup>

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { matchPath } from 'react-router';
 import './styles.css';
 
-export const Navigation = () => {
+export const Navigation = (props) => {
   const [opened, setOpened] = useState(false);
 
   const location = useLocation();
@@ -93,7 +93,10 @@ export const Navigation = () => {
   }
 
   return (
-    <nav className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}>
+    <nav
+      className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}
+      onClick={() => props.setDataIndex(null)}
+    >
       <button
         className={`nav__button ${
           location.pathname === '/' ? 'nav__button--main' : ''
