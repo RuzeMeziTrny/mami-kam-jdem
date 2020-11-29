@@ -26,12 +26,22 @@
 }
 
 .category-item__name {
-  margin-top: 0;
   font-weight: 600;
+  margin: 0;
+  height: 33.3%;
 }
 
 .category-item__address {
   font-size: 0.9em;
+  margin: 0;
+  height: 33.3%;
+}
+
+.category-item__web {
+  font-size: 0.9em;
+  margin: 0;
+  height: 33.3%;
+  display: block;
 }
 
 @media only screen and (min-width: 1100px) {

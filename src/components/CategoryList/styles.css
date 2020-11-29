@@ -23,3 +23,33 @@
     top: 100px;
   }
 }
+
+@media only screen and (min-width: 1200px) {
+  .category-list {
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  .category-list {
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .category-list {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .category-list {
+    padding-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .category-list {
+    padding-left: 50px;
+  }
+}
