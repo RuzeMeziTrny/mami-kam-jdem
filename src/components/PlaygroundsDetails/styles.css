@@ -14,7 +14,7 @@
 }
 
 .modal-drop {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   left: 0;
   right: 0;
@@ -36,7 +36,7 @@
 .playgrounds-container--link {
   font-size: 1.6em;
   margin: 5px;
-  color: lightgrey;
+  color: grey;
   text-decoration: none;
 }
 

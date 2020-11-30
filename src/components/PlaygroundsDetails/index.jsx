@@ -37,7 +37,7 @@ export const PlaygroundsDetails = (props) => {
       <div className="playgrounds-container">
         <button>
           <Link className="playgrounds-container--link" to="/hriste">
-            x
+          🗙
           </Link>
         </button>
         <div>

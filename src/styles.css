@@ -32,6 +32,21 @@ header {
   cursor: pointer;
 }
 
+.header__btn {
+  background-color: white;
+  outline: none;
+  border: none;
+  width: 50px;
+  padding: 5px 0 0 5px;
+}
+
+.header__btn a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
 @media only screen and (min-width: 760px) {
   section {
     min-height: 170px;

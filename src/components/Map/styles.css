@@ -69,8 +69,14 @@
 
 .mapboxgl-popup-close-button {
   font-size: 1.5em;
-  filter: invert(80%);
+  color: grey;
+  outline: none;
 }
+
+.mapboxgl-popup-close-button:hover {
+  background-color: white;
+}
+
 
 @media only screen and (min-width: 1100px) {
   .map__container {

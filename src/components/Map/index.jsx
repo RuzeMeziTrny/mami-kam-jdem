@@ -114,7 +114,7 @@ export const Map = ({
                     src={iconPlaygrounds}
                     width={40}
                     height={40}
-                    alt="špendlík hřiště"
+                    alt="hřiště"
                   />
                 </button>
               </Marker>
@@ -147,7 +147,7 @@ export const Map = ({
                     src={iconOutdoorSpaces}
                     width={40}
                     height={40}
-                    alt="špendlík venkovní areál"
+                    alt="venkovní areál"
                   />
                 </button>
               </Marker>
@@ -180,7 +180,7 @@ export const Map = ({
                     src={iconInnerSpaces}
                     width={40}
                     height={40}
-                    alt="špendlík vnitřní areál"
+                    alt="vnitřní areál"
                   />
                 </button>
               </Marker>
@@ -213,7 +213,7 @@ export const Map = ({
                     src={iconRestaurants}
                     width={40}
                     height={40}
-                    alt="špendlík restaurace"
+                    alt="restaurace"
                   />
                 </button>
               </Marker>
@@ -246,7 +246,7 @@ export const Map = ({
                     src={iconGroups}
                     width={40}
                     height={40}
-                    alt="špendlík kroužek"
+                    alt="kroužek"
                   />
                 </button>
               </Marker>
@@ -279,7 +279,7 @@ export const Map = ({
                     src={iconKindergartens}
                     width={40}
                     height={40}
-                    alt="špendlík školka"
+                    alt="školka"
                   />
                 </button>
               </Marker>
@@ -312,7 +312,7 @@ export const Map = ({
                     src={iconDoctors}
                     width={40}
                     height={40}
-                    alt="špendlík lékař"
+                    alt="lékař"
                   />
                 </button>
               </Marker>
