@@ -5,6 +5,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 .app {
@@ -33,19 +34,29 @@ header {
 }
 
 .header__btn {
-  background-color: white;
-  outline: none;
-  border: none;
-  width: 50px;
-  padding: 5px 0 0 5px;
+  display: none;
 }
 
-.header__btn a {
-  text-decoration: none;
-  color: black;
+@media only screen and (min-width: 500px) {
+  .header__btn {
+    display: block;
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  .header__btn a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    transform: translateX(-4px);
+  }
 }
-
-
 
 @media only screen and (min-width: 760px) {
   section {

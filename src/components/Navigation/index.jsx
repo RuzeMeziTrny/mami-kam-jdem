@@ -11,7 +11,7 @@ export const Navigation = (props) => {
   const items = [
     {
       path: '/',
-      label: 'Vše',
+      label: 'Vyber si kategorii',
       icon: '/assets/icons/all.svg',
       iconAlt: 'ikona miminko',
     },

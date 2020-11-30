@@ -131,13 +131,17 @@ const App = () => {
     <Router>
       <section>
         <header>
-       
           <h1>
             <Link to="/" className="main-heading">
               Mami, kam jdem?
             </Link>
           </h1>
-          <button className="header__btn"><img className="header__btn--image" src="/assets/icons/envelope_white.svg" alt="obálka" />
+          <button className="header__btn">
+            <img
+              className="header__btn--image"
+              src="/assets/icons/envelope_white.svg"
+              alt="obálka"
+            />
             <a href="mailto:someone@example.com">Napište nám</a>
           </button>
         </header>

@@ -47,9 +47,9 @@ export const Map = ({
   setActiveCategory,
 }) => {
   const [viewport, setViewport] = useState({
-    latitude: 50.0441875,
-    longitude: 14.5536622,
-    zoom: 15,
+    latitude: 50.0416419,
+    longitude: 14.5408781,
+    zoom: 13,
   });
 
   const popupData = dataIndex !== null ? data[activeCategory][dataIndex] : null;
