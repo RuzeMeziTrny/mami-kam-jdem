@@ -43,7 +43,7 @@ header {
     background-color: white;
     outline: none;
     border: none;
-    width: 50px;
+    width: 45px;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -51,10 +51,15 @@ header {
 
   .header__btn a {
     text-decoration: none;
-    color: black;
+    color: grey;
+    font-size: 0.9em;
     font-family: 'Roboto', sans-serif;
     display: inline-block;
     transform: translateX(-4px);
+  }
+
+  .header__btn--image {
+    filter: invert(70%);
   }
 }
 
@@ -77,6 +82,20 @@ header {
   .main-heading {
     font-size: 1.1em;
   }
+
+  .header__btn {
+    left: 410px;
+    border-radius: 8%;
+  }
+
+  .header__btn a {
+    color: black;
+  }
+
+  .header__btn--image {
+    width: 100%;
+    filter: invert(0);
+  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -85,5 +104,8 @@ header {
   }
   section {
     width: 450px;
+  }
+  .header__btn {
+    left: 460px;
   }
 }

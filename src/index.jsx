@@ -6,6 +6,7 @@ import * as d3 from 'd3-ease';
 import { Navigation } from './components/Navigation';
 import { Map } from './components/Map';
 import { CategoryList } from './components/CategoryList';
+import { Form } from './components/Form';
 import { PlaygroundsDetails } from './components/PlaygroundsDetails';
 import { data } from './data.js';
 import './index.html';
@@ -173,6 +174,11 @@ const App = () => {
               alt="obálka"
             />
             <a href="mailto:someone@example.com">Napište nám</a>
+
+            {/*  <Link to="/form" className="form__link">
+              Napište nám
+            </Link>     
+  <Route path={'/form'} render={() => <Form />} /> */}
           </button>
         </header>
         <Navigation
