@@ -33,51 +33,56 @@ export const PlaygroundsDetails = (props) => {
 
   return (
     <>
-      <div className="modal-drop"></div>
-      <div className="playgrounds-container">
-        <button>
-          <Link className="playgrounds-container--link" to="/hriste">
-          🗙
-          </Link>
-        </button>
-        <div>
-          <h3 className="playgrounds-name">{props.name}</h3>
+      <div className="modal-drop">
+        <div className="playgrounds-container">
+          <button>
+            <Link
+              className="playgrounds-container--link"
+              to="/hriste"
+              onClick={() => props.setDataIndex(null)}
+            >
+              ×
+            </Link>
+          </button>
+          <div>
+            <h3 className="playgrounds-name">{props.name}</h3>
 
-          <ul className="playgrounds-list">
-            <li>
-              <h3 className="playgrounds-items__heading">Herní prvky</h3>
-              <ul className="playgrounds-others">
-                {props.babySwing && <li>malá houpačka</li>}
-                {props.swing && <li>houpačka</li>}
-                {props.seeSaw && <li>houpačka pro dvojice</li>}
-                {props.sandbox && <li>pískoviště</li>}
-                {props.slide && <li>skluzavka</li>}
-                {props.carousel && <li>kolotoč</li>}
-                {props.others.map((other) => (
-                  <li key={other}>{other}</li>
-                ))}
-              </ul>
-            </li>
-            <li>
-              <h3 className="playgrounds-items__heading">Stín</h3>
-              <p>{shadow(props)}</p>
-            </li>
-            <li>
-              <h3 className="playgrounds-items__heading">Povrch hřiště</h3>
-              <p>{surface(props)}</p>
-            </li>
-            <li>
-              <h3 className="playgrounds-items__heading">Erární hračky</h3>
-              <p>{props.toys ? 'ano' : 'ne'}</p>
-            </li>
-          </ul>
+            <ul className="playgrounds-list">
+              <li>
+                <h3 className="playgrounds-items__heading">Herní prvky</h3>
+                <ul className="playgrounds-others">
+                  {props.babySwing && <li>malá houpačka</li>}
+                  {props.swing && <li>houpačka</li>}
+                  {props.seeSaw && <li>houpačka pro dvojice</li>}
+                  {props.sandbox && <li>pískoviště</li>}
+                  {props.slide && <li>skluzavka</li>}
+                  {props.carousel && <li>kolotoč</li>}
+                  {props.others.map((other) => (
+                    <li key={other}>{other}</li>
+                  ))}
+                </ul>
+              </li>
+              <li>
+                <h3 className="playgrounds-items__heading">Stín</h3>
+                <p>{shadow(props)}</p>
+              </li>
+              <li>
+                <h3 className="playgrounds-items__heading">Povrch hřiště</h3>
+                <p>{surface(props)}</p>
+              </li>
+              <li>
+                <h3 className="playgrounds-items__heading">Erární hračky</h3>
+                <p>{props.toys ? 'ano' : 'ne'}</p>
+              </li>
+            </ul>
+          </div>
+
+          <img
+            className="playgrounds-photo"
+            src={`/assets/images/${props.image}`}
+            alt="obrázek hřiště"
+          />
         </div>
-
-        <img
-          className="playgrounds-photo"
-          src={`/assets/images/${props.image}`}
-          alt="obrázek hřiště"
-        />
       </div>
     </>
   );

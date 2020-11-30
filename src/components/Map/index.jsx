@@ -45,13 +45,9 @@ export const Map = ({
   setDataIndex,
   activeCategory,
   setActiveCategory,
+  viewport,
+  setViewport,
 }) => {
-  const [viewport, setViewport] = useState({
-    latitude: 50.0416419,
-    longitude: 14.5408781,
-    zoom: 13,
-  });
-
   const popupData = dataIndex !== null ? data[activeCategory][dataIndex] : null;
 
   useEffect(() => {
@@ -332,6 +328,7 @@ export const Map = ({
             <CategoryItem
               image={popupData.image}
               name={popupData.name}
+              address={popupData.address}
               web={popupData.web}
               id={popupData.id}
               category={activeCategory}

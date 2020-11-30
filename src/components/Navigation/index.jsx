@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { matchPath } from 'react-router';
+import { FlyToInterpolator } from 'react-map-gl';
+import * as d3 from 'd3-ease';
 import './styles.css';
 
 export const Navigation = (props) => {
@@ -11,7 +13,7 @@ export const Navigation = (props) => {
   const items = [
     {
       path: '/',
-      label: 'Vyber si kategorii',
+      label: 'Vyberte si kategorii',
       icon: '/assets/icons/all.svg',
       iconAlt: 'ikona miminko',
     },
@@ -122,7 +124,20 @@ export const Navigation = (props) => {
         />
       </button>
 
-      <ul className={navListClasses.join(' ')} onClick={() => setOpened(false)}>
+      <ul
+        className={navListClasses.join(' ')}
+        onClick={() => {
+          setOpened(false);
+          props.setViewport({
+            latitude: props.latitudeStart,
+            longitude: props.longitudeStart,
+            zoom: props.viewport.zoom,
+            transitionDuration: 2000,
+            transitionInterpolator: new FlyToInterpolator(),
+            transitionEasing: d3.easeCubic,
+          });
+        }}
+      >
         <li className="nav__item">
           <img
             className="nav__category-icon"

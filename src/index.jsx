@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { FlyToInterpolator } from 'react-map-gl';
+import * as d3 from 'd3-ease';
 import { Navigation } from './components/Navigation';
 import { Map } from './components/Map';
 import { CategoryList } from './components/CategoryList';
@@ -27,8 +29,13 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
             return IDhristezURL === place.id ? true : false;
           });
 
-          return <PlaygroundsDetails key={playground.id} {...playground} />;
-          /* ale teď to vyrenderuje všechny hřiště -> propojit to se správným hřištěm (pomocí id hřiště?) */
+          return (
+            <PlaygroundsDetails
+              key={playground.id}
+              setDataIndex={setDataIndex}
+              {...playground}
+            />
+          );
         }}
       />
     </div>
@@ -127,12 +134,35 @@ const App = () => {
   const [dataIndex, setDataIndex] = useState(null);
   const [activeCategory, setActiveCategory] = useState('');
 
+  const latitudeStart = 50.0416419;
+  const longitudeStart = 14.5408781;
+
+  const [viewport, setViewport] = useState({
+    latitude: latitudeStart,
+    longitude: longitudeStart,
+    zoom: 13,
+  });
+
   return (
     <Router>
       <section>
         <header>
           <h1>
-            <Link to="/" className="main-heading">
+            <Link
+              to="/"
+              className="main-heading"
+              onClick={() => {
+                setDataIndex(null);
+                setViewport({
+                  latitude: latitudeStart,
+                  longitude: longitudeStart,
+                  zoom: viewport.zoom,
+                  transitionDuration: 2000,
+                  transitionInterpolator: new FlyToInterpolator(),
+                  transitionEasing: d3.easeCubic,
+                });
+              }}
+            >
               Mami, kam jdem?
             </Link>
           </h1>
@@ -145,7 +175,13 @@ const App = () => {
             <a href="mailto:someone@example.com">Napište nám</a>
           </button>
         </header>
-        <Navigation setDataIndex={setDataIndex} />
+        <Navigation
+          setDataIndex={setDataIndex}
+          viewport={viewport}
+          setViewport={setViewport}
+          latitudeStart={latitudeStart}
+          longitudeStart={longitudeStart}
+        />
         <Switch>
           {routes.map((route, index) => {
             const { Component, path } = route;
@@ -170,6 +206,8 @@ const App = () => {
           setDataIndex={setDataIndex}
           activeCategory={activeCategory}
           setActiveCategory={setActiveCategory}
+          viewport={viewport}
+          setViewport={setViewport}
         />
       </main>
     </Router>

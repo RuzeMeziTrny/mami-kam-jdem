@@ -6,7 +6,7 @@ export const CategoryItem = (props) => {
   const cutOffUrlProtocole = (web) => {
     const colonIndex = web.indexOf(':');
     return (
-      web !== '' && `${web.slice(colonIndex + 3, web.length).slice(0, 20)}...`
+      web !== '' && `${web.slice(colonIndex + 3, web.length).slice(0, 30)}...`
     );
   };
 
