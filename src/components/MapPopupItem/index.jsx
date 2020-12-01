@@ -17,7 +17,6 @@ export const MapPopupItem = (props) => (
         </Link>
       ) : (
         <a className="map-popup-item__web" href={props.web} target="_blank">
-          test
           {cutOffUrlProtocole(props.web)}
         </a>
       )}
