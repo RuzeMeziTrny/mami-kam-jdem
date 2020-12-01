@@ -64,6 +64,7 @@
 
 .mapboxgl-popup-content {
   border-radius: 3%;
+  padding: 10px 20px 10px 0;
   /* transform: translateY(
     200px
   ); */ /* jenže ta šipečka pod popupem zůstává na původním místě */
@@ -98,10 +99,3 @@
     left: 450px;
   }
 }
-
-/* tohle musíme udělat jinak, rozhazuje to CategoryItem komponentu 
-.category-item__name {
-  font-size: 1.1em;
-  margin-bottom: 25px;
-  margin-top: 10px;
-} */

@@ -17,7 +17,7 @@ import iconGroups from '../../assets/icons/groups.svg';
 import iconKindergartens from '../../assets/icons/kindergartens.svg';
 import iconDoctors from '../../assets/icons/doctors.svg';
 import { data } from '../../data.js';
-import { CategoryItem } from '../CategoryItem';
+import { MapPopupItem } from '../MapPopupItem';
 import './styles.css';
 
 const seznamMapy = {
@@ -325,7 +325,7 @@ export const Map = ({
             closeOnClick={false}
             onClose={() => setDataIndex(null)}
           >
-            <CategoryItem
+            <MapPopupItem
               image={popupData.image}
               name={popupData.name}
               address={popupData.address}
