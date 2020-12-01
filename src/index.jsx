@@ -59,7 +59,7 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
 
 const OutdoorSpaces = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
       <CategoryList
         array={data.outdoorSpaces}
         setDataIndex={setDataIndex}
@@ -72,7 +72,7 @@ const OutdoorSpaces = ({ setDataIndex, setActiveCategory }) => {
 
 const InnerSpaces = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
       <CategoryList
         array={data.innerSpaces}
         setDataIndex={setDataIndex}
@@ -85,7 +85,7 @@ const InnerSpaces = ({ setDataIndex, setActiveCategory }) => {
 
 const Restaurants = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
       <CategoryList
         array={data.restaurants}
         setDataIndex={setDataIndex}
@@ -98,7 +98,10 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
 
 const Groups = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
+      <div className="filters">
+        <button className="filters__button">Typ kroužku</button>
+      </div>
       <CategoryList
         array={data.groups}
         setDataIndex={setDataIndex}
@@ -111,7 +114,7 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
 
 const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
       <CategoryList
         array={data.kindergartens}
         setDataIndex={setDataIndex}
@@ -124,7 +127,10 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
 
 const Doctors = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
+      <div className="filters">
+        <button className="filters__button">Specializace</button>
+      </div>
       <CategoryList
         array={data.doctors}
         setDataIndex={setDataIndex}

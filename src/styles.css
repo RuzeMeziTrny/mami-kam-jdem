@@ -127,6 +127,8 @@ header {
   width: 100%;
   background-color: white;
   padding-top: 10px;
+  position: relative;
+  top: 50px;
 }
 
 .filters {
@@ -161,8 +163,7 @@ header {
 @media only screen and (min-width: 1100px) {
   .category-list__container {
     height: 80vh;
-    position: relative;
-    top: 80px;
+    top: 70px;
   }
 
   .filters {
