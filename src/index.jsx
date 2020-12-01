@@ -24,10 +24,43 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
   return (
     <div className="category-list__container">
       <div className="filters">
-        <button className="filters__button">Herní prvky</button>
-        <button className="filters__button">Stín</button>
-        <button className="filters__button">Erární hračky</button>
-        <button className="filters__button">Povrch hřiště</button>
+        <select
+          className="filters__button"
+          name="playgroundElements"
+          id="playgroundElements"
+        >
+          <option value="allElements" selected>
+            Herní prvky
+          </option>
+          <option value="babySwing">malá houpačka</option>
+          <option value="swing">houpačka</option>
+          <option value="seeSaw">houpačka pro dvojice</option>
+          <option value="sandbox">pískoviště</option>
+          <option value="slide">skluzavka</option>
+          <option value="carousel">kolotoč</option>
+        </select>
+        <select className="filters__button" name="shadow" id="shadow">
+          <option value="allShadow" selected>
+            Stín
+          </option>
+          <option value="true">ano</option>
+          <option value="false">ne</option>
+        </select>
+        <select className="filters__button" name="toys" id="toys">
+          <option value="allToys" selected>
+            Erární hračky
+          </option>
+          <option value="true">ano</option>
+          <option value="false">ne</option>
+        </select>
+        <select className="filters__button" name="surface" id="surface">
+          <option value="allSurface" selected>
+            Povrch hřiště
+          </option>
+          <option value="sand">písek</option>
+          <option value="grain">kamínky</option>
+          <option value="tartan">tartan</option>
+        </select>
       </div>
       <CategoryList
         array={data.playgrounds}
@@ -100,7 +133,15 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
   return (
     <div className="category-list__container">
       <div className="filters">
-        <button className="filters__button">Typ kroužku</button>
+        <select className="filters__button" name="groups" id="groups">
+          <option value="allGroups" selected>
+            Typ kroužku
+          </option>
+          <option value="language">cizí jazyky</option>
+          <option value="music">hudební</option>
+          <option value="creative">kreativní</option>
+          <option value="sport">sportovní</option>
+        </select>
       </div>
       <CategoryList
         array={data.groups}
@@ -129,7 +170,21 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
   return (
     <div className="category-list__container">
       <div className="filters">
-        <button className="filters__button">Specializace</button>
+        <select className="filters__button" name="doctors" id="doctors">
+          <option value="allDoctors" selected>
+            Specializace
+          </option>
+          <option value="alergologie">alergologie</option>
+          <option value="dermatologie">dermatologie</option>
+          <option value="fyzioterapie">fyzioterapie</option>
+          <option value="logopedie">logopedie</option>
+          <option value="oftalmologie">oční</option>
+          <option value="orl">orl</option>
+          <option value="ortodoncie">ortodoncie</option>
+          <option value="ortopedie">ortopedie</option>
+          <option value="pediatrie">pediatrie</option>
+          <option value="stomatologie">stomatologie</option>
+        </select>
       </div>
       <CategoryList
         array={data.doctors}

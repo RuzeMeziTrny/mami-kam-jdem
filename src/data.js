@@ -1568,7 +1568,7 @@ export const data = {
       longitude: 14.5260722,
       address: 'Hviezdoslavova 520/12, Praha 11',
       web: 'http://www.ocni-pospisilova.cz/',
-      type: 'oční',
+      type: 'oftalmologie',
       cityPart: 'Háje',
     },
     {
@@ -1677,7 +1677,7 @@ export const data = {
       longitude: 14.5470072,
       address: 'Golfová 910/10, Praha 15',
       web: 'https://www.ocni-zborilova.cz',
-      type: 'oční',
+      type: 'oftalmologie',
       cityPart: 'Hostivař',
     },
     {
