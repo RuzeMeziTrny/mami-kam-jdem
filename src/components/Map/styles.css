@@ -3,7 +3,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  top: 200px;
+  top: 130px;
 }
 
 .map__logo {
@@ -64,6 +64,9 @@
 
 .mapboxgl-popup-content {
   border-radius: 3%;
+  /* transform: translateY(
+    200px
+  ); */ /* jenže ta šipečka pod popupem zůstává na původním místě */
 }
 
 .mapboxgl-popup-close-button {
@@ -79,11 +82,15 @@
 @media only screen and (min-width: 1100px) {
   .map__container {
     position: fixed;
-    left: 400px;
+    left: 410px;
     right: 0;
     bottom: 0;
     top: 0;
   }
+
+  /* .mapboxgl-popup-content {
+    transform: translateY(0);
+  } */
 }
 
 @media only screen and (min-width: 1400px) {

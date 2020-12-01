@@ -254,7 +254,7 @@ export const data = {
       gps: '50.0401453N, 14.5173678E',
       latitude: 50.0401453,
       longitude: 14.5173678,
-      address: null,
+      address: 'na konci ulice K Obecním hájovnám',
       web:
         'https://lhmp.cz/zachranna-stanice/lesni-zookoutky/divoka-zahrada-hostivar/',
       cityPart: 'Hostivař',
@@ -311,7 +311,7 @@ export const data = {
       gps: '50.0451481N, 14.5369528E',
       latitude: 50.0451481,
       longitude: 14.5369528,
-      address: null,
+      address: 'Lesopark Hostivař',
       web: 'http://www.praha-priroda.cz/lesy/hostivarsky-lesopark/',
       cityPart: 'Hostivař',
     },

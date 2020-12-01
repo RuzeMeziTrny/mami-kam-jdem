@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 import { render } from 'react-dom';
-import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  HashRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useLocation,
+  Redirect,
+} from 'react-router-dom';
+import { matchPath } from 'react-router';
 import { FlyToInterpolator } from 'react-map-gl';
 import * as d3 from 'd3-ease';
 import { Navigation } from './components/Navigation';
@@ -14,7 +22,13 @@ import './styles.css';
 
 const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div>
+    <div className="category-list__container">
+      <div className="filters">
+        <button className="filters__button">Herní prvky</button>
+        <button className="filters__button">Stín</button>
+        <button className="filters__button">Erární hračky</button>
+        <button className="filters__button">Povrch hřiště</button>
+      </div>
       <CategoryList
         array={data.playgrounds}
         setDataIndex={setDataIndex}
@@ -144,6 +158,16 @@ const App = () => {
     zoom: 13,
   });
 
+  /* const location = useLocation(); */
+  /* Cannot read property 'location' of undefined at useLocation */
+
+  /* const otherURL = routes.find((route) => {
+    const match = matchPath(location.pathname, { path: route.path });
+    (vrací vždy null, protože location.pathname je jen "/")
+    return match === null ? true : false;
+  }); */
+  /* ale tímhle neošetřím, pokud někdo napíše /hriste/neexistujici-adresa */
+
   return (
     <Router>
       <section>
@@ -205,6 +229,10 @@ const App = () => {
             );
           })}
         </Switch>
+
+        {/* <Route exact path="/home"> (nefunguje mi to ani s konkrétní variantou)
+          <Redirect to="/" />
+        </Route> */}
       </section>
       <main>
         <Map

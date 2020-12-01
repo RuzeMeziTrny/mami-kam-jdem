@@ -8,16 +8,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.app {
-  position: relative;
-}
-
 section {
   background-color: white;
-  position: absolute;
-  z-index: 1;
+  position: relative;
+  z-index: 1; /* jen kvůli form ikonce */
   width: 100vw;
-  min-height: 150px;
+  height: 130px;
 }
 
 header {
@@ -65,7 +61,7 @@ header {
 
 @media only screen and (min-width: 760px) {
   section {
-    min-height: 170px;
+    height: 150px;
   }
 
   .main-heading {
@@ -84,7 +80,7 @@ header {
   }
 
   .header__btn {
-    left: 410px;
+    left: 415px;
     border-radius: 8%;
   }
 
@@ -106,6 +102,65 @@ header {
     width: 450px;
   }
   .header__btn {
-    left: 460px;
+    left: 455px;
+  }
+}
+
+/* ke komponentě Playgrounds */
+
+.category-list__container {
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.filters__button {
+  flex-basis: 45%;
+  margin: 5px 0px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 600px) {
+  .category-list__container {
+    overflow-x: auto;
+    overflow-y: auto;
+  }
+
+  .filters {
+    flex-wrap: nowrap;
+  }
+
+  .filters__button {
+    flex-basis: 20%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .category-list__container {
+    height: 80vh;
+    position: relative;
+    top: 80px;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+  }
+
+  .filters__button {
+    flex-basis: 45%;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .category-list__container {
+    top: 90px;
   }
 }
