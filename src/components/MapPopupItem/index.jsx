@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { cutOffUrlProtocole } from '../../utilities';
 import './styles.css';
 
 export const MapPopupItem = (props) => (
@@ -17,7 +18,7 @@ export const MapPopupItem = (props) => (
       ) : (
         <a className="map-popup-item__web" href={props.web} target="_blank">
           test
-          {/* {cutOffUrlProtocole(props.web)} */}
+          {cutOffUrlProtocole(props.web)}
         </a>
       )}
     </div>

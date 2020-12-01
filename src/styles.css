@@ -16,65 +16,9 @@ section {
   height: 130px;
 }
 
-header {
-  font-family: 'Atma', cursive;
-}
-
-.main-heading {
-  text-decoration: none;
-  color: #1a1a1d;
-  font-size: 1.1em;
-  text-align: center;
-  display: block;
-  cursor: pointer;
-}
-
-.header__btn {
-  display: block;
-  background-color: white;
-  outline: none;
-  border: none;
-  width: 45px;
-  position: absolute;
-  bottom: -130px;
-  left: 5px;
-}
-
-.header__btn a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.9em;
-  font-family: 'Roboto', sans-serif;
-  display: inline-block;
-  transform: translateX(-4px);
-}
-
-@media only screen and (min-width: 500px) {
-  .header__btn {
-    left: 5px;
-    bottom: 80px;
-  }
-
-  .header__btn a {
-    color: grey;
-  }
-
-  .header__btn--image {
-    filter: invert(70%);
-  }
-}
-
 @media only screen and (min-width: 760px) {
   section {
     height: 150px;
-  }
-
-  .main-heading {
-    font-size: 1.5em;
-  }
-
-  .header__btn {
-    bottom: 150px;
   }
 }
 
@@ -83,41 +27,11 @@ header {
     width: 410px;
     height: 100vh;
   }
-
-  .main-heading {
-    font-size: 1.6em;
-  }
-
-  .header__btn {
-    left: 430px;
-    border-radius: 8%;
-    width: 55px;
-    bottom: 650px;
-  }
-
-  .header__btn a {
-    color: black;
-    transform: translateX(1px);
-  }
-
-  .header__btn--image {
-    width: 100%;
-    filter: invert(0);
-  }
 }
 
 @media only screen and (min-width: 1400px) {
   section {
     width: 450px;
-  }
-
-  .main-heading {
-    font-size: 1.7em;
-  }
-
-  .header__btn {
-    left: 470px;
-    bottom: 630px;
   }
 }
 
@@ -140,16 +54,23 @@ header {
 
 .filters__button {
   flex-basis: 45%;
-  margin: 5px 0px;
+  margin: 5px 5px;
+  width: 180px;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   background-color: rgb(240, 240, 240);
   border-radius: 3px;
+  text-align: center;
 }
 
 .filters__button:hover {
   background-color: lightgray;
   cursor: pointer;
+}
+
+label {
+  text-align: center;
+  width: 180px;
 }
 
 @media only screen and (min-width: 600px) {

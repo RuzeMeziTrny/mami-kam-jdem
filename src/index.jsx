@@ -4,17 +4,13 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Link,
-  useLocation,
   Redirect,
 } from 'react-router-dom';
-import { matchPath } from 'react-router';
-import { FlyToInterpolator } from 'react-map-gl';
-import * as d3 from 'd3-ease';
+import { Header } from './components/Header';
 import { Navigation } from './components/Navigation';
+import { Form } from './components/Form';
 import { Map } from './components/Map';
 import { CategoryList } from './components/CategoryList';
-import { Form } from './components/Form';
 import { PlaygroundsDetails } from './components/PlaygroundsDetails';
 import { data } from './data.js';
 import './index.html';
@@ -29,9 +25,7 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           name="playgroundElements"
           id="playgroundElements"
         >
-          <option value="allElements" selected>
-            Herní prvky
-          </option>
+          <option value="allElements">Herní prvky</option>
           <option value="babySwing">malá houpačka</option>
           <option value="swing">houpačka</option>
           <option value="seeSaw">houpačka pro dvojice</option>
@@ -40,23 +34,17 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           <option value="carousel">kolotoč</option>
         </select>
         <select className="filters__button" name="shadow" id="shadow">
-          <option value="allShadow" selected>
-            Stín
-          </option>
+          <option value="allShadow">Stín</option>
           <option value="true">ano</option>
           <option value="false">ne</option>
         </select>
         <select className="filters__button" name="toys" id="toys">
-          <option value="allToys" selected>
-            Erární hračky
-          </option>
+          <option value="allToys">Erární hračky</option>
           <option value="true">ano</option>
           <option value="false">ne</option>
         </select>
         <select className="filters__button" name="surface" id="surface">
-          <option value="allSurface" selected>
-            Povrch hřiště
-          </option>
+          <option value="allSurface">Povrch hřiště</option>
           <option value="sand">písek</option>
           <option value="grain">kamínky</option>
           <option value="tartan">tartan</option>
@@ -134,9 +122,7 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
     <div className="category-list__container">
       <div className="filters">
         <select className="filters__button" name="groups" id="groups">
-          <option value="allGroups" selected>
-            Typ kroužku
-          </option>
+          <option value="allGroups">Typ kroužku</option>
           <option value="language">cizí jazyky</option>
           <option value="music">hudební</option>
           <option value="creative">kreativní</option>
@@ -171,9 +157,7 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
     <div className="category-list__container">
       <div className="filters">
         <select className="filters__button" name="doctors" id="doctors">
-          <option value="allDoctors" selected>
-            Specializace
-          </option>
+          <option value="allDoctors">Specializace</option>
           <option value="alergologie">alergologie</option>
           <option value="dermatologie">dermatologie</option>
           <option value="fyzioterapie">fyzioterapie</option>
@@ -219,53 +203,16 @@ const App = () => {
     zoom: 13,
   });
 
-  /* const location = useLocation(); */
-  /* Cannot read property 'location' of undefined at useLocation */
-
-  /* const otherURL = routes.find((route) => {
-    const match = matchPath(location.pathname, { path: route.path });
-    (vrací vždy null, protože location.pathname je jen "/")
-    return match === null ? true : false;
-  }); */
-  /* ale tímhle neošetřím, pokud někdo napíše /hriste/neexistujici-adresa */
-
   return (
     <Router>
       <section>
-        <header>
-          <h1>
-            <Link
-              to="/"
-              className="main-heading"
-              onClick={() => {
-                setDataIndex(null);
-                setViewport({
-                  latitude: latitudeStart,
-                  longitude: longitudeStart,
-                  zoom: viewport.zoom,
-                  transitionDuration: 2000,
-                  transitionInterpolator: new FlyToInterpolator(),
-                  transitionEasing: d3.easeCubic,
-                });
-              }}
-            >
-              Mami, kam jdem?
-            </Link>
-          </h1>
-          <button className="header__btn">
-            <img
-              className="header__btn--image"
-              src="/assets/icons/envelope_white.svg"
-              alt="obálka"
-            />
-            <a href="mailto:someone@example.com">Napište nám</a>
-
-            {/*  <Link to="/form" className="form__link">
-              Napište nám
-            </Link>     
-  <Route path={'/form'} render={() => <Form />} /> */}
-          </button>
-        </header>
+        <Header
+          setDataIndex={setDataIndex}
+          viewport={viewport}
+          setViewport={setViewport}
+          latitudeStart={latitudeStart}
+          longitudeStart={longitudeStart}
+        />
         <Navigation
           setDataIndex={setDataIndex}
           viewport={viewport}
@@ -289,11 +236,10 @@ const App = () => {
               />
             );
           })}
+          <Route path={'/form'} render={() => <Form />} />
+          {/* když budeme přidávat další routy, tak to přidáme sem před redirect */}
+          <Route render={() => <Redirect to="/" />} />
         </Switch>
-
-        {/* <Route exact path="/home"> (nefunguje mi to ani s konkrétní variantou)
-          <Redirect to="/" />
-        </Route> */}
       </section>
       <main>
         <Map

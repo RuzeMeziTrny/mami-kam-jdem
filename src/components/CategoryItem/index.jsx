@@ -1,19 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { cutOffUrlProtocole } from '../../utilities';
 import './styles.css';
 
 export const CategoryItem = (props) => {
-  const cutOffUrlProtocole = (web) => {
-    const colonIndex = web.indexOf(':');
-    if (web === '') {
-      return null;
-    } else if (web.length <= 30) {
-      return web.slice(colonIndex + 3, web.length);
-    } else {
-      return `${web.slice(colonIndex + 3, 30)}...`;
-    }
-  };
-
   return (
     <div className="category-item" onClick={props.handleClick}>
       <div className="category-item__image">
