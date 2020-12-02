@@ -39,7 +39,7 @@
 }
 
 .playgrounds-items__heading {
-  font-size: 0.9em;
+  font-size: 1.2em;
 }
 
 .playgrounds-list {
@@ -67,7 +67,7 @@
 .playgrounds-name {
   margin-bottom: 5px;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 .playgrounds-photo {
@@ -85,8 +85,14 @@
   .playgrounds-container div {
     width: 50%;
   }
+
+  .playgrounds-name {
+    margin: 40px 0 5px 0;
+    font-size: 1.7em;
+  }
+
   .playgrounds-items__heading {
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .playgrounds-photo {
@@ -118,8 +124,6 @@
   }
 
   .playgrounds-name {
-    margin-left: 20px;
-    text-align: left;
-    font-size: 1.2em;
+    font-size: 1.7em;
   }
 }

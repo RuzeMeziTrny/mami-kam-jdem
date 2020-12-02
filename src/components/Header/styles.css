@@ -17,33 +17,33 @@ header {
 }
 
 .header__btn {
-  display: block;
-  background-color: white;
-  outline: none;
-  border: none;
-  width: 45px;
-  position: absolute;
-  bottom: -130px;
-  left: 5px;
-}
-
-.header__btn a {
-  text-decoration: none;
-  color: black;
-  font-size: 0.9em;
-  font-family: 'Roboto', sans-serif;
-  display: inline-block;
-  transform: translateX(-4px);
+  display: none;
 }
 
 @media only screen and (min-width: 500px) {
   .header__btn {
     left: 5px;
     bottom: 80px;
+    display: block;
+    background-color: white;
+    outline: none;
+    border: none;
+    width: 45px;
+    position: absolute;
+    left: 5px;
   }
 
   .header__btn a {
     color: grey;
+  }
+
+  .header__btn a {
+    text-decoration: none;
+    color: grey;
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    transform: translateX(-4px);
   }
 
   .header__btn--image {
@@ -61,7 +61,7 @@ header {
   }
 
   .header__btn {
-    bottom: 150px;
+    top: -40px;
   }
 }
 
@@ -78,7 +78,8 @@ header {
     left: 430px;
     border-radius: 8%;
     width: 55px;
-    bottom: 650px;
+    bottom: 850px;
+    top: 1px;
   }
 
   .header__btn a {
@@ -103,6 +104,5 @@ header {
 
   .header__btn {
     left: 470px;
-    bottom: 630px;
   }
 }

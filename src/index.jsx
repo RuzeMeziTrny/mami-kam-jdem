@@ -120,7 +120,7 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
 const Groups = ({ setDataIndex, setActiveCategory }) => {
   return (
     <>
-      <div className="filters">
+      <div className="filters filters--groups">
         <select className="filters__button" name="groups" id="groups">
           <option value="allGroups">Typ kroužku</option>
           <option value="language">cizí jazyky</option>
@@ -155,7 +155,7 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
 const Doctors = ({ setDataIndex, setActiveCategory }) => {
   return (
     <>
-      <div className="filters">
+      <div className="filters filters--doctors">
         <select className="filters__button" name="doctors" id="doctors">
           <option value="allDoctors">Specializace</option>
           <option value="alergologie">alergologie</option>
