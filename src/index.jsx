@@ -18,7 +18,7 @@ import './styles.css';
 
 const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <div className="filters">
         <select
           className="filters__button"
@@ -74,52 +74,52 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           );
         }}
       />
-    </div>
+    </>
   );
 };
 
 const OutdoorSpaces = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <CategoryList
         array={data.outdoorSpaces}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="outdoorSpaces"
       />
-    </div>
+    </>
   );
 };
 
 const InnerSpaces = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <CategoryList
         array={data.innerSpaces}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="innerSpaces"
       />
-    </div>
+    </>
   );
 };
 
 const Restaurants = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <CategoryList
         array={data.restaurants}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="restaurants"
       />
-    </div>
+    </>
   );
 };
 
 const Groups = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <div className="filters">
         <select className="filters__button" name="groups" id="groups">
           <option value="allGroups">Typ kroužku</option>
@@ -135,26 +135,26 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
         setActiveCategory={setActiveCategory}
         category="groups"
       />
-    </div>
+    </>
   );
 };
 
 const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <CategoryList
         array={data.kindergartens}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="kindergartens"
       />
-    </div>
+    </>
   );
 };
 
 const Doctors = ({ setDataIndex, setActiveCategory }) => {
   return (
-    <div className="category-list__container">
+    <>
       <div className="filters">
         <select className="filters__button" name="doctors" id="doctors">
           <option value="allDoctors">Specializace</option>
@@ -176,7 +176,7 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
         setActiveCategory={setActiveCategory}
         category="doctors"
       />
-    </div>
+    </>
   );
 };
 

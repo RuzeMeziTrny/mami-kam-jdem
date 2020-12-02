@@ -5,13 +5,20 @@
 @media only screen and (min-width: 760px) {
   .category-list {
     display: flex;
-    padding: 10px 10px 0 10px;
+    padding: 10px 0;
     width: 100%;
+    background-color: white;
+    position: relative;
+    top: 50px;
+    overflow-x: auto;
+    overflow-y: auto;
   }
 }
 
 @media only screen and (min-width: 1100px) {
   .category-list {
     flex-direction: column;
+    height: 72vh; /* zkontrolovat, že sedí */
+    top: 70px;
   }
 }
