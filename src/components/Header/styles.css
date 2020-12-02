@@ -33,17 +33,21 @@ header {
     left: 5px;
   }
 
-  .header__btn a {
-    color: grey;
-  }
-
-  .header__btn a {
+  .form__link {
     text-decoration: none;
     color: grey;
     font-size: 0.9em;
     font-family: 'Roboto', sans-serif;
     display: inline-block;
     transform: translateX(-4px);
+  }
+
+  .form__link::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: -40px;
+    padding: 38px 20px;
   }
 
   .header__btn--image {
@@ -82,7 +86,7 @@ header {
     top: 1px;
   }
 
-  .header__btn a {
+  .form__link {
     color: black;
     transform: translateX(1px);
   }
@@ -90,6 +94,14 @@ header {
   .header__btn--image {
     width: 100%;
     filter: invert(0);
+  }
+
+  .form__link::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -50px;
+    padding: 43px 28px;
   }
 }
 

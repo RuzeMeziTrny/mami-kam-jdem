@@ -41,6 +41,10 @@ section {
   display: none;
 }
 
+.sub-filter__button {
+  display: none;
+}
+
 @media only screen and (min-width: 760px) {
   .filters {
     display: flex;
@@ -71,6 +75,7 @@ section {
 
 @media only screen and (min-width: 1100px) {
   .filters {
+    display: none;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -90,6 +95,26 @@ section {
   .filters--groups,
   .filters--doctors {
     width: 250px;
+  }
+
+  .sub-filter__button {
+    display: block;
+    margin: auto;
+    position: relative;
+    bottom: -45px;
+    background-color: white;
+    outline: none;
+    border: white;
+    width: 150px;
+    height: 30px;
+    font-size: 1.1em;
+    border-radius: 0 0 10px 10px;
+    z-index: 1;
+  }
+
+  .sub-filter__button:hover {
+    background-color: rgba(240, 240, 240);
+    color: #68bdff;
   }
 }
 

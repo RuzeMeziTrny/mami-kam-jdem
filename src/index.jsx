@@ -49,7 +49,9 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           <option value="grain">kamínky</option>
           <option value="tartan">tartan</option>
         </select>
+        <button className="sub-filter__button">Zobrazit filtry</button>
       </div>
+
       <CategoryList
         array={data.playgrounds}
         setDataIndex={setDataIndex}
@@ -128,6 +130,7 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
           <option value="creative">kreativní</option>
           <option value="sport">sportovní</option>
         </select>
+        <button className="sub-filter__button">Zobrazit filtry</button>
       </div>
       <CategoryList
         array={data.groups}
@@ -169,6 +172,7 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
           <option value="pediatrie">pediatrie</option>
           <option value="stomatologie">stomatologie</option>
         </select>
+        <button className="sub-filter__button">Zobrazit filtry</button>
       </div>
       <CategoryList
         array={data.doctors}
