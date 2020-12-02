@@ -13,40 +13,104 @@ import { Map } from './components/Map';
 import { CategoryList } from './components/CategoryList';
 import { PlaygroundsDetails } from './components/PlaygroundsDetails';
 import { data } from './data.js';
+import { playgroundsMatches } from './utilities';
 import './index.html';
 import './styles.css';
 
 const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
+  const [playgroundsFilters, setPlaygroundsFilters] = useState({
+    elements: '',
+    shadow: '',
+    toys: '',
+    surface: '',
+  });
+
+  const filterItems = (place) => {
+    if (!playgroundsMatches(playgroundsFilters.elements, place.elements)) {
+      return false;
+    }
+    if (!playgroundsMatches(playgroundsFilters.shadow, place.shadow)) {
+      return false;
+    }
+    if (!playgroundsMatches(playgroundsFilters.toys, place.toys)) {
+      return false;
+    }
+    if (!playgroundsMatches(playgroundsFilters.surface, place.surface)) {
+      return false;
+    }
+    return true;
+  };
+
   return (
     <>
       <div className="filters">
         <select
           className="filters__button"
-          name="playgroundElements"
-          id="playgroundElements"
+          name="elements"
+          id="elements"
+          value={playgroundsFilters.elements}
+          onChange={(event) =>
+            setPlaygroundsFilters({
+              ...playgroundsFilters,
+              elements: event.target.value,
+            })
+          }
         >
-          <option value="allElements">Herní prvky</option>
-          <option value="babySwing">malá houpačka</option>
-          <option value="swing">houpačka</option>
-          <option value="seeSaw">houpačka pro dvojice</option>
-          <option value="sandbox">pískoviště</option>
-          <option value="slide">skluzavka</option>
-          <option value="carousel">kolotoč</option>
+          <option value="">Herní prvky</option>
+          <option value="malá houpačka">malá houpačka</option>
+          <option value="houpačka">houpačka</option>
+          <option value="houpačka pro dvojice">houpačka pro dvojice</option>
+          <option value="pískoviště">pískoviště</option>
+          <option value="skluzavka">skluzavka</option>
+          <option value="kolotoč">kolotoč</option>
         </select>
-        <select className="filters__button" name="shadow" id="shadow">
-          <option value="allShadow">Stín</option>
-          <option value="true">ano</option>
-          <option value="false">ne</option>
+        <select
+          className="filters__button"
+          name="shadow"
+          id="shadow"
+          value={playgroundsFilters.shadow}
+          onChange={(event) =>
+            setPlaygroundsFilters({
+              ...playgroundsFilters,
+              shadow: event.target.value,
+            })
+          }
+        >
+          <option value="">Stín</option>
+          <option value={true}>ano</option>
+          <option value={false}>ne</option>
         </select>
-        <select className="filters__button" name="toys" id="toys">
-          <option value="allToys">Erární hračky</option>
-          <option value="true">ano</option>
-          <option value="false">ne</option>
+        <select
+          className="filters__button"
+          name="toys"
+          id="toys"
+          value={playgroundsFilters.toys}
+          onChange={(event) =>
+            setPlaygroundsFilters({
+              ...playgroundsFilters,
+              toys: event.target.value,
+            })
+          }
+        >
+          <option value="">Erární hračky</option>
+          <option value={true}>ano</option>
+          <option value={false}>ne</option>
         </select>
-        <select className="filters__button" name="surface" id="surface">
-          <option value="allSurface">Povrch hřiště</option>
-          <option value="sand">písek</option>
-          <option value="grain">kamínky</option>
+        <select
+          className="filters__button"
+          name="surface"
+          id="surface"
+          value={playgroundsFilters.surface}
+          onChange={(event) =>
+            setPlaygroundsFilters({
+              ...playgroundsFilters,
+              surface: event.target.value,
+            })
+          }
+        >
+          <option value="">Povrch hřiště</option>
+          <option value="písek">písek</option>
+          <option value="kamínky">kamínky</option>
           <option value="tartan">tartan</option>
         </select>
       </div>
@@ -55,6 +119,8 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="playgrounds"
+        playgroundsFilters={playgroundsFilters}
+        filterItems={filterItems}
       />
 
       <Route
@@ -118,11 +184,29 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
 };
 
 const Groups = ({ setDataIndex, setActiveCategory }) => {
+  const [type, setType] = useState('');
+
+  const filterItems = (place) => {
+    if (type === '') {
+      return true;
+    }
+    if (place.type.indexOf(type) !== -1) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <>
       <div className="filters">
-        <select className="filters__button" name="groups" id="groups">
-          <option value="allGroups">Typ kroužku</option>
+        <select
+          className="filters__button"
+          name="groups"
+          id="groups"
+          value={type}
+          onChange={(event) => setType(event.target.value)}
+        >
+          <option value="">Typ kroužku</option>
           <option value="language">cizí jazyky</option>
           <option value="music">hudební</option>
           <option value="creative">kreativní</option>
@@ -134,6 +218,8 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="groups"
+        type={type}
+        filterItems={filterItems}
       />
     </>
   );
@@ -153,11 +239,29 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
 };
 
 const Doctors = ({ setDataIndex, setActiveCategory }) => {
+  const [speciality, setSpeciality] = useState('');
+
+  const filterItems = (place) => {
+    if (speciality === '') {
+      return true;
+    }
+    if (speciality === place.type) {
+      return true;
+    }
+    return false;
+  };
+
   return (
     <>
       <div className="filters">
-        <select className="filters__button" name="doctors" id="doctors">
-          <option value="allDoctors">Specializace</option>
+        <select
+          className="filters__button"
+          name="doctors"
+          id="doctors"
+          value={speciality}
+          onChange={(event) => setSpeciality(event.target.value)}
+        >
+          <option value="">Specializace</option>
           <option value="alergologie">alergologie</option>
           <option value="dermatologie">dermatologie</option>
           <option value="fyzioterapie">fyzioterapie</option>
@@ -175,6 +279,8 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="doctors"
+        speciality={speciality}
+        filterItems={filterItems}
       />
     </>
   );

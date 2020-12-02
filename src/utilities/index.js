@@ -8,3 +8,19 @@ export const cutOffUrlProtocole = (web) => {
     return `${web.slice(colonIndex + 3, 30)}...`;
   }
 };
+
+export const playgroundsMatches = (inputValue, dataValue) => {
+  if (inputValue === '') {
+    return true;
+  }
+
+  if (typeof dataValue === 'boolean') {
+    dataValue = dataValue.toString();
+  }
+
+  if (Array.isArray(dataValue)) {
+    return dataValue.indexOf(inputValue) !== -1;
+  }
+
+  return inputValue === dataValue;
+};

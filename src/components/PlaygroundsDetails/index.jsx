@@ -5,19 +5,7 @@ import './styles.css';
 export const PlaygroundsDetails = (props) => {
   const params = useParams();
 
-  const surface = (props) => {
-    let surfaceElm = '';
-    if (props.sand) {
-      surfaceElm = 'písek';
-    } else if (props.grain) {
-      surfaceElm = 'kamínky';
-    } else if (props.tartan) {
-      surfaceElm = 'tartan';
-    }
-    return surfaceElm;
-  };
-
-  const shadow = (props) => {
+  const shadowDisplay = (props) => {
     let shadowElm = '';
     if (props.shadow) {
       if (props.shadowDetails) {
@@ -51,24 +39,18 @@ export const PlaygroundsDetails = (props) => {
               <li>
                 <h3 className="playgrounds-items__heading">Herní prvky</h3>
                 <ul className="playgrounds-others">
-                  {props.babySwing && <li>malá houpačka</li>}
-                  {props.swing && <li>houpačka</li>}
-                  {props.seeSaw && <li>houpačka pro dvojice</li>}
-                  {props.sandbox && <li>pískoviště</li>}
-                  {props.slide && <li>skluzavka</li>}
-                  {props.carousel && <li>kolotoč</li>}
-                  {props.others.map((other) => (
-                    <li key={other}>{other}</li>
+                  {props.elements.map((element) => (
+                    <li key={element}>{element}</li>
                   ))}
                 </ul>
               </li>
               <li>
                 <h3 className="playgrounds-items__heading">Stín</h3>
-                <p>{shadow(props)}</p>
+                <p>{shadowDisplay(props)}</p>
               </li>
               <li>
                 <h3 className="playgrounds-items__heading">Povrch hřiště</h3>
-                <p>{surface(props)}</p>
+                <p>{props.surface.map((surface) => surface)}</p>
               </li>
               <li>
                 <h3 className="playgrounds-items__heading">Erární hračky</h3>
