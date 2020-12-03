@@ -28,7 +28,7 @@ export const Form = () => {
             </label>
             <label className="form-label">
               Popis místa:
-              <input className="form-description" type="text" />
+              <textarea className="form-description" type="text" />
             </label>
             <button className="form-button">Odeslat</button>
           </form>
