@@ -1,5 +1,126 @@
-.fake-form {
-  width: 800px;
-  background-color: indigo;
-  position: absolute;
+.modal-drop--form {
+  display: none;
+}
+
+.form-container {
+  display: none;
+}
+
+@media only screen and (min-width: 500px) {
+  .modal-drop--form {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-container {
+    display: block;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 0.8em;
+    z-index: 1;
+    overflow-y: auto;
+    width: 80%;
+    color: #1a1a1d;
+  }
+
+  .form-container p {
+    padding: 0 20px;
+  }
+
+  .form-heading {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  .form-items {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+  }
+
+  .form-label {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+
+  .form-input {
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px lightgrey;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .form-description {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 2px lightgrey;
+    border: none;
+    margin-top: 5px;
+    resize: none;
+  }
+
+  .form-container-button {
+    outline: none;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    padding-left: 5px;
+    float: right;
+    padding: 0;
+  }
+
+  .form-container--link {
+    font-size: 1.6em;
+    margin: 5px;
+    color: grey;
+    text-decoration: none;
+  }
+
+  .form-button {
+    outline: none;
+    background-color: white;
+    box-shadow: 0px 0px 0px 2px lightgrey;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+    align-self: flex-end;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+  }
+
+  .form-button:hover {
+    background-color: lightskyblue;
+  }
+
+  .form-button--link {
+    font-size: 1.2em;
+    margin: 5px;
+    color: #1a1a1d;
+    text-decoration: none;
+  }
+  .form-button--link:hover {
+    color: white;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .form-container {
+    width: 700px;
+  }
 }
