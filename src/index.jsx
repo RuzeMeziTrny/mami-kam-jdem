@@ -13,34 +13,15 @@ import { Map } from './components/Map';
 import { CategoryList } from './components/CategoryList';
 import { PlaygroundsDetails } from './components/PlaygroundsDetails';
 import { data } from './data.js';
-import { playgroundsMatches } from './utilities';
+import {
+  filterItemsPlaygrounds,
+  filterItemsGroups,
+  filterItemsDoctors,
+} from './utilities';
 import './index.html';
 import './styles.css';
 
-const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
-  const [playgroundsFilters, setPlaygroundsFilters] = useState({
-    elements: '',
-    shadow: '',
-    toys: '',
-    surface: '',
-  });
-
-  const filterItems = (place) => {
-    if (!playgroundsMatches(playgroundsFilters.elements, place.elements)) {
-      return false;
-    }
-    if (!playgroundsMatches(playgroundsFilters.shadow, place.shadow)) {
-      return false;
-    }
-    if (!playgroundsMatches(playgroundsFilters.toys, place.toys)) {
-      return false;
-    }
-    if (!playgroundsMatches(playgroundsFilters.surface, place.surface)) {
-      return false;
-    }
-    return true;
-  };
-
+const Playgrounds = (props) => {
   return (
     <>
       <div className="filters">
@@ -48,10 +29,10 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           className="filters__button"
           name="elements"
           id="elements"
-          value={playgroundsFilters.elements}
+          value={props.playgroundsFilters.elements}
           onChange={(event) =>
-            setPlaygroundsFilters({
-              ...playgroundsFilters,
+            props.setPlaygroundsFilters({
+              ...props.playgroundsFilters,
               elements: event.target.value,
             })
           }
@@ -68,10 +49,10 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           className="filters__button"
           name="shadow"
           id="shadow"
-          value={playgroundsFilters.shadow}
+          value={props.playgroundsFilters.shadow}
           onChange={(event) =>
-            setPlaygroundsFilters({
-              ...playgroundsFilters,
+            props.setPlaygroundsFilters({
+              ...props.playgroundsFilters,
               shadow: event.target.value,
             })
           }
@@ -84,10 +65,10 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           className="filters__button"
           name="toys"
           id="toys"
-          value={playgroundsFilters.toys}
+          value={props.playgroundsFilters.toys}
           onChange={(event) =>
-            setPlaygroundsFilters({
-              ...playgroundsFilters,
+            props.setPlaygroundsFilters({
+              ...props.playgroundsFilters,
               toys: event.target.value,
             })
           }
@@ -100,10 +81,10 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           className="filters__button"
           name="surface"
           id="surface"
-          value={playgroundsFilters.surface}
+          value={props.playgroundsFilters.surface}
           onChange={(event) =>
-            setPlaygroundsFilters({
-              ...playgroundsFilters,
+            props.setPlaygroundsFilters({
+              ...props.playgroundsFilters,
               surface: event.target.value,
             })
           }
@@ -118,11 +99,13 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
 
       <CategoryList
         dataArray={data.playgrounds}
-        setDataIndex={setDataIndex}
-        setActiveCategory={setActiveCategory}
+        setDataIndex={props.setDataIndex}
+        setActiveCategory={props.setActiveCategory}
         category="playgrounds"
-        playgroundsFilters={playgroundsFilters}
-        filterItems={filterItems}
+        playgroundsFilters={props.playgroundsFilters}
+        filterItems={(place) =>
+          props.filterItemsPlaygrounds(place, props.playgroundsFilters)
+        }
       />
 
       <Route
@@ -136,7 +119,7 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
           return (
             <PlaygroundsDetails
               key={playground.id}
-              setDataIndex={setDataIndex}
+              setDataIndex={props.setDataIndex}
               {...playground}
             />
           );
@@ -185,19 +168,7 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
   );
 };
 
-const Groups = ({ setDataIndex, setActiveCategory }) => {
-  const [type, setType] = useState('');
-
-  const filterItems = (place) => {
-    if (type === '') {
-      return true;
-    }
-    if (place.type.indexOf(type) !== -1) {
-      return true;
-    }
-    return false;
-  };
-
+const Groups = (props) => {
   return (
     <>
       <div className="filters filters--groups">
@@ -205,8 +176,8 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
           className="filters__button"
           name="groups"
           id="groups"
-          value={type}
-          onChange={(event) => setType(event.target.value)}
+          value={props.type}
+          onChange={(event) => props.setType(event.target.value)}
         >
           <option value="">Typ kroužku</option>
           <option value="language">cizí jazyky</option>
@@ -218,11 +189,11 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
       </div>
       <CategoryList
         dataArray={data.groups}
-        setDataIndex={setDataIndex}
-        setActiveCategory={setActiveCategory}
+        setDataIndex={props.setDataIndex}
+        setActiveCategory={props.setActiveCategory}
         category="groups"
-        type={type}
-        filterItems={filterItems}
+        type={props.type}
+        filterItems={(place) => props.filterItemsGroups(place, props.type)}
       />
     </>
   );
@@ -241,19 +212,7 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
   );
 };
 
-const Doctors = ({ setDataIndex, setActiveCategory }) => {
-  const [speciality, setSpeciality] = useState('');
-
-  const filterItems = (place) => {
-    if (speciality === '') {
-      return true;
-    }
-    if (speciality === place.type) {
-      return true;
-    }
-    return false;
-  };
-
+const Doctors = (props) => {
   return (
     <>
       <div className="filters filters--doctors">
@@ -261,8 +220,8 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
           className="filters__button"
           name="doctors"
           id="doctors"
-          value={speciality}
-          onChange={(event) => setSpeciality(event.target.value)}
+          value={props.speciality}
+          onChange={(event) => props.setSpeciality(event.target.value)}
         >
           <option value="">Specializace</option>
           <option value="alergologie">alergologie</option>
@@ -280,11 +239,13 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
       </div>
       <CategoryList
         dataArray={data.doctors}
-        setDataIndex={setDataIndex}
-        setActiveCategory={setActiveCategory}
+        setDataIndex={props.setDataIndex}
+        setActiveCategory={props.setActiveCategory}
         category="doctors"
-        speciality={speciality}
-        filterItems={filterItems}
+        speciality={props.speciality}
+        filterItems={(place) =>
+          props.filterItemsDoctors(place, props.speciality)
+        }
       />
     </>
   );
@@ -313,6 +274,20 @@ const App = () => {
     zoom: 13,
   });
 
+  /* states for playgrounds filters */
+  const [playgroundsFilters, setPlaygroundsFilters] = useState({
+    elements: '',
+    shadow: '',
+    toys: '',
+    surface: '',
+  });
+
+  /* states for groups filters */
+  const [type, setType] = useState('');
+
+  /* states for doctors filters */
+  const [speciality, setSpeciality] = useState('');
+
   return (
     <Router>
       <section>
@@ -339,12 +314,24 @@ const App = () => {
                   <Component
                     setDataIndex={setDataIndex}
                     setActiveCategory={setActiveCategory}
+                    playgroundsFilters={playgroundsFilters}
+                    setPlaygroundsFilters={setPlaygroundsFilters}
+                    filterItemsPlaygrounds={filterItemsPlaygrounds}
+                    type={type}
+                    setType={setType}
+                    filterItemsGroups={filterItemsGroups}
+                    speciality={speciality}
+                    setSpeciality={setSpeciality}
+                    filterItemsDoctors={filterItemsDoctors}
                   />
                 )}
               />
             );
           })}
-          <Route path={'/form'} render={() => <Form />} />
+          <Route
+            path={'/form'}
+            render={() => <Form setDataIndex={setDataIndex} />}
+          />
           {/* když budeme přidávat další routy, tak to přidáme sem před redirect */}
           <Route render={() => <Redirect to="/" />} />
         </Switch>
