@@ -30,7 +30,11 @@ export const Form = () => {
               Popis místa:
               <textarea className="form-description" type="text" />
             </label>
-            <button className="form-button">Odeslat</button>
+            <button className="form-button">
+              <Link className="form-button--link" to="/">
+                Odeslat
+              </Link>
+            </button>
           </form>
         </div>
       </div>

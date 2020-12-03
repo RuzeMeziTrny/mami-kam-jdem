@@ -28,6 +28,7 @@
     z-index: 1;
     overflow-y: auto;
     width: 80%;
+    color: #1a1a1d;
   }
 
   .form-container p {
@@ -81,9 +82,7 @@
     border-radius: 50%;
     padding-left: 5px;
     float: right;
-    width: 5%;
     padding: 0;
-    margin-right: 5px;
   }
 
   .form-container--link {
@@ -107,6 +106,15 @@
 
   .form-button:hover {
     background-color: lightskyblue;
+  }
+
+  .form-button--link {
+    font-size: 1.2em;
+    margin: 5px;
+    color: #1a1a1d;
+    text-decoration: none;
+  }
+  .form-button--link:hover {
     color: white;
   }
 }
