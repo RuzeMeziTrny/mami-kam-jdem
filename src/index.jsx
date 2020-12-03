@@ -117,7 +117,7 @@ const Playgrounds = ({ setDataIndex, setActiveCategory }) => {
       </div>
 
       <CategoryList
-        array={data.playgrounds}
+        dataArray={data.playgrounds}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="playgrounds"
@@ -150,7 +150,7 @@ const OutdoorSpaces = ({ setDataIndex, setActiveCategory }) => {
   return (
     <>
       <CategoryList
-        array={data.outdoorSpaces}
+        dataArray={data.outdoorSpaces}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="outdoorSpaces"
@@ -163,7 +163,7 @@ const InnerSpaces = ({ setDataIndex, setActiveCategory }) => {
   return (
     <>
       <CategoryList
-        array={data.innerSpaces}
+        dataArray={data.innerSpaces}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="innerSpaces"
@@ -176,7 +176,7 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
   return (
     <>
       <CategoryList
-        array={data.restaurants}
+        dataArray={data.restaurants}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="restaurants"
@@ -217,7 +217,7 @@ const Groups = ({ setDataIndex, setActiveCategory }) => {
         <button className="sub-filter__button">Zobrazit filtry</button>
       </div>
       <CategoryList
-        array={data.groups}
+        dataArray={data.groups}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="groups"
@@ -232,7 +232,7 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
   return (
     <>
       <CategoryList
-        array={data.kindergartens}
+        dataArray={data.kindergartens}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="kindergartens"
@@ -279,7 +279,7 @@ const Doctors = ({ setDataIndex, setActiveCategory }) => {
         <button className="sub-filter__button">Zobrazit filtry</button>
       </div>
       <CategoryList
-        array={data.doctors}
+        dataArray={data.doctors}
         setDataIndex={setDataIndex}
         setActiveCategory={setActiveCategory}
         category="doctors"
@@ -318,14 +318,12 @@ const App = () => {
       <section>
         <Header
           setDataIndex={setDataIndex}
-          viewport={viewport}
           setViewport={setViewport}
           latitudeStart={latitudeStart}
           longitudeStart={longitudeStart}
         />
         <Navigation
           setDataIndex={setDataIndex}
-          viewport={viewport}
           setViewport={setViewport}
           latitudeStart={latitudeStart}
           longitudeStart={longitudeStart}

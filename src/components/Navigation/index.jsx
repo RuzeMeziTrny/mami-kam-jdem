@@ -135,7 +135,7 @@ export const Navigation = (props) => {
           props.setViewport({
             latitude: props.latitudeStart,
             longitude: props.longitudeStart,
-            zoom: props.viewport.zoom,
+            zoom: 13,
             transitionDuration: 2000,
             transitionInterpolator: new FlyToInterpolator(),
             transitionEasing: d3.easeCubic,

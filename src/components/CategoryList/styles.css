@@ -2,6 +2,10 @@
   display: none;
 }
 
+.category-list__no-result {
+  display: none;
+}
+
 @media only screen and (min-width: 760px) {
   .category-list {
     display: flex;
@@ -12,6 +16,12 @@
     top: 50px;
     overflow-x: auto;
     overflow-y: auto;
+  }
+
+  .category-list__no-result {
+    display: block;
+    margin: auto;
+    padding: 15px 0;
   }
 }
 

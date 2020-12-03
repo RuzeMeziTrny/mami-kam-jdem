@@ -7,7 +7,6 @@ import './styles.css';
 export const Header = ({
   setDataIndex,
   setViewport,
-  viewport,
   latitudeStart,
   longitudeStart,
 }) => {
@@ -27,7 +26,7 @@ export const Header = ({
               setViewport({
                 latitude: latitudeStart,
                 longitude: longitudeStart,
-                zoom: viewport.zoom,
+                zoom: 13,
                 transitionDuration: 2000,
                 transitionInterpolator: new FlyToInterpolator(),
                 transitionEasing: d3.easeCubic,

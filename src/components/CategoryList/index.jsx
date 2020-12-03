@@ -15,13 +15,22 @@ export const CategoryList = (props) => {
     />
   );
 
-  return (
-    <div className="category-list">
-      {props.category === 'playgrounds' ||
-      props.category === 'groups' ||
-      props.category === 'doctors'
-        ? props.array.filter(props.filterItems).map(mapItems)
-        : props.array.map(mapItems)}
-    </div>
-  );
+  const filterResult = () => {
+    const filtered =
+      props.filterItems != null
+        ? props.dataArray.filter(props.filterItems)
+        : props.dataArray;
+
+    if (filtered.length === 0) {
+      return (
+        <p className="category-list__no-result">
+          Bohužel žádná položka nevyhovuje vašemu výběru.
+        </p>
+      );
+    }
+
+    return filtered.map(mapItems);
+  };
+
+  return <div className="category-list">{filterResult()}</div>;
 };
