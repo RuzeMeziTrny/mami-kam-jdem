@@ -22,9 +22,17 @@ import './index.html';
 import './styles.css';
 
 const Playgrounds = (props) => {
+  const [filterOpen, setFilterOpen] = useState(true);
+
   return (
     <>
-      <div className="filters">
+      <div
+        className={
+          filterOpen
+            ? 'filters-hidden filters--playgrounds-hidden'
+            : 'filters filters--playgrounds'
+        }
+      >
         <select
           className="filters__button"
           name="elements"
@@ -94,7 +102,12 @@ const Playgrounds = (props) => {
           <option value="kamínky">kamínky</option>
           <option value="tartan">tartan</option>
         </select>
-        <button className="sub-filter__button">Zobrazit filtry</button>
+        <button
+          className="sub-filter__button"
+          onClick={() => setFilterOpen(!filterOpen)}
+        >
+          Zobrazit filtry
+        </button>
       </div>
 
       <CategoryList
@@ -169,9 +182,17 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
 };
 
 const Groups = (props) => {
+  const [filterOpen, setFilterOpen] = useState(true);
+
   return (
     <>
-      <div className="filters filters--groups">
+      <div
+        className={
+          filterOpen
+            ? 'filters-hidden filters--groups'
+            : 'filters filters--groups'
+        }
+      >
         <select
           className="filters__button"
           name="groups"
@@ -185,7 +206,12 @@ const Groups = (props) => {
           <option value="creative">kreativní</option>
           <option value="sport">sportovní</option>
         </select>
-        <button className="sub-filter__button">Zobrazit filtry</button>
+        <button
+          className="sub-filter__button"
+          onClick={() => setFilterOpen(!filterOpen)}
+        >
+          Zobrazit filtry
+        </button>
       </div>
       <CategoryList
         dataArray={data.groups}
@@ -213,9 +239,17 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
 };
 
 const Doctors = (props) => {
+  const [filterOpen, setFilterOpen] = useState(true);
+
   return (
     <>
-      <div className="filters filters--doctors">
+      <div
+        className={
+          filterOpen
+            ? 'filters-hidden filters--doctors'
+            : 'filters filters--doctors'
+        }
+      >
         <select
           className="filters__button"
           name="doctors"
@@ -235,7 +269,12 @@ const Doctors = (props) => {
           <option value="pediatrie">pediatrie</option>
           <option value="stomatologie">stomatologie</option>
         </select>
-        <button className="sub-filter__button">Zobrazit filtry</button>
+        <button
+          className="sub-filter__button"
+          onClick={() => setFilterOpen(!filterOpen)}
+        >
+          Zobrazit filtry
+        </button>
       </div>
       <CategoryList
         dataArray={data.doctors}
