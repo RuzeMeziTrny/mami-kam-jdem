@@ -27,7 +27,7 @@ export const Form = (props) => {
               <input className="form-input" type="text" />
             </label>
             <label className="form-label">
-              Místo, které chcete doporučit:
+              Místo, které chcete doporučit*:
               <input className="form-input" type="text" />
             </label>
             <label className="form-label">
