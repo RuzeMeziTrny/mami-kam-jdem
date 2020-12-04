@@ -29,8 +29,8 @@ const Playgrounds = (props) => {
       <div
         className={
           filterHidden
-            ? 'filters-tablet filters--playgrounds-hidden filters--playgrounds'
-            : 'filters-tablet filters--playgrounds'
+            ? 'filters filters--playgrounds-hidden filters--playgrounds'
+            : 'filters filters--playgrounds'
         }
       >
         <select
@@ -189,8 +189,8 @@ const Groups = (props) => {
       <div
         className={
           filterHidden
-            ? 'filters-tablet filters-hidden filters--groups'
-            : 'filters-tablet filters--groups'
+            ? 'filters filters-hidden filters--groups'
+            : 'filters filters--groups'
         }
       >
         <select
@@ -246,8 +246,8 @@ const Doctors = (props) => {
       <div
         className={
           filterHidden
-            ? 'filters-tablet filters-hidden filters--doctors'
-            : 'filters-tablet filters--doctors'
+            ? 'filters filters-hidden filters--doctors'
+            : 'filters filters--doctors'
         }
       >
         <select
