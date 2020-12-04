@@ -3,13 +3,13 @@ import { CategoryItem } from '../CategoryItem';
 import './styles.css';
 
 export const CategoryList = (props) => {
-  const mapItems = (place, index) => (
+  const mapItems = (place) => (
     <CategoryItem
       key={place.id}
       {...place}
       category={props.category}
       handleClick={() => {
-        props.setDataIndex(index);
+        props.setDataIndex(place.index);
         props.setActiveCategory(props.category);
       }}
     />
