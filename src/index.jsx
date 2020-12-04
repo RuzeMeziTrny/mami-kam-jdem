@@ -22,15 +22,15 @@ import './index.html';
 import './styles.css';
 
 const Playgrounds = (props) => {
-  const [filterOpen, setFilterOpen] = useState(true);
+  const [filterHidden, setFilterHidden] = useState(true);
 
   return (
     <>
       <div
         className={
-          filterOpen
-            ? 'filters-hidden filters--playgrounds-hidden'
-            : 'filters filters--playgrounds'
+          filterHidden
+            ? 'filters-tablet filters--playgrounds-hidden filters--playgrounds'
+            : 'filters-tablet filters--playgrounds'
         }
       >
         <select
@@ -103,10 +103,10 @@ const Playgrounds = (props) => {
           <option value="tartan">tartan</option>
         </select>
         <button
-          className="sub-filter__button"
-          onClick={() => setFilterOpen(!filterOpen)}
+          className="sub-filter__button sub-filter__button--playgrounds"
+          onClick={() => setFilterHidden(!filterHidden)}
         >
-          Zobrazit filtry
+          {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
         </button>
       </div>
 
@@ -182,15 +182,15 @@ const Restaurants = ({ setDataIndex, setActiveCategory }) => {
 };
 
 const Groups = (props) => {
-  const [filterOpen, setFilterOpen] = useState(true);
+  const [filterHidden, setFilterHidden] = useState(true);
 
   return (
     <>
       <div
         className={
-          filterOpen
-            ? 'filters-hidden filters--groups'
-            : 'filters filters--groups'
+          filterHidden
+            ? 'filters-tablet filters-hidden filters--groups'
+            : 'filters-tablet filters--groups'
         }
       >
         <select
@@ -207,10 +207,10 @@ const Groups = (props) => {
           <option value="sport">sportovní</option>
         </select>
         <button
-          className="sub-filter__button"
-          onClick={() => setFilterOpen(!filterOpen)}
+          className="sub-filter__button sub-filter__button--groups"
+          onClick={() => setFilterHidden(!filterHidden)}
         >
-          Zobrazit filtry
+          {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
         </button>
       </div>
       <CategoryList
@@ -239,15 +239,15 @@ const Kindergartens = ({ setDataIndex, setActiveCategory }) => {
 };
 
 const Doctors = (props) => {
-  const [filterOpen, setFilterOpen] = useState(true);
+  const [filterHidden, setFilterHidden] = useState(true);
 
   return (
     <>
       <div
         className={
-          filterOpen
-            ? 'filters-hidden filters--doctors'
-            : 'filters filters--doctors'
+          filterHidden
+            ? 'filters-tablet filters-hidden filters--doctors'
+            : 'filters-tablet filters--doctors'
         }
       >
         <select
@@ -270,10 +270,10 @@ const Doctors = (props) => {
           <option value="stomatologie">stomatologie</option>
         </select>
         <button
-          className="sub-filter__button"
-          onClick={() => setFilterOpen(!filterOpen)}
+          className="sub-filter__button sub-filter__button--doctors "
+          onClick={() => setFilterHidden(!filterHidden)}
         >
-          Zobrazit filtry
+          {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
         </button>
       </div>
       <CategoryList

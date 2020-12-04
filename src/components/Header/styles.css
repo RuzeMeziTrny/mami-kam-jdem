@@ -23,14 +23,13 @@ header {
 @media only screen and (min-width: 500px) {
   .header__btn {
     left: 5px;
-    bottom: 80px;
     display: block;
     background-color: white;
     outline: none;
     border: none;
     width: 45px;
     position: absolute;
-    left: 5px;
+    top: -15px;
   }
 
   .form__link {
@@ -65,7 +64,7 @@ header {
   }
 
   .header__btn {
-    top: -40px;
+    top: -15px;
   }
 }
 
@@ -82,8 +81,7 @@ header {
     left: 430px;
     border-radius: 8%;
     width: 55px;
-    bottom: 850px;
-    top: 1px;
+    top: 2px;
   }
 
   .form__link {
