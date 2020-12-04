@@ -16,6 +16,11 @@ import iconRestaurants from '../../assets/icons/restaurants.svg';
 import iconGroups from '../../assets/icons/groups.svg';
 import iconKindergartens from '../../assets/icons/kindergartens.svg';
 import iconDoctors from '../../assets/icons/doctors.svg';
+import {
+  filterItemsPlaygrounds,
+  filterItemsGroups,
+  filterItemsDoctors,
+} from '../../utilities';
 import { data } from '../../data.js';
 import { MapPopupItem } from '../MapPopupItem';
 import './styles.css';
@@ -40,22 +45,18 @@ const seznamMapy = {
   ],
 };
 
-export const Map = ({
-  dataIndex,
-  setDataIndex,
-  activeCategory,
-  setActiveCategory,
-  viewport,
-  setViewport,
-}) => {
-  const popupData = dataIndex !== null ? data[activeCategory][dataIndex] : null;
+export const Map = (props) => {
+  const popupData =
+    props.dataIndex !== null
+      ? data[props.activeCategory][props.dataIndex]
+      : null;
 
   useEffect(() => {
     if (popupData !== null) {
-      setViewport({
+      props.setViewport({
         latitude: popupData.latitude,
         longitude: popupData.longitude,
-        zoom: viewport.zoom,
+        zoom: props.viewport.zoom,
         transitionDuration: 2000,
         transitionInterpolator: new FlyToInterpolator(),
         transitionEasing: d3.easeCubic,
@@ -66,10 +67,10 @@ export const Map = ({
   return (
     <div className="map__container">
       <ReactMapGL
-        {...viewport}
+        {...props.viewport}
         width="100%"
         height="100%"
-        onViewportChange={(nextViewport) => setViewport(nextViewport)}
+        onViewportChange={(nextViewport) => props.setViewport(nextViewport)}
         mapStyle={seznamMapy}
         /* scrollZoom={false} kdybychom chtěli zabránit zoomu kolečkem myši */
       >
@@ -88,40 +89,44 @@ export const Map = ({
           path={['/', '/hriste/:id?']}
           exact
           render={() =>
-            data.playgrounds.map((place, index) => (
-              <Marker
-                key={place.id}
-                latitude={place.latitude}
-                longitude={place.longitude}
-                offsetLeft={-20}
-                offsetTop={-20}
-              >
-                <button
-                  className="marker__button marker__button--playgrounds"
-                  onClick={() => {
-                    setActiveCategory('playgrounds');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
-                  }}
+            data.playgrounds
+              .filter((place) =>
+                filterItemsPlaygrounds(place, props.playgroundsFilters),
+              )
+              .map((place) => (
+                <Marker
+                  key={place.id}
+                  latitude={place.latitude}
+                  longitude={place.longitude}
+                  offsetLeft={-20}
+                  offsetTop={-20}
                 >
-                  <img
-                    className="marker__icon"
-                    src={iconPlaygrounds}
-                    width={40}
-                    height={40}
-                    alt="hřiště"
-                  />
-                </button>
-              </Marker>
-            ))
+                  <button
+                    className="marker__button marker__button--playgrounds"
+                    onClick={() => {
+                      props.setActiveCategory('playgrounds');
+                      props.dataIndex === place.index
+                        ? props.setDataIndex(null)
+                        : props.setDataIndex(place.index);
+                    }}
+                  >
+                    <img
+                      className="marker__icon"
+                      src={iconPlaygrounds}
+                      width={40}
+                      height={40}
+                      alt="hřiště"
+                    />
+                  </button>
+                </Marker>
+              ))
           }
         />
         <Route
           path={['/', '/venkovni-arealy']}
           exact
           render={() =>
-            data.outdoorSpaces.map((place, index) => (
+            data.outdoorSpaces.map((place) => (
               <Marker
                 key={place.id}
                 latitude={place.latitude}
@@ -132,10 +137,10 @@ export const Map = ({
                 <button
                   className="marker__button marker__button--outdoor-spaces"
                   onClick={() => {
-                    setActiveCategory('outdoorSpaces');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
+                    props.setActiveCategory('outdoorSpaces');
+                    props.dataIndex === place.index
+                      ? props.setDataIndex(null)
+                      : props.setDataIndex(place.index);
                   }}
                 >
                   <img
@@ -154,7 +159,7 @@ export const Map = ({
           path={['/', '/vnitrni-arealy']}
           exact
           render={() =>
-            data.innerSpaces.map((place, index) => (
+            data.innerSpaces.map((place) => (
               <Marker
                 key={place.id}
                 latitude={place.latitude}
@@ -165,10 +170,10 @@ export const Map = ({
                 <button
                   className="marker__button marker__button--inner-spaces"
                   onClick={() => {
-                    setActiveCategory('innerSpaces');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
+                    props.setActiveCategory('innerSpaces');
+                    props.dataIndex === place.index
+                      ? props.setDataIndex(null)
+                      : props.setDataIndex(place.index);
                   }}
                 >
                   <img
@@ -187,7 +192,7 @@ export const Map = ({
           path={['/', '/restaurace']}
           exact
           render={() =>
-            data.restaurants.map((place, index) => (
+            data.restaurants.map((place) => (
               <Marker
                 key={place.id}
                 latitude={place.latitude}
@@ -198,10 +203,10 @@ export const Map = ({
                 <button
                   className="marker__button marker__button--restaurants"
                   onClick={() => {
-                    setActiveCategory('restaurants');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
+                    props.setActiveCategory('restaurants');
+                    props.dataIndex === place.index
+                      ? props.setDataIndex(null)
+                      : props.setDataIndex(place.index);
                   }}
                 >
                   <img
@@ -220,40 +225,42 @@ export const Map = ({
           path={['/', '/krouzky']}
           exact
           render={() =>
-            data.groups.map((place, index) => (
-              <Marker
-                key={place.id}
-                latitude={place.latitude}
-                longitude={place.longitude}
-                offsetLeft={-20}
-                offsetTop={-20}
-              >
-                <button
-                  className="marker__button marker__button--groups"
-                  onClick={() => {
-                    setActiveCategory('groups');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
-                  }}
+            data.groups
+              .filter((place) => filterItemsGroups(place, props.type))
+              .map((place) => (
+                <Marker
+                  key={place.id}
+                  latitude={place.latitude}
+                  longitude={place.longitude}
+                  offsetLeft={-20}
+                  offsetTop={-20}
                 >
-                  <img
-                    className="marker__icon"
-                    src={iconGroups}
-                    width={40}
-                    height={40}
-                    alt="kroužek"
-                  />
-                </button>
-              </Marker>
-            ))
+                  <button
+                    className="marker__button marker__button--groups"
+                    onClick={() => {
+                      props.setActiveCategory('groups');
+                      props.dataIndex === place.index
+                        ? props.setDataIndex(null)
+                        : props.setDataIndex(place.index);
+                    }}
+                  >
+                    <img
+                      className="marker__icon"
+                      src={iconGroups}
+                      width={40}
+                      height={40}
+                      alt="kroužek"
+                    />
+                  </button>
+                </Marker>
+              ))
           }
         />
         <Route
           path={['/', '/skolky']}
           exact
           render={() =>
-            data.kindergartens.map((place, index) => (
+            data.kindergartens.map((place) => (
               <Marker
                 key={place.id}
                 latitude={place.latitude}
@@ -264,10 +271,10 @@ export const Map = ({
                 <button
                   className="marker__button marker__button--kindergartens"
                   onClick={() => {
-                    setActiveCategory('kindergartens');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
+                    props.setActiveCategory('kindergartens');
+                    props.dataIndex === place.index
+                      ? props.setDataIndex(null)
+                      : props.setDataIndex(place.index);
                   }}
                 >
                   <img
@@ -286,33 +293,35 @@ export const Map = ({
           path={['/', '/lekari']}
           exact
           render={() =>
-            data.doctors.map((place, index) => (
-              <Marker
-                key={place.id}
-                latitude={place.latitude}
-                longitude={place.longitude}
-                offsetLeft={-20}
-                offsetTop={-20}
-              >
-                <button
-                  className="marker__button marker__button--doctors"
-                  onClick={() => {
-                    setActiveCategory('doctors');
-                    dataIndex === index
-                      ? setDataIndex(null)
-                      : setDataIndex(index);
-                  }}
+            data.doctors
+              .filter((place) => filterItemsDoctors(place, props.speciality))
+              .map((place) => (
+                <Marker
+                  key={place.id}
+                  latitude={place.latitude}
+                  longitude={place.longitude}
+                  offsetLeft={-20}
+                  offsetTop={-20}
                 >
-                  <img
-                    className="marker__icon"
-                    src={iconDoctors}
-                    width={40}
-                    height={40}
-                    alt="lékař"
-                  />
-                </button>
-              </Marker>
-            ))
+                  <button
+                    className="marker__button marker__button--doctors"
+                    onClick={() => {
+                      props.setActiveCategory('doctors');
+                      props.dataIndex === place.index
+                        ? props.setDataIndex(null)
+                        : props.setDataIndex(place.index);
+                    }}
+                  >
+                    <img
+                      className="marker__icon"
+                      src={iconDoctors}
+                      width={40}
+                      height={40}
+                      alt="lékař"
+                    />
+                  </button>
+                </Marker>
+              ))
           }
         />
 
@@ -323,7 +332,7 @@ export const Map = ({
             longitude={popupData.longitude}
             offsetTop={-30}
             closeOnClick={false}
-            onClose={() => setDataIndex(null)}
+            onClose={() => props.setDataIndex(null)}
           >
             <MapPopupItem
               image={popupData.image}
@@ -331,7 +340,7 @@ export const Map = ({
               address={popupData.address}
               web={popupData.web}
               id={popupData.id}
-              category={activeCategory}
+              category={props.activeCategory}
             />
           </Popup>
         )}

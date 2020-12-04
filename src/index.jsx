@@ -383,6 +383,9 @@ const App = () => {
           setActiveCategory={setActiveCategory}
           viewport={viewport}
           setViewport={setViewport}
+          playgroundsFilters={playgroundsFilters}
+          type={type}
+          speciality={speciality}
         />
       </main>
     </Router>
