@@ -30,13 +30,15 @@ header {
     background-color: white;
     outline: none;
     border: none;
+    cursor: pointer;
   }
 
   .header__form-icon {
     filter: invert(70%);
   }
 
-  .header__form-link {
+  .header__form-text {
+    margin: 0;
     text-decoration: none;
     color: grey;
     font-size: 0.9em;
@@ -45,7 +47,7 @@ header {
     transform: translateX(-4px);
   }
 
-  .header__form-link::after {
+  .header__form-text::after {
     content: '';
     position: absolute;
     left: 1px;
@@ -95,12 +97,12 @@ header {
     filter: invert(0);
   }
 
-  .header__form-link {
+  .header__form-text {
     color: black;
     transform: translateX(0px);
   }
 
-  .header__form-link::after {
+  .header__form-text::after {
     left: -5px;
     top: -50px;
     padding: 40px 27px;

@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FlyToInterpolator } from 'react-map-gl';
 import * as d3 from 'd3-ease';
+import { ContactForm } from '../ContactForm';
 import './styles.css';
 
-export const Header = ({
-  setDataIndex,
-  setViewport,
-  latitudeStart,
-  longitudeStart,
-}) => {
+export const Header = (props) => {
   const location = useLocation();
+
+  const [contactFormOpen, setContactFormOpen] = useState(false);
 
   return (
     <header>
@@ -22,10 +20,10 @@ export const Header = ({
             to="/"
             className="main-heading--link"
             onClick={() => {
-              setDataIndex(null);
-              setViewport({
-                latitude: latitudeStart,
-                longitude: longitudeStart,
+              props.setDataIndex(null);
+              props.setViewport({
+                latitude: props.latitudeStart,
+                longitude: props.longitudeStart,
                 zoom: 13,
                 transitionDuration: 2000,
                 transitionInterpolator: new FlyToInterpolator(),
@@ -38,17 +36,28 @@ export const Header = ({
         </h1>
       )}
 
-      <button className="header__form-button">
+      <button
+        className="header__form-button"
+        onClick={() => {
+          setContactFormOpen(true);
+          props.setDataIndex(null);
+        }}
+      >
         <img
           className="header__form-icon"
           src="/assets/icons/envelope_white.svg"
           alt="obálka"
         />
+        <p className="header__form-text">Napište nám</p>
         {/* <a href="mailto:someone@example.com">Napište nám</a> */}
-        <Link to="/form" className="header__form-link">
-          Napište nám
-        </Link>
       </button>
+
+      {contactFormOpen && (
+        <ContactForm
+          onClose={() => setContactFormOpen(false)}
+          setContactFormOpen={setContactFormOpen}
+        />
+      )}
     </header>
   );
 };

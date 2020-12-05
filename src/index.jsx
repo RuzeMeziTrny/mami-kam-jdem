@@ -15,7 +15,6 @@ import { Restaurants } from './components/Restaurants';
 import { Groups } from './components/Groups';
 import { Kindergartens } from './components/Kindergartens';
 import { Doctors } from './components/Doctors';
-import { Form } from './components/Form';
 import { Map } from './components/Map';
 import {
   filterItemsPlaygrounds,
@@ -48,9 +47,10 @@ const App = () => {
     zoom: 13,
   });
 
+  /* state for show/hide filters */
   const [filterHidden, setFilterHidden] = useState(true);
 
-  /* states for playgrounds filters */
+  /* state for playgrounds filters */
   const [playgroundsFilters, setPlaygroundsFilters] = useState({
     elements: '',
     shadow: '',
@@ -58,10 +58,10 @@ const App = () => {
     surface: '',
   });
 
-  /* states for groups filters */
+  /* state for groups filters */
   const [type, setType] = useState('');
 
-  /* states for doctors filters */
+  /* state for doctors filters */
   const [speciality, setSpeciality] = useState('');
 
   return (
@@ -106,10 +106,6 @@ const App = () => {
               />
             );
           })}
-          <Route
-            path={'/form'}
-            render={() => <Form setDataIndex={setDataIndex} />}
-          />
           {/* když budeme přidávat další routy, tak to přidáme sem před redirect */}
           <Route render={() => <Redirect to="/" />} />
         </Switch>

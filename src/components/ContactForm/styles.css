@@ -1,0 +1,100 @@
+.modal-drop--form {
+  display: none;
+}
+
+@media only screen and (min-width: 500px) {
+  .modal-drop--form {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .form-container {
+    background-color: white;
+    color: #1a1a1d;
+    font-size: 0.8em;
+    border-radius: 10px;
+    width: 80%;
+    overflow-y: auto;
+  }
+
+  .form-container__close-button {
+    border: none;
+    outline: none;
+    float: right;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 1.5em;
+    color: grey;
+    background-color: transparent;
+  }
+
+  .form-container__heading {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.4em;
+  }
+
+  .form-container__text {
+    padding: 0 20px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+  }
+
+  .form__label {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+
+  .form__input {
+    height: 30px;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 2px lightgrey;
+    border: none;
+    margin-top: 5px;
+  }
+
+  .form__input--lg {
+    height: 200px;
+    width: 100%;
+    resize: none;
+  }
+
+  .form__send-button {
+    background-color: white;
+    box-shadow: 0px 0px 0px 2px lightgrey;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 20px 20px 10px;
+    padding: 5px 10px;
+    align-self: flex-end;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .form__send-button:hover {
+    background-color: rgb(240, 240, 240);
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .form-container {
+    width: 700px;
+  }
+}
