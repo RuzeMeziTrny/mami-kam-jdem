@@ -8,15 +8,9 @@ export const Doctors = (props) => {
 
   return (
     <>
-      <div
-        className={
-          filterHidden
-            ? 'filters filters-hidden filters--doctors'
-            : 'filters filters--doctors'
-        }
-      >
+      <div className={`filters ${filterHidden ? 'filters--hidden' : ''}`}>
         <select
-          className="filters__button"
+          className="filters__select"
           name="doctors"
           id="doctors"
           value={props.speciality}
@@ -35,7 +29,7 @@ export const Doctors = (props) => {
           <option value="stomatologie">stomatologie</option>
         </select>
         <button
-          className="sub-filter__button sub-filter__button--doctors "
+          className="filters__button filters__button--doctors "
           onClick={() => setFilterHidden(!filterHidden)}
         >
           {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}

@@ -11,14 +11,12 @@ export const Playgrounds = (props) => {
   return (
     <>
       <div
-        className={
-          filterHidden
-            ? 'filters filters--playgrounds-hidden filters--playgrounds'
-            : 'filters filters--playgrounds'
-        }
+        className={`filters filters-playgrounds ${
+          filterHidden ? 'filters-playgrounds--hidden' : ''
+        }`}
       >
         <select
-          className="filters__button"
+          className="filters__select"
           name="elements"
           id="elements"
           value={props.playgroundsFilters.elements}
@@ -38,7 +36,7 @@ export const Playgrounds = (props) => {
           <option value="kolotoč">kolotoč</option>
         </select>
         <select
-          className="filters__button"
+          className="filters__select"
           name="shadow"
           id="shadow"
           value={props.playgroundsFilters.shadow}
@@ -54,7 +52,7 @@ export const Playgrounds = (props) => {
           <option value={false}>ne</option>
         </select>
         <select
-          className="filters__button"
+          className="filters__select"
           name="toys"
           id="toys"
           value={props.playgroundsFilters.toys}
@@ -70,7 +68,7 @@ export const Playgrounds = (props) => {
           <option value={false}>ne</option>
         </select>
         <select
-          className="filters__button"
+          className="filters__select"
           name="surface"
           id="surface"
           value={props.playgroundsFilters.surface}
@@ -87,7 +85,7 @@ export const Playgrounds = (props) => {
           <option value="tartan">tartan</option>
         </select>
         <button
-          className="sub-filter__button sub-filter__button--playgrounds"
+          className="filters__button filters__button--playgrounds"
           onClick={() => setFilterHidden(!filterHidden)}
         >
           {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}

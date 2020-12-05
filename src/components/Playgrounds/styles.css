@@ -2,10 +2,6 @@
   display: none;
 }
 
-.sub-filter__button {
-  display: none;
-}
-
 @media only screen and (min-width: 760px) {
   .filters {
     display: flex;
@@ -16,104 +12,99 @@
     margin-top: 0;
   }
 
-  .filters__button {
-    width: 175px; /* 175px je nejužší možná šířka, aby se tam vešel i nejdelší parametr (houpačka pro dvojice) */
+  .filters__select {
+    width: 175px;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
     background-color: white;
+    color: #1a1a1d;
     border-radius: 3px;
     box-shadow: 0px 0px 0px 2px rgba(240, 240, 240);
     border: none;
     outline: none;
     padding: 5px 0;
-    color: #1a1a1d;
   }
 
-  .filters__button:hover {
+  .filters__select:hover {
     background-color: rgba(240, 240, 240);
     cursor: pointer;
+  }
+
+  .filters__button {
+    display: none;
   }
 }
 
 @media only screen and (min-width: 1100px) {
-  /*záporný margin - podfiltry Groups a Doctors jsou schované*/
-  .filters-hidden {
-    margin-top: -85px;
-  }
-
   .filters {
-    width: 250px;
-    position: absolute;
+    transform: translateY(0px);
     display: block;
-    background-color: white;
-    left: 570px;
+    position: absolute;
+    left: 410px;
+    top: -20px;
+    width: 200px;
+    padding: 0;
     border-radius: 0 0 10px 10px;
     text-align: center;
   }
 
-  .filters--groups,
-  .filters--doctors {
-    height: 100px;
-    top: -90px;
-  }
-
-  /*podfiltry Playgrounds jsou schované*/
-  .filters--playgrounds-hidden {
-    margin-top: -255px;
-  }
-
-  .filters--playgrounds {
-    top: -95px;
+  .filters-playgrounds {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
+  }
+
+  .filters--hidden {
+    margin-top: -71px;
+  }
+
+  .filters-playgrounds--hidden {
+    margin-top: -221px;
+  }
+
+  .filters__select {
+    margin-top: 20px;
   }
 
   .filters__button {
-    margin: 20px 0 10px 0;
-  }
-
-  .sub-filter__button {
-    width: 250px;
+    width: 200px;
     display: block;
-    background-color: white;
     outline: none;
     border: white;
-    position: relative;
-    bottom: -17px;
+    margin-top: 20px;
     font-family: 'Roboto', sans-serif;
     font-size: 1.1em;
     border-radius: 0 0 10px 10px;
     padding: 8px 0;
+    cursor: pointer;
   }
 
-  .sub-filter__button--doctors {
+  .filters__button--doctors {
     background-color: #512fd8;
     color: white;
   }
 
-  .sub-filter__button--doctors:hover {
+  .filters__button--doctors:hover {
     background-color: white;
     color: black;
   }
 
-  .sub-filter__button--groups {
+  .filters__button--groups {
     background-color: #ff2222;
     color: white;
   }
 
-  .sub-filter__button--groups:hover {
+  .filters__button--groups:hover {
     background-color: white;
     color: black;
   }
 
-  .sub-filter__button--playgrounds {
+  .filters__button--playgrounds {
     background-color: #68bdff;
     color: white;
   }
 
-  .sub-filter__button--playgrounds:hover {
+  .filters__button--playgrounds:hover {
     background-color: white;
     color: black;
   }

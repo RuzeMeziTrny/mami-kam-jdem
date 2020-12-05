@@ -8,15 +8,9 @@ export const Groups = (props) => {
 
   return (
     <>
-      <div
-        className={
-          filterHidden
-            ? 'filters filters-hidden filters--groups'
-            : 'filters filters--groups'
-        }
-      >
+      <div className={`filters ${filterHidden ? 'filters--hidden' : ''}`}>
         <select
-          className="filters__button"
+          className="filters__select"
           name="groups"
           id="groups"
           value={props.type}
@@ -29,7 +23,7 @@ export const Groups = (props) => {
           <option value="sport">sportovní</option>
         </select>
         <button
-          className="sub-filter__button sub-filter__button--groups"
+          className="filters__button filters__button--groups"
           onClick={() => setFilterHidden(!filterHidden)}
         >
           {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}

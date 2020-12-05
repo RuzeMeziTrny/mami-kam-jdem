@@ -38,14 +38,14 @@ export const Header = ({
         </h1>
       )}
 
-      <button className="header__btn">
+      <button className="header__form-button">
         <img
-          className="header__btn--image"
+          className="header__form-icon"
           src="/assets/icons/envelope_white.svg"
           alt="obálka"
         />
         {/* <a href="mailto:someone@example.com">Napište nám</a> */}
-        <Link to="/form" className="form__link">
+        <Link to="/form" className="header__form-link">
           Napište nám
         </Link>
       </button>
