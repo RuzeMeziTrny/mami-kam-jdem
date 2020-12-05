@@ -24,11 +24,7 @@ export const PlaygroundsDetails = (props) => {
       <div className="modal-drop">
         <div className="playgrounds-container">
           <button>
-            <Link
-              className="playgrounds-container--link"
-              to="/hriste"
-              onClick={() => props.setDataIndex(null)}
-            >
+            <Link className="playgrounds-container--link" to="/hriste">
               ×
             </Link>
           </button>
