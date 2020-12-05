@@ -13,8 +13,8 @@ export const Playgrounds = (props) => {
       <div
         className={
           filterHidden
-            ? 'filters-tablet filters--playgrounds-hidden filters--playgrounds'
-            : 'filters-tablet filters--playgrounds'
+            ? 'filters filters--playgrounds-hidden filters--playgrounds'
+            : 'filters filters--playgrounds'
         }
       >
         <select

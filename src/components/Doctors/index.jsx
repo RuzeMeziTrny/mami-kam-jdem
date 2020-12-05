@@ -11,8 +11,8 @@ export const Doctors = (props) => {
       <div
         className={
           filterHidden
-            ? 'filters-tablet filters-hidden filters--doctors'
-            : 'filters-tablet filters--doctors'
+            ? 'filters filters-hidden filters--doctors'
+            : 'filters filters--doctors'
         }
       >
         <select

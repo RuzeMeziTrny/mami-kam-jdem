@@ -11,8 +11,8 @@ export const Groups = (props) => {
       <div
         className={
           filterHidden
-            ? 'filters-tablet filters-hidden filters--groups'
-            : 'filters-tablet filters--groups'
+            ? 'filters filters-hidden filters--groups'
+            : 'filters filters--groups'
         }
       >
         <select

@@ -37,7 +37,7 @@ section {
 
 /*podfiltry - hřiště, doktoři, kroužky*/
 
-.filters-tablet {
+.filters {
   display: none;
 }
 
@@ -46,7 +46,7 @@ section {
 }
 
 @media only screen and (min-width: 760px) {
-  .filters-tablet {
+  .filters {
     display: flex;
     justify-content: space-evenly;
     padding: 16px 0;
@@ -80,17 +80,20 @@ section {
     margin-top: -85px;
   }
 
-  .filters--groups,
-  .filters--doctors {
+  .filters {
     width: 250px;
-    height: 100px;
     position: absolute;
     display: block;
     background-color: white;
-    top: -90px;
     left: 570px;
     border-radius: 0 0 10px 10px;
     text-align: center;
+  }
+
+  .filters--groups,
+  .filters--doctors {
+    height: 100px;
+    top: -90px;
   }
 
   /*podfiltry Playgrounds jsou schované*/
@@ -99,16 +102,10 @@ section {
   }
 
   .filters--playgrounds {
-    position: absolute;
     top: -95px;
-    background-color: white;
-    left: 570px;
-    border-radius: 0 0 10px 10px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
     height: 300px;
   }
 
@@ -130,18 +127,33 @@ section {
     padding: 8px 0;
   }
 
-  .sub-filter__button--doctors:hover {
+  .sub-filter__button--doctors {
     background-color: #512fd8;
     color: white;
   }
 
-  .sub-filter__button--groups:hover {
+  .sub-filter__button--doctors:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .sub-filter__button--groups {
     background-color: #ff2222;
     color: white;
   }
 
-  .sub-filter__button--playgrounds:hover {
+  .sub-filter__button--groups:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .sub-filter__button--playgrounds {
     background-color: #68bdff;
     color: white;
+  }
+
+  .sub-filter__button--playgrounds:hover {
+    background-color: white;
+    color: black;
   }
 }
