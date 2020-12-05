@@ -59,7 +59,7 @@
   }
 
   .filters-playgrounds--hidden {
-    margin-top: -221px;
+    margin-top: -224px;
   }
 
   .filters__select {
@@ -107,5 +107,11 @@
   .filters__button--playgrounds:hover {
     background-color: white;
     color: black;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .filters {
+    left: 440px;
   }
 }
