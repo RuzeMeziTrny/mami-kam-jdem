@@ -8,9 +8,9 @@
   .filters {
     display: flex;
     justify-content: space-evenly;
-    padding: 16px 0;
+    padding: 20px 0 10px 0;
     background-color: white;
-    transform: translateY(60px);
+    transform: translateY(52px);
     margin-top: 0;
   }
 
@@ -43,7 +43,7 @@
     display: block;
     position: absolute;
     left: 410px;
-    top: -20px;
+    top: 0px;
     width: 200px;
     padding: 0;
     border-radius: 0 0 10px 10px;
