@@ -1,0 +1,12 @@
+/* obecné styly pro filtry v Playgrounds */
+/* TODO: extraktovat filtry do samostatne komponenty (FiltersContainer a FilterSelect) */
+
+.filters__button--doctors {
+  background-color: #512fd8;
+  color: white;
+}
+
+.filters__button--doctors:hover {
+  background-color: white;
+  color: black;
+}

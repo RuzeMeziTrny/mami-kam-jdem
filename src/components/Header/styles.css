@@ -76,7 +76,7 @@ header {
   .header__form-button {
     left: 410px;
     top: auto;
-    bottom: 30px;
+    bottom: 10px;
     width: 55px;
     border-radius: 8%;
   }

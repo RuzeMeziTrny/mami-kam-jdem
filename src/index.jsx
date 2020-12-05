@@ -128,3 +128,5 @@ const App = () => {
 };
 
 render(<App />, document.querySelector('#app'));
+
+/* TODO: názvy kategorií dát do proměnných a pak doplňovat jen proměnné */

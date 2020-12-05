@@ -1,3 +1,5 @@
+/* TODO: extraktovat filtry do samostatne komponenty (FiltersContainer a FilterSelect) */
+
 .filters {
   display: none;
 }
@@ -77,26 +79,6 @@
     border-radius: 0 0 10px 10px;
     padding: 8px 0;
     cursor: pointer;
-  }
-
-  .filters__button--doctors {
-    background-color: #512fd8;
-    color: white;
-  }
-
-  .filters__button--doctors:hover {
-    background-color: white;
-    color: black;
-  }
-
-  .filters__button--groups {
-    background-color: #ff2222;
-    color: white;
-  }
-
-  .filters__button--groups:hover {
-    background-color: white;
-    color: black;
   }
 
   .filters__button--playgrounds {

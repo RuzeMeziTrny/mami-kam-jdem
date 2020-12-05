@@ -180,7 +180,7 @@
 
   /*.nav__button,*/
   .nav__item {
-    padding: 1em;
+    padding: 0.8em;
   }
 
   .nav__link::after {
