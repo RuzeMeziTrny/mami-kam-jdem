@@ -4,11 +4,9 @@ import { data } from '../../data.js';
 import './styles.css';
 
 export const Doctors = (props) => {
-  const [filterHidden, setFilterHidden] = useState(true);
-
   return (
     <>
-      <div className={`filters ${filterHidden ? 'filters--hidden' : ''}`}>
+      <div className={`filters ${props.filterHidden ? 'filters--hidden' : ''}`}>
         <select
           className="filters__select"
           name="doctors"
@@ -30,9 +28,12 @@ export const Doctors = (props) => {
         </select>
         <button
           className="filters__button filters__button--doctors "
-          onClick={() => setFilterHidden(!filterHidden)}
+          onClick={() => {
+            props.setFilterHidden(!props.filterHidden);
+            props.setDataIndex(null);
+          }}
         >
-          {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
+          {props.filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
         </button>
       </div>
       <CategoryList

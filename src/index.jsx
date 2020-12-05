@@ -48,6 +48,8 @@ const App = () => {
     zoom: 13,
   });
 
+  const [filterHidden, setFilterHidden] = useState(true);
+
   /* states for playgrounds filters */
   const [playgroundsFilters, setPlaygroundsFilters] = useState({
     elements: '',
@@ -88,6 +90,8 @@ const App = () => {
                   <Component
                     setDataIndex={setDataIndex}
                     setActiveCategory={setActiveCategory}
+                    filterHidden={filterHidden}
+                    setFilterHidden={setFilterHidden}
                     playgroundsFilters={playgroundsFilters}
                     setPlaygroundsFilters={setPlaygroundsFilters}
                     filterItemsPlaygrounds={filterItemsPlaygrounds}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import { CategoryList } from '../CategoryList';
 import { PlaygroundsDetails } from '../PlaygroundsDetails';
@@ -6,13 +6,11 @@ import { data } from '../../data.js';
 import './styles.css';
 
 export const Playgrounds = (props) => {
-  const [filterHidden, setFilterHidden] = useState(true);
-
   return (
     <>
       <div
         className={`filters filters-playgrounds ${
-          filterHidden ? 'filters-playgrounds--hidden' : ''
+          props.filterHidden ? 'filters-playgrounds--hidden' : ''
         }`}
       >
         <select
@@ -86,9 +84,12 @@ export const Playgrounds = (props) => {
         </select>
         <button
           className="filters__button filters__button--playgrounds"
-          onClick={() => setFilterHidden(!filterHidden)}
+          onClick={() => {
+            props.setFilterHidden(!props.filterHidden);
+            props.setDataIndex(null);
+          }}
         >
-          {filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
+          {props.filterHidden ? 'Zobrazit filtry' : 'Skrýt filtry'}
         </button>
       </div>
 
