@@ -7,6 +7,6 @@
 }
 
 .filters__button--groups:hover {
-  background-color: white;
+  background-color: rgba(240, 240, 240);
   color: black;
 }

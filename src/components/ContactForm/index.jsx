@@ -2,12 +2,30 @@ import React, { useState } from 'react';
 import './styles.css';
 
 export const ContactForm = ({ onClose, setContactFormOpen }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState({
+    name: '',
+    place: '',
+    details: '',
+  });
+
+  const sentAlert = () => alert('Vaše zpráva byla odeslána. Děkujeme.');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setContactFormOpen(false);
-    alert('Vaše zpráva byla odeslána. Děkujeme.');
+    const data = new FormData();
+    data.append('name', inputValue.name);
+    data.append('place', inputValue.place);
+    data.append('details', inputValue.details);
+
+    fetch('https://formsubmit.co/ajax/mamikamjdem@gmail.com', {
+      method: 'POST',
+      body: data,
+    })
+      .then(() => {
+        setContactFormOpen(false);
+        setTimeout(sentAlert, 100);
+      })
+      .catch(() => alert('Odeslání se nezdařilo, zkuste to prosím znovu.'));
   };
 
   return (
@@ -24,24 +42,29 @@ export const ContactForm = ({ onClose, setContactFormOpen }) => {
           doporučit, vyplňte prosím tento formulář. Rádi je do naší aplikace
           doplníme.
         </p>
-        <form
-          className="form"
-          action="https://formsubmit.co/mamikamjdem@gmail.com"
-          method="POST"
-          onSubmit={handleSubmit}
-        >
+        <form className="form" onSubmit={handleSubmit}>
           <label className="form__label">
             Vaše jméno:
-            <input className="form__input" type="text" autoFocus />
+            <input
+              className="form__input"
+              type="text"
+              name="name"
+              autoFocus
+              onChange={(e) =>
+                setInputValue({ ...inputValue, name: e.target.value })
+              }
+            />
           </label>
           <label className="form__label">
             Místo, které chcete doporučit: *
             <input
               className="form__input"
               type="text"
-              name="name"
+              name="place"
               required
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e) =>
+                setInputValue({ ...inputValue, place: e.target.value })
+              }
             />
           </label>
           <label className="form__label">
@@ -49,15 +72,17 @@ export const ContactForm = ({ onClose, setContactFormOpen }) => {
             <textarea
               className="form__input form__input--lg"
               type="text"
-              name="place"
+              name="details"
               placeholder="např. adresa a web místa, specializace doktora apod."
+              onChange={(e) =>
+                setInputValue({ ...inputValue, details: e.target.value })
+              }
             />
           </label>
           <button
             className="form__send-button"
             type="submit"
-            name="details"
-            disabled={inputValue.length > 0 ? false : true}
+            disabled={inputValue.place.length > 0 ? false : true}
           >
             Odeslat
           </button>
