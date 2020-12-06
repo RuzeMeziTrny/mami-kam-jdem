@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, {
@@ -16,12 +16,12 @@ import iconRestaurants from '../../assets/icons/restaurants.svg';
 import iconGroups from '../../assets/icons/groups.svg';
 import iconKindergartens from '../../assets/icons/kindergartens.svg';
 import iconDoctors from '../../assets/icons/doctors.svg';
+import { data } from '../../data.js';
 import {
   filterItemsPlaygrounds,
   filterItemsGroups,
   filterItemsDoctors,
 } from '../../utilities';
-import { data } from '../../data.js';
 import { MapPopupItem } from '../MapPopupItem';
 import './styles.css';
 

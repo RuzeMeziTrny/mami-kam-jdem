@@ -49,7 +49,6 @@ export const Header = (props) => {
           alt="obálka"
         />
         <p className="header__form-text">Napište nám</p>
-        {/* <a href="mailto:someone@example.com">Napište nám</a> */}
       </button>
 
       {contactFormOpen && (

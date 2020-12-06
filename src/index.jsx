@@ -106,7 +106,6 @@ const App = () => {
               />
             );
           })}
-          {/* když budeme přidávat další routy, tak to přidáme sem před redirect */}
           <Route render={() => <Redirect to="/" />} />
         </Switch>
       </section>

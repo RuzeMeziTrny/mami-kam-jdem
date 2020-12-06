@@ -1,5 +1,5 @@
 /* obecné styly pro filtry v Playgrounds */
-/* TODO: extraktovat filtry do samostatne komponenty (FiltersContainer a FilterSelect) */
+/* -> TODO: extraktovat filtry do samostatne komponenty (FiltersContainer a FilterSelect) */
 
 .filters__button--groups {
   background-color: #ff2222;

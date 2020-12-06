@@ -23,18 +23,18 @@ export const PlaygroundsDetails = (props) => {
     <>
       <div className="modal-drop">
         <div className="playgrounds-container">
-          <button>
-            <Link className="playgrounds-container--link" to="/hriste">
+          <button className="playgrounds-container__close-button">
+            <Link className="playgrounds-container__link" to="/hriste">
               ×
             </Link>
           </button>
-          <div>
-            <h3 className="playgrounds-name">{props.name}</h3>
+          <article>
+            <h2 className="playgrounds-name">{props.name}</h2>
 
-            <ul className="playgrounds-list">
+            <ul className="playgrounds-details">
               <li>
                 <h3 className="playgrounds-items__heading">Herní prvky</h3>
-                <ul className="playgrounds-others">
+                <ul className="playgrounds-items__list">
                   {props.elements.map((element) => (
                     <li key={element}>{element}</li>
                   ))}
@@ -53,7 +53,7 @@ export const PlaygroundsDetails = (props) => {
                 <p>{props.toys ? 'ano' : 'ne'}</p>
               </li>
             </ul>
-          </div>
+          </article>
 
           <img
             className="playgrounds-photo"

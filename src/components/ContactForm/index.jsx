@@ -8,8 +8,6 @@ export const ContactForm = ({ onClose, setContactFormOpen }) => {
     details: '',
   });
 
-  const sentAlert = () => alert('Vaše zpráva byla odeslána. Děkujeme.');
-
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData();
@@ -23,7 +21,7 @@ export const ContactForm = ({ onClose, setContactFormOpen }) => {
     })
       .then(() => {
         setContactFormOpen(false);
-        setTimeout(sentAlert, 100);
+        setTimeout(() => alert('Vaše zpráva byla odeslána. Děkujeme.'), 100);
       })
       .catch(() => alert('Odeslání se nezdařilo, zkuste to prosím znovu.'));
   };
