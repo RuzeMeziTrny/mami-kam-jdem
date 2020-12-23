@@ -110,6 +110,7 @@ export const Navigation = (props) => {
         className={`nav__button ${
           location.pathname === '/' ? 'nav__button--main' : ''
         }`}
+        title=""
         onClick={() => setOpened(!opened)}
       >
         <img

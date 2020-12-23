@@ -27,6 +27,25 @@ body {
     width: 400px;
     height: 100vh;
   }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    color: black;
+    font-size: 0.7em;
+  }
+
+  .footer a {
+    color: black;
+  }
+
+  .footer a:hover {
+    color: rgb(11, 11, 97);
+  }
 }
 
 @media only screen and (min-width: 1400px) {

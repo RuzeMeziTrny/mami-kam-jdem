@@ -110,6 +110,30 @@ const App = () => {
           })}
           <Route render={() => <Redirect to="/" />} />
         </Switch>
+        <footer className="footer">
+          <small>
+            Icons made by{' '}
+            <a
+              href="https://www.flaticon.com/authors/smashicons"
+              title="Smashicons"
+            >
+              Smashicons
+            </a>
+            ,{' '}
+            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
+              Freepik
+            </a>{' '}
+            and{' '}
+            <a href="https://www.flaticon.com/authors/monkik" title="monkik">
+              monkik
+            </a>{' '}
+            from{' '}
+            <a href="https://www.flaticon.com/" title="Flaticon">
+              {' '}
+              www.flaticon.com
+            </a>
+          </small>
+        </footer>
       </section>
       <main>
         <Map
