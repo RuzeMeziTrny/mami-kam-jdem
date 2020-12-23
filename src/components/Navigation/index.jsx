@@ -101,7 +101,10 @@ export const Navigation = (props) => {
   return (
     <nav
       className={`nav ${location.pathname === '/' ? 'nav--main' : ''}`}
-      onClick={() => props.setDataIndex(null)}
+      onClick={() => {
+        props.setDataIndex(null);
+        props.setFilterHidden(true);
+      }}
     >
       <button
         className={`nav__button ${

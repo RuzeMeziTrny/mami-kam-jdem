@@ -5,11 +5,11 @@ import './styles.css';
 
 export const CategoryItem = (props) => {
   return (
-    <div className="category-item" onClick={props.handleClick}>
+    <figure className="category-item" onClick={props.handleClick}>
       <div className="category-item__image">
         <img src={`/assets/images/${props.image}`} alt="obrázek místa" />
       </div>
-      <div className="category-item__details">
+      <figcaption className="category-item__details">
         <p className="category-item__name">{props.name}</p>
         <p className="category-item__address">{props.address}</p>
         {props.category === 'playgrounds' ? (
@@ -21,7 +21,7 @@ export const CategoryItem = (props) => {
             {cutOffUrlProtocole(props.web)}
           </a>
         )}
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   );
 };

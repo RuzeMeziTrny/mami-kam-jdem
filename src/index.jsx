@@ -66,18 +66,20 @@ const App = () => {
 
   return (
     <Router>
-      <section>
+      <section className="panel">
         <Header
           setDataIndex={setDataIndex}
           setViewport={setViewport}
           latitudeStart={latitudeStart}
           longitudeStart={longitudeStart}
+          setFilterHidden={setFilterHidden}
         />
         <Navigation
           setDataIndex={setDataIndex}
           setViewport={setViewport}
           latitudeStart={latitudeStart}
           longitudeStart={longitudeStart}
+          setFilterHidden={setFilterHidden}
         />
         <Switch>
           {routes.map((route, index) => {

@@ -11,7 +11,7 @@ export const Header = (props) => {
   const [contactFormOpen, setContactFormOpen] = useState(false);
 
   return (
-    <header>
+    <header className="header">
       {location.pathname === '/' ? (
         <h1 className="main-heading">Mami, kam jdem?</h1>
       ) : (
@@ -20,6 +20,7 @@ export const Header = (props) => {
             to="/"
             className="main-heading--link"
             onClick={() => {
+              props.setFilterHidden(true)
               props.setDataIndex(null);
               props.setViewport({
                 latitude: props.latitudeStart,

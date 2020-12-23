@@ -32,5 +32,5 @@ export const CategoryList = (props) => {
     return filtered.map(mapItems);
   };
 
-  return <div className="category-list">{filterResult()}</div>;
+  return <section className="category-list">{filterResult()}</section>;
 };

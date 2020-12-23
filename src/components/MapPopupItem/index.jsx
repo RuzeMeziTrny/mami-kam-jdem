@@ -4,11 +4,11 @@ import { cutOffUrlProtocole } from '../../utilities';
 import './styles.css';
 
 export const MapPopupItem = (props) => (
-  <div className="map-popup-item">
+  <figure className="map-popup-item">
     <div className="map-popup-item__image">
       <img src={`/assets/images/${props.image}`} alt="obrázek místa" />
     </div>
-    <div className="map-popup-item__details">
+    <figcaption className="map-popup-item__details">
       <p className="map-popup-item__name">{props.name}</p>
       <p className="map-popup-item__address">{props.address}</p>
       {props.category === 'playgrounds' ? (
@@ -20,6 +20,6 @@ export const MapPopupItem = (props) => (
           {cutOffUrlProtocole(props.web)}
         </a>
       )}
-    </div>
-  </div>
+    </figcaption>
+  </figure>
 );

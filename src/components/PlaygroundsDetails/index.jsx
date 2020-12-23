@@ -20,14 +20,14 @@ export const PlaygroundsDetails = (props) => {
   };
 
   return (
-    <>
-      <div className="modal-drop">
-        <div className="playgrounds-container">
-          <button className="playgrounds-container__close-button">
-            <Link className="playgrounds-container__link" to="/hriste">
-              ×
-            </Link>
-          </button>
+    <div className="modal-drop">
+      <article className="playgrounds-container">
+        <button className="playgrounds-container__close-button">
+          <Link className="playgrounds-container__link" to="/hriste">
+            ×
+          </Link>
+        </button>
+        <section className="playgrounds-info">
           <article>
             <h2 className="playgrounds-name">{props.name}</h2>
 
@@ -54,14 +54,14 @@ export const PlaygroundsDetails = (props) => {
               </li>
             </ul>
           </article>
-
-          <img
-            className="playgrounds-photo"
-            src={`/assets/images/${props.image}`}
-            alt="obrázek hřiště"
-          />
-        </div>
-      </div>
-    </>
+          <div className="playgrounds-photo">
+            <img
+              src={`/assets/images/${props.image}`}
+              alt="obrázek hřiště"
+            />
+          </div>
+        </section>
+      </article>
+    </div>
   );
 };

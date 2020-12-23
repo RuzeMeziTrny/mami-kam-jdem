@@ -14,18 +14,19 @@
 .playgrounds-container {
   background-color: white;
   width: 80%;
+  max-height: 90%;
+  overflow-y: auto;
   border-radius: 10px;
   font-size: 0.8em;
-  overflow-y: auto;
 }
 
 .playgrounds-container__close-button {
-  float: right;
+  position: fixed;
+  right: 10%;
   background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
-  padding-left: 5px;
 }
 
 .playgrounds-container__link {
@@ -35,27 +36,28 @@
   text-decoration: none;
 }
 
+.playgrounds-info {
+  margin: 30px 0 20px 0;
+}
+
 .playgrounds-name {
-  margin-bottom: 5px;
   text-align: center;
-  font-size: 1.4em;
 }
 
 .playgrounds-details {
   list-style-type: none;
   width: 80%;
-  margin: 15px auto;
+  margin: auto;
   padding: 0;
+  line-height: 1.5em;
 }
 
-.playgrounds-details li {
-  padding: 3px 5px 3px 0;
+.playgrounds-details > li {
+  padding: 10px 0;
 }
 
 .playgrounds-items__heading {
-  font-size: 1.2em;
   margin: 0;
-  padding: 5px;
 }
 
 .playgrounds-items__list {
@@ -64,58 +66,57 @@
 
 .playgrounds-details p {
   margin: 0;
-  padding: 5px;
 }
 
 .playgrounds-photo {
-  display: block;
+  margin: auto;
   width: 80%;
-  margin: 15px auto;
 }
 
-@media only screen and (min-width: 650px) {
-  .playgrounds-container {
+.playgrounds-photo img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+  .playgrounds-info {
     display: flex;
-    top: 350px;
+    margin: 30px 20px 20px 20px;
   }
 
-  .playgrounds-container__close-button {
-    order: 1;
-    align-self: flex-start;
-    padding: 5px;
-  }
-
-  .playgrounds-container article {
-    width: 60%;
-    padding: 0 20px;
+  .playgrounds-info article {
+    width: 50%;
   }
 
   .playgrounds-name {
-    margin: 40px 0 5px 0;
+    width: 80%;
+    margin: 0 auto 15px;
+    text-align: left;
     font-size: 1.7em;
-  }
-
-  .playgrounds-items__heading {
-    font-size: 1.3em;
   }
 
   .playgrounds-photo {
     width: 50%;
+    margin: 0;
+  }
+
+  .playgrounds-photo img {
+    height: 100%;
     object-fit: cover;
-    margin: 40px 10px;
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1000px) {
   .playgrounds-container {
     width: 800px;
-    height: 600px;
-    font-size: 0.9em;
+    max-height: 600px;
+    font-size: 1em;
+    position: relative;
   }
 
-  .playgrounds-container article {
-    width: 100%;
-    padding: 20px;
+  .playgrounds-container__close-button {
+    position: absolute;
+    right: -5px;
+    top: 5px;
   }
 
   .playgrounds-photo {

@@ -28,7 +28,7 @@ export const ContactForm = ({ onClose, setContactFormOpen }) => {
 
   return (
     <div className="modal-drop--form">
-      <div className="form-container">
+      <article className="form-container">
         <button className="form-container__close-button" onClick={onClose}>
           ×
         </button>
@@ -85,7 +85,7 @@ export const ContactForm = ({ onClose, setContactFormOpen }) => {
             Odeslat
           </button>
         </form>
-      </div>
+      </article>
     </div>
   );
 };
