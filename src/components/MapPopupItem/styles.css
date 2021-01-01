@@ -1,6 +1,7 @@
 .map-popup-item {
   display: flex;
   flex-shrink: 0;
+  margin: 0 5px 0 10px;
 }
 
 .map-popup-item__image {
